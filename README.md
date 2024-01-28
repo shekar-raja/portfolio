@@ -1,5 +1,7 @@
 ## Hello World! - I'm Raja Shekar 👋
 
+2.5+ years of experience in Full Stack Web Development at [GroundHog Apps](https://groundhogapps.com/). I'm passionate about learning and exploring the latest technologies that leverage to solve real-world problems. My Interest lies in Web app development, Data Science. If you'd like to collaborate or chat more, feel free to reach out to me.💬
+
 **Known Languages and frameworks:**  
 
 <code><img height="20" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/javascript/javascript.png"></code>
