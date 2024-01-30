@@ -7,18 +7,18 @@
   <em>
     A tech enthusiast, embarking on an exciting career transformation. With over 3+ years as a <b>Full Stack Developer</b>, specializing in the MEAN stack, However, my fascination with the profound impact of data on business decisions has steered me toward a transformative shift into the realm of Data Science. Currently pursuing an MSc in Data Science and Analytics at the <a href="https://www.herts.ac.uk/"><b>University of Hertfordshire</b></a>
   <br>
-  <!-- <b><i>"---Always Work Hard and Trust the Process---"</i></b> -->
 </p>
+<hr>
 
----
-<h3>Little facts about me 🧑</h3>
+<h3>Little facts about me 👨‍💻</h3>
 
 - 🧞 I'm a Tech Enthusiast since childhood.
 -  📚 I'm currently learning alot about various Data Science technologies.
 - 👯 I’m looking to collaborate with Data Science and MEAN stack web projects.
 - 💡 Learning something new is always been a goal to me.
 - ⚡ Fun fact: I love learning about Space & Cosmos, watching movies and exploring new tech.
----
+<br>
+<hr>
 
 <h3>My Skills</h3>
 <b>Programming Languages: </b><br>
@@ -49,7 +49,7 @@
 <code><a href="https://www.tensorflow.org/" target="_blank"><img height="30" src="https://www.vectorlogo.zone/logos/tensorflow/tensorflow-icon.svg"></a></code>
 <br>
 
----
+<hr>
 
 <details open="">
 <summary>
