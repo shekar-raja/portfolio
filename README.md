@@ -67,8 +67,10 @@
 ---
 
 <h3> Connect with me🤝 <h3>
+
 [<img src="https://img.shields.io/badge/linkedin-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white" />](https://www.linkedin.com/in/raja-shekar/) [<img src="https://img.shields.io/badge/gmail-%23EE0000.svg?&style=for-the-badge&logo=gmail&logoColor=white">](mailto:rajashekarb.dev@gmail.com) 
 ![Visits Badge](https://badges.pufler.dev/visits/shekar-raja/shekar-raja?style=for-the-badge)
+
 <br>
   
 <p align="right" > Created with 🖤 by <a href="https://github.com/shekar-raja">Raja Shekar</a></p>
