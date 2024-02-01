@@ -4,9 +4,7 @@
 </p>
 
 <p align="center">
-  <em>
     A tech enthusiast, embarking on an exciting career transformation. With over 3+ years as a <b>Full Stack Developer</b>, specializing in the MEAN stack, However, my fascination with the profound impact of data on business decisions has steered me toward a transformative shift into the realm of Data Science. Currently pursuing an MSc in Data Science and Analytics at the <a href="https://www.herts.ac.uk/"><b>University of Hertfordshire</b></a>
-  <br>
 </p>
 <hr>
 
@@ -17,12 +15,11 @@
 - 👯 I’m looking to collaborate with Data Science and MEAN stack web projects.
 - 💡 Learning something new is always been a goal to me.
 - ⚡ Fun fact: I love learning about Space & Cosmos, watching movies and exploring new tech.
-<br>
 <hr>
 
 <h3>My Skills</h3>
-<b>Programming Languages: </b><br>
-    <code><a href="https://www.python.org/" target="_blank" tooltip="Python"><img height="30" src="https://www.vectorlogo.zone/logos/python/python-icon.svg"></a></code>
+<b style="margin-bottom: 50px">Programming Languages: </b><br>
+    <code style=""><a href="https://www.python.org/" target="_blank" tooltip="Python"><img height="30" src="https://www.vectorlogo.zone/logos/python/python-icon.svg"></a></code>
     <code><a href="https://www.w3schools.com/html/" target="_blank"><img height="30" src="https://www.vectorlogo.zone/logos/w3_html5/w3_html5-icon.svg"></a></code>
     <code><a href="https://www.javascript.com/" target="_blank"><img height="30" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-plain.svg"></a></code>
     <code><a href="https://www.typescriptlang.org/" target="_blank"><img height="30" src="https://www.vectorlogo.zone/logos/typescriptlang/typescriptlang-icon.svg"></a></code>
@@ -69,28 +66,17 @@
 
 ---
 
-<h4> Connect with me🤝: <h4>
-  </hr>
-  <a href="https://www.linkedin.com/in/ratheshan-sathiyamoorthy-3aa2891b9/">
-   <img align="left" alt=" Ratheshan Sathiyamoorthy | Linkedin" width="24px" src="https://www.vectorlogo.zone/logos/linkedin/linkedin-icon.svg" />
-  </a>
-  <a href="mailto:lionratheshan@gmail.com">
-    <img align="left" alt="Ratheshan Sathiyamoorthy | Gmail" width="26px" src="https://www.vectorlogo.zone/logos/gmail/gmail-icon.svg" />
-  </a>
-  <a href="https://twitter.com/Ratheshan_03">
-    <img align="left" alt="Ratheshan Sathiyamoorthy| Twitter" width="26px" src="https://www.vectorlogo.zone/logos/twitter/twitter-official.svg" />
-  </a>
-  <a href="https://www.instagram.com/ratheshan_03/">
-    <img align="left" alt="Ratheshan Sathiyamoorthy | Instagram" width="24px" src="https://www.vectorlogo.zone/logos/instagram/instagram-icon.svg" />
-  </a>
-   <a href="https://www.facebook.com/profile.php?id=100003874786181">
-    <img align="left" alt="Ratheshan Sathiyamoorthy| Github" width="26px" src="https://www.vectorlogo.zone/logos/facebook/facebook-tile.svg" />
-  </a>
-   <a href="https://github.com/shekar-raja">
-    <img align="left" alt="Raja Shekar| Github" width="26px" src="https://www.vectorlogo.zone/logos/github/github-tile.svg" />
-  </a>
-  <br>
+<h4> Connect with me🤝<h4>
+
+[<img src="https://img.shields.io/badge/linkedin-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white" />](https://www.linkedin.com/in/raja-shekar/) [<img src="https://img.shields.io/badge/gmail-%23EE0000.svg?&style=for-the-badge&logo=gmail&logoColor=white">](mailto:rajashekarb.dev@gmail.com) 
+![Visits Badge](https://badges.pufler.dev/visits/shekar-raja/shekar-raja?style=for-the-badge)
+<br>
   
 <p align="right" > Created with 🖤 by <a href="https://github.com/shekar-raja">Raja Shekar</a></p>
 <p align="right"> <img src="https://komarev.com/ghpvc/?username=RajaShekar&label=Views&color=blue&style=plastic" alt="Raja Shekar views" /> </p>
 
+<style>
+  code {
+    margin: 5px
+  }  
+</style>
