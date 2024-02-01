@@ -18,24 +18,24 @@
 <hr>
 
 <h2>My Skills</h2>
-<p style="margin-bottom: 10px">Programming Languages: </p><br>
-    <code style=""><a href="https://www.python.org/" target="_blank" tooltip="Python"><img height="30" src="https://www.vectorlogo.zone/logos/python/python-icon.svg"></a></code>
-    <code><a href="https://www.w3schools.com/html/" target="_blank"><img height="30" src="https://www.vectorlogo.zone/logos/w3_html5/w3_html5-icon.svg"></a></code>
-    <code><a href="https://www.javascript.com/" target="_blank"><img height="30" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-plain.svg"></a></code>
-    <code><a href="https://www.typescriptlang.org/" target="_blank"><img height="30" src="https://www.vectorlogo.zone/logos/typescriptlang/typescriptlang-icon.svg"></a></code>
-    <code><a href="https://www.r-project.org/" target="_blank"><img height="30" src="https://www.vectorlogo.zone/logos/r-project/r-project-icon.svg"></a></code>
-    <code><a href="https://www.scala-lang.org/" target="_blank"><img height="30" src="https://www.vectorlogo.zone/logos/scala-lang/scala-lang-icon.svg"></a></code>
+<p style="margin-bottom: 5px">Programming Languages: </p><br>
+  <code style=""><a href="https://www.python.org/" target="_blank" tooltip="Python"><img height="30" src="https://www.vectorlogo.zone/logos/python/python-icon.svg"></a></code>
+  <code><a href="https://www.w3schools.com/html/" target="_blank"><img height="30" src="https://www.vectorlogo.zone/logos/w3_html5/w3_html5-icon.svg"></a></code>
+  <code><a href="https://www.javascript.com/" target="_blank"><img height="30" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-plain.svg"></a></code>
+  <code><a href="https://www.typescriptlang.org/" target="_blank"><img height="30" src="https://www.vectorlogo.zone/logos/typescriptlang/typescriptlang-icon.svg"></a></code>
+  <code><a href="https://www.r-project.org/" target="_blank"><img height="30" src="https://www.vectorlogo.zone/logos/r-project/r-project-icon.svg"></a></code>
+  <code><a href="https://www.scala-lang.org/" target="_blank"><img height="30" src="https://www.vectorlogo.zone/logos/scala-lang/scala-lang-icon.svg"></a></code>
 <br><br>
 <p style="margin-bottom: 10px">Frameworks, OS & Tools: </p><br>
-    <code><a href="https://angular.io/" target="_blank"><img height="30" src="https://www.vectorlogo.zone/logos/angular/angular-icon.svg"></a></code>
-    <code><a href="https://nodejs.org/en/" target="_blank"><img height="30" src="https://www.vectorlogo.zone/logos/nodejs/nodejs-icon.svg"></a></code>
-    <code><a href="https://git-scm.com/" target="_blank"><img height="30" src="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg"></a></code>
+  <code><a href="https://angular.io/" target="_blank"><img height="30" src="https://www.vectorlogo.zone/logos/angular/angular-icon.svg"></a></code>
+  <code><a href="https://nodejs.org/en/" target="_blank"><img height="30" src="https://www.vectorlogo.zone/logos/nodejs/nodejs-icon.svg"></a></code>
+  <code><a href="https://git-scm.com/" target="_blank"><img height="30" src="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg"></a></code>
 <br><br>
 <p style="margin-bottom: 10px">Databases: </p><br>
-    <code><a href="https://www.mongodb.com/" target="_blank"><img height="30" src="https://www.vectorlogo.zone/logos/mongodb/mongodb-icon.svg"></a></code>
-    <code><a href="https://www.sqlite.org/index.html" target="_blank"><img height="30" src="https://www.vectorlogo.zone/logos/sqlite/sqlite-icon.svg"></a></code>
-    <code><a href="https://www.couchbase.com/" target="_blank"><img height="30" src="https://www.vectorlogo.zone/logos/couchbase/couchbase-icon.svg"></a></code>
-    <code><a href="https://redis.io/" target="_blank"><img height="30" src="https://www.vectorlogo.zone/logos/redis/redis-icon.svg"></a></code>
+  <code><a href="https://www.mongodb.com/" target="_blank"><img height="30" src="https://www.vectorlogo.zone/logos/mongodb/mongodb-icon.svg"></a></code>
+  <code><a href="https://www.sqlite.org/index.html" target="_blank"><img height="30" src="https://www.vectorlogo.zone/logos/sqlite/sqlite-icon.svg"></a></code>
+  <code><a href="https://www.couchbase.com/" target="_blank"><img height="30" src="https://www.vectorlogo.zone/logos/couchbase/couchbase-icon.svg"></a></code>
+  <code><a href="https://redis.io/" target="_blank"><img height="30" src="https://www.vectorlogo.zone/logos/redis/redis-icon.svg"></a></code>
 <br><br>
 <p style="margin-bottom: 10px">Looking forward to learn:</p><br>
   <code><a href="https://cloud.google.com/" target="_blank"><img height="30" src="https://www.vectorlogo.zone/logos/google_cloud/google_cloud-icon.svg"></a></code>
@@ -62,6 +62,7 @@
 </p>
 <p align="center"><img align="center" src="https://github-readme-streak-stats.herokuapp.com/?user=shekar-raja&text_color=FFFFFF&bg_color=000000&title_color=94b4a4&langs_count=15&layout=compact&hide_border=true" alt="shekar-raja" /></p>
 
+<br><br>
 <hr>
 ---
 
