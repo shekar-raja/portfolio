@@ -19,31 +19,28 @@
 
 <h2>My Skills</h2>
 <p style="margin-bottom: 5px">Programming Languages: </p>
-  <code style=""><a href="https://www.python.org/" target="_blank" tooltip="Python"><img height="30" src="https://www.vectorlogo.zone/logos/python/python-icon.svg"></a></code>
-  <code><a href="https://www.w3schools.com/html/" target="_blank"><img height="30" src="https://www.vectorlogo.zone/logos/w3_html5/w3_html5-icon.svg"></a></code>
-  <code><a href="https://www.javascript.com/" target="_blank"><img height="30" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-plain.svg"></a></code>
-  <code><a href="https://www.typescriptlang.org/" target="_blank"><img height="30" src="https://www.vectorlogo.zone/logos/typescriptlang/typescriptlang-icon.svg"></a></code>
-  <code><a href="https://www.r-project.org/" target="_blank"><img height="30" src="https://www.vectorlogo.zone/logos/r-project/r-project-icon.svg"></a></code>
-  <code><a href="https://www.scala-lang.org/" target="_blank"><img height="30" src="https://www.vectorlogo.zone/logos/scala-lang/scala-lang-icon.svg"></a></code>
-<br>
+  <code margin: 5px><a href="https://www.python.org/" target="_blank" tooltip="Python"><img height="30" src="https://www.vectorlogo.zone/logos/python/python-icon.svg"></a></code>
+  <code margin: 5px><a href="https://www.w3schools.com/html/" target="_blank"><img height="30" src="https://www.vectorlogo.zone/logos/w3_html5/w3_html5-icon.svg"></a></code>
+  <code margin: 5px><a href="https://www.javascript.com/" target="_blank"><img height="30" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-plain.svg"></a></code>
+  <code margin: 5px><a href="https://www.typescriptlang.org/" target="_blank"><img height="30" src="https://www.vectorlogo.zone/logos/typescriptlang/typescriptlang-icon.svg"></a></code>
+  <code margin: 5px><a href="https://www.r-project.org/" target="_blank"><img height="30" src="https://www.vectorlogo.zone/logos/r-project/r-project-icon.svg"></a></code>
+  <code margin: 5px><a href="https://www.scala-lang.org/" target="_blank"><img height="30" src="https://www.vectorlogo.zone/logos/scala-lang/scala-lang-icon.svg"></a></code>
 <p style="margin-bottom: 10px">Frameworks, OS & Tools: </p>
-  <code><a href="https://angular.io/" target="_blank"><img height="30" src="https://www.vectorlogo.zone/logos/angular/angular-icon.svg"></a></code>
-  <code><a href="https://nodejs.org/en/" target="_blank"><img height="30" src="https://www.vectorlogo.zone/logos/nodejs/nodejs-icon.svg"></a></code>
-  <code><a href="https://git-scm.com/" target="_blank"><img height="30" src="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg"></a></code>
-<br>
+  <code margin: 5px><a href="https://angular.io/" target="_blank"><img height="30" src="https://www.vectorlogo.zone/logos/angular/angular-icon.svg"></a></code>
+  <code margin: 5px><a href="https://nodejs.org/en/" target="_blank"><img height="30" src="https://www.vectorlogo.zone/logos/nodejs/nodejs-icon.svg"></a></code>
+  <code margin: 5px><a href="https://git-scm.com/" target="_blank"><img height="30" src="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg"></a></code>
 <p style="margin-bottom: 10px">Databases: </p>
-  <code><a href="https://www.mongodb.com/" target="_blank"><img height="30" src="https://www.vectorlogo.zone/logos/mongodb/mongodb-icon.svg"></a></code>
-  <code><a href="https://www.sqlite.org/index.html" target="_blank"><img height="30" src="https://www.vectorlogo.zone/logos/sqlite/sqlite-icon.svg"></a></code>
-  <code><a href="https://www.couchbase.com/" target="_blank"><img height="30" src="https://www.vectorlogo.zone/logos/couchbase/couchbase-icon.svg"></a></code>
-  <code><a href="https://redis.io/" target="_blank"><img height="30" src="https://www.vectorlogo.zone/logos/redis/redis-icon.svg"></a></code>
-<br>
+  <code margin: 5px><a href="https://www.mongodb.com/" target="_blank"><img height="30" src="https://www.vectorlogo.zone/logos/mongodb/mongodb-icon.svg"></a></code>
+  <code margin: 5px><a href="https://www.sqlite.org/index.html" target="_blank"><img height="30" src="https://www.vectorlogo.zone/logos/sqlite/sqlite-icon.svg"></a></code>
+  <code margin: 5px><a href="https://www.couchbase.com/" target="_blank"><img height="30" src="https://www.vectorlogo.zone/logos/couchbase/couchbase-icon.svg"></a></code>
+  <code margin: 5px><a href="https://redis.io/" target="_blank"><img height="30" src="https://www.vectorlogo.zone/logos/redis/redis-icon.svg"></a></code>
 <p style="margin-bottom: 10px">Looking forward to learn:</p>
-  <code><a href="https://cloud.google.com/" target="_blank"><img height="30" src="https://www.vectorlogo.zone/logos/google_cloud/google_cloud-icon.svg"></a></code>
-  <code><a href="https://aws.amazon.com/" target="_blank"><img height="30" src="https://www.vectorlogo.zone/logos/amazon_aws/amazon_aws-icon.svg"></a></code>
-  <code><a href="https://azure.microsoft.com/en-us/" target="_blank"><img height="30" src="https://www.vectorlogo.zone/logos/microsoft_azure/microsoft_azure-icon.svg"></a></code>
-  <code><a href="https://opencv.org/" target="_blank"><img height="30" src="https://www.vectorlogo.zone/logos/opencv/opencv-icon.svg"></a></code>
-  <code><a href="https://pytorch.org/" target="_blank"><img height="30" src="https://www.vectorlogo.zone/logos/pytorch/pytorch-icon.svg"></a></code>
-  <code><a href="https://www.tensorflow.org/" target="_blank"><img height="30" src="https://www.vectorlogo.zone/logos/tensorflow/tensorflow-icon.svg"></a></code>
+  <code margin: 5px><a href="https://cloud.google.com/" target="_blank"><img height="30" src="https://www.vectorlogo.zone/logos/google_cloud/google_cloud-icon.svg"></a></code>
+  <code margin: 5px><a href="https://aws.amazon.com/" target="_blank"><img height="30" src="https://www.vectorlogo.zone/logos/amazon_aws/amazon_aws-icon.svg"></a></code>
+  <code margin: 5px><a href="https://azure.microsoft.com/en-us/" target="_blank"><img height="30" src="https://www.vectorlogo.zone/logos/microsoft_azure/microsoft_azure-icon.svg"></a></code>
+  <code margin: 5px><a href="https://opencv.org/" target="_blank"><img height="30" src="https://www.vectorlogo.zone/logos/opencv/opencv-icon.svg"></a></code>
+  <code margin: 5px><a href="https://pytorch.org/" target="_blank"><img height="30" src="https://www.vectorlogo.zone/logos/pytorch/pytorch-icon.svg"></a></code>
+  <code margin: 5px><a href="https://www.tensorflow.org/" target="_blank"><img height="30" src="https://www.vectorlogo.zone/logos/tensorflow/tensorflow-icon.svg"></a></code>
 
 <hr>
 
@@ -70,9 +67,3 @@
 
 <p align="right" > Created with 🖤 by <a href="https://github.com/shekar-raja">Raja Shekar</a></p>
 <p align="right"> <img src="https://komarev.com/ghpvc/?username=RajaShekar&label=Views&color=blue&style=plastic" alt="Raja Shekar views" /> </p>
-
-<style>
-  code {
-    margin: 5px
-  }  
-</style>
