@@ -21,15 +21,15 @@
 
 ---
 
-### EDUCATION
+## EDUCATION
 
 - **MSc in Data Science and Analytics**
   University of Hertfordshire, Hertfordshire, England
-  *Sept 2022 – Present*
+  Sept 2022 – Present
 
 - **Bachelor of Engineering in Computer Science Engineering**
   Hyderabad Institute of Technology and Management, Hyderabad, India
-  *Aug 2015 – Jul 2019*
+  Aug 2015 – Jul 2019
 
 
 
@@ -37,8 +37,9 @@
 
 ## WORK EXPERIENCE
 
-### Freelance MEAN Stack Developer | [TruNums](https://trunums.com/)
-###### Oct 2022 - Present
+**Freelance MEAN Stack Developer | [TruNums](https://trunums.com/)**
+<br>
+Oct 2022 - Present
 
 - Crafted and managed a dynamic social web app, enhancing user interaction and experience.
 - Developed custom features such as file sharing, communities, and private sites tailored to client needs.
@@ -47,8 +48,9 @@
 - Engineered CRON jobs and APIs for seamless functionality.
 
 
-### Full Stack Developer | [GroundHog](https://groundhogapps.com/)
-###### Dec 2019 – Aug 2022
+**Full Stack Developer | [GroundHog](https://groundhogapps.com/)**
+<br>
+Dec 2019 – Aug 2022
 
 As a Full Stack Developer with over 2.8+ years of experience at GROUNDHOG APPS, I played a key role in developing robust web applications for the mining industry. My responsibilities and achievements include:
 
