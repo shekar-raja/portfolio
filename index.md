@@ -5,6 +5,8 @@
 
 <p align="center">
     A tech enthusiast, embarking on an exciting career transformation. With over 3+ years as a <b>Full Stack Web Application Developer</b>, specializing in the MEAN stack, However, my fascination with the profound impact of data on business decisions has steered me toward a transformative shift into the realm of Data Science. Currently pursuing an MSc in Data Science and Analytics at the <a href="https://www.herts.ac.uk/"><b>University of Hertfordshire</b></a>
+    <br>
+    <b><i>"---Functions describe the world---"</i></b>
 </p>
 
 ---
