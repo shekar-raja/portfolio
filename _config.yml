@@ -1,5 +1,5 @@
 title: Raja Shekar
-logo: "/images/headshot.jpg?raw=true"
+logo: "/images/headshot.png?raw=true"
 description: >
   <a href="https://www.linkedin.com/in/raja-shekar/">View my LinkedIn Profile</a> 
   <br>Mean Stack Developer Turned Data Science Enthusiast | MSc Data Science Student<br>
@@ -10,4 +10,4 @@ plugins:
 - jekyll-remote-theme
 show_downloads: true
 google_analytics: G-TH5VEMBXCG
-resume_link: 'https://drive.google.com/drive/folders/1CfSoKsmp5jOIPyiUgQap012RG4i28aZ9'
+resume_link: 'https://drive.google.com/file/d/11qakiz9EFCHO5gnRkuBAn7mGLOpVoB5i/view?usp=sharing'
