@@ -69,7 +69,7 @@ My tenure at GROUNDHOG APPS was marked by continuous innovation, collaboration w
 #### OS: 
 ![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black) ![Windows](https://img.shields.io/badge/Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white)
 
----
+<!-- ---
 
 ### Category Name 1     
 
@@ -92,7 +92,7 @@ My tenure at GROUNDHOG APPS was marked by continuous innovation, collaboration w
 - [Project 2 Title](http://example.com/)
 - [Project 3 Title](http://example.com/)
 - [Project 4 Title](http://example.com/)
-- [Project 5 Title](http://example.com/)
+- [Project 5 Title](http://example.com/) -->
 
 
 ---
