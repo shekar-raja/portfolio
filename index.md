@@ -1,7 +1,9 @@
 <h1 align="center">Hi <img src="https://raw.githubusercontent.com/ABSphreak/ABSphreak/master/gifs/Hi.gif" width="30px">, I'm Raja Shekar</h1>
-<p align="center">
-    <a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=50&pause=1000&color=0025FF&center=true&vCenter=true&random=false&width=450&lines=3%2B+years+Full+Stack+Developer+Experience;Aspiring+Data+Science+Professional;DS+%7C+AI+%7C+ML+Enthusiast" alt="Typing SVG" /></a>
-</p>
+<!-- <p align="center">
+    <a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.herokuapp.com?font=Fire+Code&pause=1000&color=267CB9&random=false&width=435&lines=Aspiring+Data+Science+Professional;3%2B+yrs+Full+Stack+Web+Dev+Experience;DS+%7C+AI+%7C+ML+Enthusiast" alt="Typing SVG" /></a>
+</p> -->
+
+[![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Fire+Code&pause=1000&color=267CB9&center=true&random=false&width=435&lines=Aspiring+Data+Science+Professional;3%2Byrs+Full+Stack+Web+App+Dev+Experience;DS+%7C+AI+%7C+ML+Enthusiast)](https://git.io/typing-svg)
 
 <p align="center">
     A tech enthusiast, embarking on an exciting career transformation. With over 3+ years as a <b>Full Stack Developer</b>, specializing in the MEAN stack, However, my fascination with the profound impact of data on business decisions has steered me toward a transformative shift into the realm of Data Science. Currently pursuing an MSc in Data Science and Analytics at the <a href="https://www.herts.ac.uk/"><b>University of Hertfordshire</b></a>
