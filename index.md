@@ -1,6 +1,6 @@
 <h1 align="center">Hi <img src="https://raw.githubusercontent.com/ABSphreak/ABSphreak/master/gifs/Hi.gif" width="30px">, I'm Raja Shekar</h1>
 <p align="center">
-    <a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.herokuapp.com?font=Fire+Code&pause=1000&color=267CB9&random=false&width=435&lines=Aspiring+Data+Science+Professional;3%2Byrs+Full+Stack+Web+App+Dev+Experience;DS+%7C+AI+%7C+ML+Enthusiast" alt="Typing SVG" /></a>
+    <a href="https://git.io/typing-svg"><img width=250 src="https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&color=267CB9&center=true&vCenter=true&random=true&width=435&lines=Aspiring+Data+Science+Professional;DS+%7C+ML%7C+AI+Enthusiast;3%2BYrs+Full+Stack+Web+App+Dev+Experience" alt="Typing SVG" /></a>
 </p>
 
 <p align="center">
@@ -31,8 +31,6 @@
   Hyderabad Institute of Technology and Management, Hyderabad, India
   Aug 2015 – Jul 2019
 
-
-
 ---
 
 ## WORK EXPERIENCE
@@ -47,28 +45,22 @@ Oct 2022 - Present
 - Performed ongoing maintenance and optimization of the application.
 - Engineered CRON jobs and APIs for seamless functionality.
 
-
 **Full Stack Developer | [GroundHog](https://groundhogapps.com/)**
 <br>
 Dec 2019 – Aug 2022
 
 As a Full Stack Developer with over 2.8+ years of experience at GROUNDHOG APPS, I played a key role in developing robust web applications for the mining industry. My responsibilities and achievements include:
-
 - **Web Application Development:**
   - Implemented frontend and backend systems using Angular, Node.js, Express, MongoDB, Redis, and CouchDB.
   - Contributed to product-based development, enhancing overall system performance.
-
 - **API Development:**
   - Developed RESTful APIs to handle logic and serve data to the Angular front-end.
   - Adapted to dynamically provided user inputs and data to ensure a seamless user experience.
-
 - **Analytics and Reporting:**
   - Created CRON jobs for generating accurate analytical reports on per-shift mining operations.
   - Contributed to a 40% increase in mining capacity per shift through data-driven insights.
-
 - **Revenue Contribution:**
   - Collaborated with product managers to build web applications that contributed to 60% of the overall organization's revenue.
-
 - **API Integration:**
   - Integrated multiple external APIs into internal products, improving mining data accuracy.
   - Enabled clients to access their external data within the application for comprehensive insights.
