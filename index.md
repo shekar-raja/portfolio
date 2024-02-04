@@ -1,12 +1,10 @@
 <h1 align="center">Hi <img src="https://raw.githubusercontent.com/ABSphreak/ABSphreak/master/gifs/Hi.gif" width="30px">, I'm Raja Shekar</h1>
-<!-- <p align="center">
-    <a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.herokuapp.com?font=Fire+Code&pause=1000&color=267CB9&random=false&width=435&lines=Aspiring+Data+Science+Professional;3%2B+yrs+Full+Stack+Web+Dev+Experience;DS+%7C+AI+%7C+ML+Enthusiast" alt="Typing SVG" /></a>
-</p> -->
-
-[![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Fire+Code&pause=1000&color=267CB9&center=true&random=false&width=435&lines=Aspiring+Data+Science+Professional;3%2Byrs+Full+Stack+Web+App+Dev+Experience;DS+%7C+AI+%7C+ML+Enthusiast)](https://git.io/typing-svg)
+<p align="center">
+    <a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.herokuapp.com?font=Fire+Code&pause=1000&color=267CB9&random=false&width=435&lines=Aspiring+Data+Science+Professional;3%2Byrs+Full+Stack+Web+App+Dev+Experience;DS+%7C+AI+%7C+ML+Enthusiast" alt="Typing SVG" /></a>
+</p>
 
 <p align="center">
-    A tech enthusiast, embarking on an exciting career transformation. With over 3+ years as a <b>Full Stack Developer</b>, specializing in the MEAN stack, However, my fascination with the profound impact of data on business decisions has steered me toward a transformative shift into the realm of Data Science. Currently pursuing an MSc in Data Science and Analytics at the <a href="https://www.herts.ac.uk/"><b>University of Hertfordshire</b></a>
+    A tech enthusiast, embarking on an exciting career transformation. With over 3+ years as a <b>Full Stack Web Application Developer</b>, specializing in the MEAN stack, However, my fascination with the profound impact of data on business decisions has steered me toward a transformative shift into the realm of Data Science. Currently pursuing an MSc in Data Science and Analytics at the <a href="https://www.herts.ac.uk/"><b>University of Hertfordshire</b></a>
 </p>
 
 ---
@@ -21,9 +19,34 @@
 
 ---
 
+### EDUCATION
+
+- **MSc in Data Science and Analytics**
+  University of Hertfordshire, Hertfordshire, England
+  *Sept 2022 – Present*
+
+- **Bachelor of Engineering in Computer Science Engineering**
+  Hyderabad Institute of Technology and Management, Hyderabad, India
+  *Aug 2015 – Jul 2019*
+
+
+
+---
+
 ## WORK EXPERIENCE
-### [GroundHog](https://groundhogapps.com/), Hyderabad, India
-#### Full Stack Developer | Dec 2019 – Aug 2022
+
+### Freelance MEAN Stack Developer | [TruNums](https://trunums.com/)
+###### Oct 2022 - Present
+
+- Crafted and managed a dynamic social web app, enhancing user interaction and experience.
+- Developed custom features such as file sharing, communities, and private sites tailored to client needs.
+- Implemented features ensuring passive income through private site functionality.
+- Performed ongoing maintenance and optimization of the application.
+- Engineered CRON jobs and APIs for seamless functionality.
+
+
+### Full Stack Developer | [GroundHog](https://groundhogapps.com/)
+###### Dec 2019 – Aug 2022
 
 As a Full Stack Developer with over 2.8+ years of experience at GROUNDHOG APPS, I played a key role in developing robust web applications for the mining industry. My responsibilities and achievements include:
 
