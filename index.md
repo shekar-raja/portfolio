@@ -15,10 +15,12 @@
 
 - **MSc in Data Science and Analytics**
   University of Hertfordshire, Hertfordshire, England
+  <br>
   Sept 2022 – Present
 
 - **Bachelor of Engineering in Computer Science Engineering**
   Hyderabad Institute of Technology and Management, Hyderabad, India
+  <br>
   Aug 2015 – Jul 2019
 
 ---
