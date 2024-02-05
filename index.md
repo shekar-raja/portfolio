@@ -11,16 +11,6 @@
 
 ---
 
-### Little facts about me 👨‍💻
-
-- 🧞 I'm a Tech Enthusiast since childhood.
--  📚 I'm currently learning alot about various Data Science technologies.
-- 👯 I’m looking to collaborate with Data Science and MEAN stack web projects.
-- 💡 Learning something new is always been a goal to me.
-- ⚡ Fun fact: I love learning about Space & Cosmos, watching movies and exploring new tech.
-
----
-
 ## EDUCATION
 
 - **MSc in Data Science and Analytics**
@@ -128,6 +118,16 @@ My tenure at GROUNDHOG APPS was marked by continuous innovation, collaboration w
   </a>
 </p>
 <p align="center"><img align="center" src="https://github-readme-streak-stats.herokuapp.com/?user=shekar-raja&text_color=FFFFFF&bg_color=000000&title_color=94b4a4&langs_count=15&layout=compact&hide_border=true" alt="shekar-raja" /></p>
+
+---
+
+### Little facts about me 👨‍💻
+
+- 🧞 I'm a Tech Enthusiast since childhood.
+- 📚 I'm currently learning alot about various Data Science technologies.
+- 👯 I’m looking to collaborate with Data Science and MEAN stack web projects.
+- 💡 Learning something new is always been a goal to me.
+- ⚡ Fun fact: I love learning about Space & Cosmos, watching movies and exploring new tech.
 
 ---
 
