@@ -3,6 +3,10 @@
     <a href="https://git.io/typing-svg"><img width=350 src="https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&size=18&color=267CB9&center=true&vCenter=true&random=true&width=435&lines=Aspiring+Data+Science+Professional;DS+%7C+ML+%7C+AI+Enthusiast;3%2BYrs+Full+Stack+Web+App+Dev+Experience" alt="Typing SVG" /></a>
 </p>
 
+<p align="center"><b>
+    (Open for hiring!)
+</b></p>
+
 <p style="text-align: justify;
   text-justify: inter-word;">
     A tech enthusiast, embarking on an exciting career transformation. With over 3+ years as a <b>Full Stack Web Application Developer</b>, specializing in the MEAN stack, However, my fascination with the profound impact of data on business decisions has steered me toward a transformative shift into the realm of Data Science. Currently pursuing an MSc in Data Science and Analytics at the <a href="https://www.herts.ac.uk/"><b>University of Hertfordshire</b></a>
