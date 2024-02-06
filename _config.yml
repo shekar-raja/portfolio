@@ -1,9 +1,11 @@
 title: Raja Shekar
 logo: "/images/headshot.png?raw=true"
 description: >
-  <a href="https://www.linkedin.com/in/raja-shekar/">View my LinkedIn Profile</a> 
-  <br>Mean Stack Developer Turned Data Science Enthusiast | MSc Data Science Student<br>
-  <br><br>
+  <p align="center">
+    <a href="https://www.linkedin.com/in/raja-shekar/">View my LinkedIn Profile</a> 
+    <br>Mean Stack Developer Turned Data Science Enthusiast | MSc Data Science Student<br>
+    <br><br>
+  </p>
   
 remote_theme: pages-themes/minimal@v0.2.0
 plugins:
