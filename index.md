@@ -3,6 +3,10 @@
     <a href="https://git.io/typing-svg"><img width=350 src="https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&size=18&color=267CB9&center=true&vCenter=true&random=true&width=435&lines=Aspiring+Data+Science+Professional;DS+%7C+ML+%7C+AI+Enthusiast;3%2BYrs+Full+Stack+Web+App+Dev+Experience" alt="Typing SVG" /></a>
 </p>
 
+<p align="center"><b>
+    (Open for hiring!)
+</b></p>
+
 <p style="text-align: justify;
   text-justify: inter-word;">
     A tech enthusiast, embarking on an exciting career transformation. With over 3+ years as a <b>Full Stack Web Application Developer</b>, specializing in the MEAN stack, However, my fascination with the profound impact of data on business decisions has steered me toward a transformative shift into the realm of Data Science. Currently pursuing an MSc in Data Science and Analytics at the <a href="https://www.herts.ac.uk/"><b>University of Hertfordshire</b></a>
@@ -73,22 +77,34 @@ My tenure at GROUNDHOG APPS was marked by continuous innovation, collaboration w
 
 **Programming Languages:**
 <br>
-![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54) ![R](https://img.shields.io/badge/r-%23276DC3.svg?style=for-the-badge&logo=r&logoColor=white) ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white) ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E) ![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white) 
+![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54) 
+![R](https://img.shields.io/badge/r-%23276DC3.svg?style=for-the-badge&logo=r&logoColor=white) 
+![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white)
 ![Scala](https://img.shields.io/badge/scala-%23DC322F.svg?style=for-the-badge&logo=scala&logoColor=white) 
+![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white) 
+![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E) 
+![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)
 ![C](https://img.shields.io/badge/c-%2300599C.svg?style=for-the-badge&logo=c&logoColor=white)
+
+**Libraries:**
+<br>
+![NumPy](https://img.shields.io/badge/numpy-%23013243.svg?style=for-the-badge&logo=numpy&logoColor=white)
+![Pandas](https://img.shields.io/badge/pandas-%23150458.svg?style=for-the-badge&logo=pandas&logoColor=white)
+![Matplotlib](https://img.shields.io/badge/Matplotlib-%23ffffff.svg?style=for-the-badge&logo=Matplotlib&logoColor=black)
+![SciPy](https://img.shields.io/badge/SciPy-%230C55A5.svg?style=for-the-badge&logo=scipy&logoColor=%white)
 
 **Frameworks & Tools:**
 <br>
-![Pandas](https://img.shields.io/badge/pandas-%23150458.svg?style=for-the-badge&logo=pandas&logoColor=white)
 ![Angular](https://img.shields.io/badge/angular-%23DD0031.svg?style=for-the-badge&logo=angular&logoColor=white) ![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white) 
 ![Apache Kafka](https://img.shields.io/badge/Apache%20Kafka-000?style=for-the-badge&logo=apachekafka)
+![Apache Spark](https://img.shields.io/badge/Apache%20Spark-FDEE21?style=flat-square&logo=apachespark&logoColor=black)
 
 **Databases:**
 <br>
+![MySQL](https://img.shields.io/badge/mysql-%2300f.svg?style=for-the-badge&logo=mysql&logoColor=white)
 ![SQLite](https://img.shields.io/badge/sqlite-%2307405e.svg?style=for-the-badge&logo=sqlite&logoColor=white) 
 ![MongoDB](https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white) ![Couchbase](https://img.shields.io/badge/Couchbase-EA2328?style=for-the-badge&logo=couchbase&logoColor=white) 
 ![Redis](https://img.shields.io/badge/redis-%23DD0031.svg?style=for-the-badge&logo=redis&logoColor=white) 
-![MySQL](https://img.shields.io/badge/mysql-%2300f.svg?style=for-the-badge&logo=mysql&logoColor=white)
 
 **Project Management Tools:**
 <br>
@@ -100,22 +116,39 @@ My tenure at GROUNDHOG APPS was marked by continuous innovation, collaboration w
 ![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black) 
 ![Windows](https://img.shields.io/badge/Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white)
 
+---
+
+## Projects 
+
+### [Real Time Data Pipeline](https://github.com/shekar-raja/meet-up-dot-com-realtime-pipeline)
+Developed comprehensive real-time and batch data processing pipelines leveraging the meetup.com API. In this project, raw real-time data was efficiently stored into MongoDB objects, while processed real-time data was seamlessly integrated into SQL databases. Employing a robust tech stack encompassing Python, Scala, Apache Spark, Apache Kafka, SQL, and MongoDB, the system ensured optimal data management and processing capabilities, empowering streamlined analytics and insights generation.
+
+![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54) 
+![Scala](https://img.shields.io/badge/scala-%23DC322F.svg?style=for-the-badge&logo=scala&logoColor=white) 
+![Apache Kafka](https://img.shields.io/badge/Apache%20Kafka-000?style=for-the-badge&logo=apachekafka)
+![Apache Spark](https://img.shields.io/badge/Apache%20Spark-FDEE21?style=flat-square&logo=apachespark&logoColor=black)
+![MySQL](https://img.shields.io/badge/mysql-%2300f.svg?style=for-the-badge&logo=mysql&logoColor=white)
+![MongoDB](https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white)
+
+---
+
+### [ChatBot](https://github.com/shekar-raja/Leo-TheCollegeBot)
+
+Implemented a sophisticated chatbot using Python to provide comprehensive assistance and answer inquiries related to the university's services, programs, and facilities. The chatbot offers intelligent responses to a wide range of user queries, enhancing accessibility and user experience within the university community.
+
+![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54) 
+![SQLite](https://img.shields.io/badge/sqlite-%2307405e.svg?style=for-the-badge&logo=sqlite&logoColor=white) 
+
+---
+
+### [Image Optimizer Plugin for Adobe XD](https://github.com/shekar-raja/Image-Optimizer-AdobeXD)
+
+Created an Image Optimizer plugin for Adobe XD, allowing image compression within the platform. Empowering designers with seamless optimization capabilities directly within Adobe XD, this plugin has been successfully launched and is now available on the Adobe XD plugins store. Leveraging a robust tech stack comprising Javascript and JSON, the plugin delivers unparalleled efficiency and convenience for designers striving for pixel-perfect results.
+
+![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E) 
+
+---
 <!-- ---
-
-### Category Name 1     
-
-[Project 1 Title](/sample_page)
-<img src="images/dummy_thumbnail.jpg?raw=true"/>
-
----
-[Project 2 Title](/pdf/sample_presentation.pdf)
-<img src="images/dummy_thumbnail.jpg?raw=true"/>
-
----
-[Project 3 Title](http://example.com/)
-<img src="images/dummy_thumbnail.jpg?raw=true"/>
-
----
 
 ### Category Name 2
 
@@ -123,10 +156,10 @@ My tenure at GROUNDHOG APPS was marked by continuous innovation, collaboration w
 - [Project 2 Title](http://example.com/)
 - [Project 3 Title](http://example.com/)
 - [Project 4 Title](http://example.com/)
-- [Project 5 Title](http://example.com/) -->
+- [Project 5 Title](http://example.com/)
 
+--- -->
 
----
 ## GitHub Stats
 
 <p align="center">
