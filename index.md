@@ -38,7 +38,7 @@
 **Freelance MEAN Stack Developer | [TruNums](https://trunums.com/)**
 <br>
 Oct 2022 - Jan 2024
-
+<br>
 - Crafted and managed a dynamic social web app, enhancing user interaction and experience.
 - Developed custom features such as file sharing, communities, and private sites tailored to client needs.
 - Implemented features ensuring passive income through private site functionality.
@@ -48,7 +48,7 @@ Oct 2022 - Jan 2024
 **Full Stack Developer | [GroundHog](https://groundhogapps.com/)**
 <br>
 Dec 2019 – Aug 2022
-
+<br>
 As a Full Stack Developer with over 2.8+ years of experience at GROUNDHOG, I played a key role in developing robust web applications for the mining industry. My responsibilities and achievements include:
 - **Web Application Development:**
   - Implemented frontend and backend systems using Angular, Node.js, Express, MongoDB, Redis, and CouchDB.
