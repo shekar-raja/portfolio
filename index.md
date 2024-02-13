@@ -37,7 +37,7 @@
 
 **Freelance MEAN Stack Developer | [TruNums](https://trunums.com/)**
 <br>
-Oct 2022 - Present
+Oct 2022 - Jan 2024
 
 - Crafted and managed a dynamic social web app, enhancing user interaction and experience.
 - Developed custom features such as file sharing, communities, and private sites tailored to client needs.
@@ -49,7 +49,7 @@ Oct 2022 - Present
 <br>
 Dec 2019 – Aug 2022
 
-As a Full Stack Developer with over 2.8+ years of experience at GROUNDHOG APPS, I played a key role in developing robust web applications for the mining industry. My responsibilities and achievements include:
+As a Full Stack Developer with over 2.8+ years of experience at GROUNDHOG, I played a key role in developing robust web applications for the mining industry. My responsibilities and achievements include:
 - **Web Application Development:**
   - Implemented frontend and backend systems using Angular, Node.js, Express, MongoDB, Redis, and CouchDB.
   - Contributed to product-based development, enhancing overall system performance.
@@ -64,7 +64,6 @@ As a Full Stack Developer with over 2.8+ years of experience at GROUNDHOG APPS, 
 - **API Integration:**
   - Integrated multiple external APIs into internal products, improving mining data accuracy.
   - Enabled clients to access their external data within the application for comprehensive insights.
-
 - **Service-Based Web Application:**
   - Built, tested, and reviewed code for a service-based web application.
   - Facilitated user interaction and passive income generation through the application.
@@ -129,6 +128,14 @@ Developed comprehensive real-time and batch data processing pipelines leveraging
 ![Apache Spark](https://img.shields.io/badge/Apache%20Spark-FDEE21?style=flat-square&logo=apachespark&logoColor=black)
 ![MySQL](https://img.shields.io/badge/mysql-%2300f.svg?style=for-the-badge&logo=mysql&logoColor=white)
 ![MongoDB](https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white)
+
+---
+
+### [Titanic EDA](https://rpubs.com/rj_2104/titanicdisaster)
+
+Conducted in-depth exploratory data analysis utilizing R language to analyze the Titanic dataset. Employed various statistical techniques and visualization methods to uncover insights into the demographics and survival rates of passengers aboard the Titanic. This analysis involved data cleaning, visualization of key trends and patterns, and statistical modeling to gain a deeper understanding of the factors influencing survival outcomes. The findings from this project contributed to a better understanding of historical events and provided valuable insights into the factors associated with survival on the Titanic.
+
+![R](https://img.shields.io/badge/r-%23276DC3.svg?style=for-the-badge&logo=r&logoColor=white) 
 
 ---
 
