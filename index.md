@@ -9,7 +9,7 @@
 
 <p style="text-align: justify;
   text-justify: inter-word;">
-    A tech enthusiast, embarking on an exciting career transformation. With over 3+ years as a <b>Full Stack Web Application Developer</b>, specializing in the MEAN stack, However, my fascination with the profound impact of data on business decisions has steered me toward a transformative shift into the realm of Data Science. Currently pursuing an MSc in Data Science and Analytics at the <a href="https://www.herts.ac.uk/"><b>University of Hertfordshire</b></a>
+    A tech enthusiast, embarking on an exciting career transformation. With over 3.5+ years as a <b>Full Stack Web Application Developer</b>, specializing in the MEAN stack, However, my fascination with the profound impact of data on business decisions has steered me toward a transformative shift into the realm of Data Science. Currently pursuing an MSc in Data Science and Analytics at the <a href="https://www.herts.ac.uk/"><b>University of Hertfordshire</b></a>
     <br> 
 </p>
 
@@ -49,7 +49,7 @@ Oct 2022 - Jan 2024
 <br>
 Dec 2019 – Aug 2022
 <br>
-As a Full Stack Developer with over 2.8+ years of experience at GROUNDHOG, I played a key role in developing robust web applications for the mining industry. My responsibilities and achievements include:
+As a Full Stack Developer with over 3.5+ years of experience at GROUNDHOG, I played a key role in developing robust web applications for the mining industry. My responsibilities and achievements include:
 - **Web Application Development:**
   - Implemented frontend and backend systems using Angular, Node.js, Express, MongoDB, Redis, and CouchDB.
   - Contributed to product-based development, enhancing overall system performance.
