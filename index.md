@@ -1,6 +1,6 @@
 <h1 align="center">Hi <img src="https://raw.githubusercontent.com/ABSphreak/ABSphreak/master/gifs/Hi.gif" width="30px">, I'm Raja Shekar</h1>
 <p align="center">
-    <a href="https://git.io/typing-svg"><img width=350 src="https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&size=18&color=267CB9&center=true&vCenter=true&random=true&width=435&lines=Aspiring+Data+Science+Professional;DS+%7C+ML+%7C+AI+Enthusiast;3%2BYrs+Full+Stack+Web+App+Dev+Experience" alt="Typing SVG" /></a>
+    <a href="https://git.io/typing-svg"><img width=350 src="https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&size=18&color=267CB9&center=true&vCenter=true&random=true&width=435&lines=Aspiring+Data+Science+Professional;DS+%7C+ML+%7C+AI+Enthusiast;3.5%2BYrs+Full+Stack+Web+App+Dev+Experience" alt="Typing SVG" /></a>
 </p>
 
 <p align="center"><b>
