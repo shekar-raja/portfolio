@@ -7,9 +7,11 @@
     (Open for hiring!)
 </b></p>
 
+## ABOUT ME
+
 <p style="text-align: justify;
   text-justify: inter-word;">
-    A tech enthusiast, embarking on an exciting career transformation. With over 3.5+ years as a <b>Full Stack Web Application Developer</b>, specializing in the MEAN stack, However, my fascination with the profound impact of data on business decisions has steered me toward a transformative shift into the realm of Data Science. Currently pursuing an MSc in Data Science and Analytics at the <a href="https://www.herts.ac.uk/"><b>University of Hertfordshire</b></a>
+    Tech enthusiast with 3.5+ years of <b>MEAN stack web application development</b>, now delving into the captivating world of Data Science. Currently honing skills at the <a href="https://www.herts.ac.uk/"><b>University of Hertfordshire</b></a> for an MSc in Data Science and Analytics. In my previous roles, I have found myself regularly called upon to tackle technical challenges, resolve coding issues and collaborating seamlessly across diverse teams and projects. My love of coding drives me internally and I relish every opportunity to tackle the deepest technical challenges. Ready to embark on new challenges!
     <br> 
 </p>
 
