@@ -6,6 +6,8 @@
     </b></p>
 </p>
 
+---
+
 ## ABOUT ME
 
 <p style="text-align: justify;
