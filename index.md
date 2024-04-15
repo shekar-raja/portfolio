@@ -12,7 +12,7 @@
 
 <p style="text-align: justify;
   text-justify: inter-word;">
-    Tech enthusiast with 3.5+ years of <b>MEAN stack web application development</b>, now delving into the captivating world of Data Science. Currently honing skills at the <a href="https://www.herts.ac.uk/"><b>University of Hertfordshire</b></a> for an MSc in Data Science and Analytics. In my previous roles, I have found myself regularly called upon to tackle technical challenges, resolve coding issues and collaborating seamlessly across diverse teams and projects. My love of coding drives me internally and I relish every opportunity to tackle the deepest technical challenges. Ready to embark on new challenges!
+    Tech enthusiast with 3.5+ years of <b>Software Development</b>, now delving into the captivating world of Data Science. Currently honing skills at the <a href="https://www.herts.ac.uk/"><b>University of Hertfordshire</b></a> for an MSc in Data Science and Analytics. In my previous roles, I have found myself regularly called upon to tackle technical challenges, resolve coding issues and collaborating seamlessly across diverse teams and projects. My love of coding drives me internally and I relish every opportunity to tackle the deepest technical challenges. Ready to embark on new challenges!
     <br> 
 </p>
 
@@ -38,7 +38,7 @@
 
 ## WORK EXPERIENCE
 
-**Freelance MEAN Stack Developer | [TruNums](https://trunums.com/)**
+**Software Engineer | [TruNums](https://trunums.com/)**
 <br>
 Oct 2022 - Jan 2024
 <br>
@@ -48,11 +48,11 @@ Oct 2022 - Jan 2024
 - Performed ongoing maintenance and optimization of the application.
 - Engineered CRON jobs and APIs for seamless functionality.
 
-**Full Stack Developer | [GroundHog](https://groundhogapps.com/)**
+**Data Engineer (MTS - II) | [GroundHog](https://groundhogapps.com/)**
 <br>
 Dec 2019 – Aug 2022
 <br>
-As a Full Stack Developer with over 3.5+ years of experience at GROUNDHOG, I played a key role in developing robust web applications for the mining industry. My responsibilities and achievements include:
+With over 3.5+ years of experience at GROUNDHOG, I played a key role in developing robust web applications for the mining industry. My responsibilities and achievements include:
 - **Web Application Development:**
   - Implemented frontend and backend systems using Angular, Node.js, Express, MongoDB, Redis, and CouchDB.
   - Contributed to product-based development, enhancing overall system performance.
@@ -63,7 +63,7 @@ As a Full Stack Developer with over 3.5+ years of experience at GROUNDHOG, I pla
   - Created CRON jobs for generating accurate analytical reports on per-shift mining operations.
   - Contributed to a 40% increase in mining capacity per shift through data-driven insights.
 - **Revenue Contribution:**
-  - Collaborated with product managers to build web applications that contributed to 60% of the overall organization's revenue.
+  - Collaborated with product managers to build web applications and data pipelines that contributed to 60% of the overall organization's revenue.
 - **API Integration:**
   - Integrated multiple external APIs into internal products, improving mining data accuracy.
   - Enabled clients to access their external data within the application for comprehensive insights.
