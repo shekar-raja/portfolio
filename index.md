@@ -52,7 +52,7 @@ Oct 2022 - Jan 2024
 <br>
 Dec 2019 – Aug 2022
 <br>
-With over 3.5+ years of experience at GROUNDHOG, I played a key role in developing robust web applications for the mining industry. My responsibilities and achievements include:
+With over 3.5+ years of experience at GROUNDHOG, I played a key role in developing robust data pipelines and web applications for the mining industry. My responsibilities and achievements include:
 - **Web Application Development:**
   - Implemented frontend and backend systems using Angular, Node.js, Express, MongoDB, Redis, and CouchDB.
   - Contributed to product-based development, enhancing overall system performance.
