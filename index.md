@@ -48,7 +48,7 @@ Oct 2022 - Jan 2024
 - Performed ongoing maintenance and optimization of the application.
 - Engineered CRON jobs and APIs for seamless functionality.
 
-**Data Engineer (MTS - II) | [GroundHog](https://groundhogapps.com/)**
+**Software Engineer | [GroundHog](https://groundhogapps.com/)**
 <br>
 Dec 2019 – Aug 2022
 <br>
