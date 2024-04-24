@@ -12,7 +12,7 @@
 
 <p style="text-align: justify;
   text-justify: inter-word;">
-    Tech enthusiast with 3.5+ years of <b>Software Development</b>, now delving into the captivating world of Data Science. Currently honing skills at the <a href="https://www.herts.ac.uk/"><b>University of Hertfordshire</b></a> for an MSc in Data Science and Analytics. In my previous roles, I have found myself regularly called upon to tackle technical challenges, resolve coding issues and collaborating seamlessly across diverse teams and projects. My love of coding drives me internally and I relish every opportunity to tackle the deepest technical challenges. Ready to embark on new challenges!
+    Tech enthusiast with 3+ years of <b>Software Development</b>, now delving into the captivating world of Data Science. Currently honing skills at the <a href="https://www.herts.ac.uk/"><b>University of Hertfordshire</b></a> for an MSc in Data Science and Analytics. In my previous roles, I have found myself regularly called upon to tackle technical challenges, resolve coding issues and collaborating seamlessly across diverse teams and projects. My love of coding drives me internally and I relish every opportunity to tackle the deepest technical challenges. Ready to embark on new challenges!
     <br> 
 </p>
 
@@ -42,34 +42,25 @@
 <br>
 Oct 2022 - Jan 2024
 <br>
-- Crafted and managed a dynamic social web app, enhancing user interaction and experience.
-- Developed custom features such as file sharing, communities, and private sites tailored to client needs.
-- Implemented features ensuring passive income through private site functionality.
-- Performed ongoing maintenance and optimization of the application.
-- Engineered CRON jobs and APIs for seamless functionality.
+- Collaborated with clients to understand requirements and delivered tailored solutions, aligning with business objectives
+- Applied data analysis techniques to identify user trends and preferences, influencing the design and functionality of the social media platform
+-	Optimized database operations, improving data retrieval speed by 30% and ensuring data quality and integrity
+-	Integrated external APIs, enhancing data accuracy and enriching user experience
+-	Deployed new releases using Amazon Web Services (AWS), resulting in a 20% increase in the user base
+
 
 **Software Engineer | [GroundHog](https://groundhogapps.com/)**
 <br>
 Dec 2019 – Aug 2022
 <br>
-With over 3.5+ years of experience at GROUNDHOG, I played a key role in developing robust data pipelines and web applications for the mining industry. My responsibilities and achievements include:
-- **Web Application Development:**
-  - Implemented frontend and backend systems using Angular, Node.js, Express, MongoDB, Redis, and CouchDB.
-  - Contributed to product-based development, enhancing overall system performance.
-- **API Development:**
-  - Developed RESTful APIs to handle logic and serve data to the Angular front-end.
-  - Adapted to dynamically provided user inputs and data to ensure a seamless user experience.
-- **Analytics and Reporting:**
-  - Created CRON jobs for generating accurate analytical reports on per-shift mining operations.
-  - Contributed to a 40% increase in mining capacity per shift through data-driven insights.
-- **Revenue Contribution:**
-  - Collaborated with product managers to build web applications and data pipelines that contributed to 60% of the overall organization's revenue.
-- **API Integration:**
-  - Integrated multiple external APIs into internal products, improving mining data accuracy.
-  - Enabled clients to access their external data within the application for comprehensive insights.
-- **Service-Based Web Application:**
-  - Built, tested, and reviewed code for a service-based web application.
-  - Facilitated user interaction and passive income generation through the application.
+With over 3+ years of experience at GROUNDHOG, I played a key role in developing robust data pipelines and web applications for the mining industry. My responsibilities and achievements include:
+-	Developed and maintained data pipelines in the mining industry, ensuring seamless integration and processing of diverse data across systems
+-	Implemented automation techniques using Power BI and CRON jobs to generate analytical reports autonomously, improving efficiency and productivity
+-	Utilized Excel to generate in-depth shift end reports, leading to a 40% increase in miners' productivity rate
+-	Integrated external APIs and data sources, enhancing data accuracy and accessibility for informed decision-making
+-	Collaborated with cross-functional teams to optimize database performance and problem-solving approaches
+-	Leveraged Amazon Web Services (AWS) for efficient deployment and scalability of applications, reflecting experience in cloud computing
+
 
 My tenure at GROUNDHOG APPS was marked by continuous innovation, collaboration with cross-functional teams, and a focus on delivering high-impact solutions to clients in the mining industry.
 
@@ -122,6 +113,21 @@ My tenure at GROUNDHOG APPS was marked by continuous innovation, collaboration w
 ---
 
 ## Projects 
+
+### University Thesis Project: Exoplanet Detection using Machine Learning
+- Conducting research on exoplanet detection using machine learning algorithms
+-	Collecting and pre-processing astronomical data for training and testing machine learning models
+-	Implementing various machine learning algorithms to classify exoplanets from NASA exoplanet archive
+-	Analysing and interpreting results to contribute to the field of exoplanet detection
+-	Expected completion: August 2024
+
+![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
+![NumPy](https://img.shields.io/badge/numpy-%23013243.svg?style=for-the-badge&logo=numpy&logoColor=white)
+![Pandas](https://img.shields.io/badge/pandas-%23150458.svg?style=for-the-badge&logo=pandas&logoColor=white)
+![Matplotlib](https://img.shields.io/badge/Matplotlib-%23ffffff.svg?style=for-the-badge&logo=Matplotlib&logoColor=black)
+![scikit-learn](https://img.shields.io/badge/scikit--learn-%23F7931E.svg?style=for-the-badge&logo=scikit-learn&logoColor=white)
+![Git](https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white) 
+
 
 ### [Real Time Data Pipeline](https://github.com/shekar-raja/meet-up-dot-com-realtime-pipeline)
 Developed comprehensive real-time and batch data processing pipelines leveraging the meetup.com API. In this project, raw real-time data was efficiently stored into MongoDB objects, while processed real-time data was seamlessly integrated into SQL databases. Employing a robust tech stack encompassing Python, Scala, Apache Spark, Apache Kafka, SQL, and MongoDB, the system ensured optimal data management and processing capabilities, empowering streamlined analytics and insights generation.
