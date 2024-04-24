@@ -38,7 +38,7 @@
 
 ## WORK EXPERIENCE
 
-**Software Engineer | [TruNums](https://trunums.com/)**
+**Freelance Software Engineer | [TruNums](https://trunums.com/)**
 <br>
 Oct 2022 - Jan 2024
 <br>
