@@ -6,7 +6,7 @@
     </b></p>
 </p>
 
----
+
 
 ## ABOUT ME
 
@@ -20,8 +20,6 @@
     <b><i>"---Functions describe the world---"</i></b>
 </p>
 
----
-
 ## EDUCATION
 
 - **MSc in Data Science and Analytics**
@@ -34,7 +32,6 @@
   <br>
   Aug 2015 – Jul 2019
 
----
 
 ## WORK EXPERIENCE
 
@@ -64,7 +61,6 @@ With over 3+ years of experience at GROUNDHOG, I played a key role in developing
 
 My tenure at GROUNDHOG APPS was marked by continuous innovation, collaboration with cross-functional teams, and a focus on delivering high-impact solutions to clients in the mining industry.
 
----
 
 ## MY SKILLS
 
@@ -110,7 +106,7 @@ My tenure at GROUNDHOG APPS was marked by continuous innovation, collaboration w
 ![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black) 
 ![Windows](https://img.shields.io/badge/Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white)
 
----
+
 
 ## Projects 
 
@@ -164,7 +160,7 @@ Created an Image Optimizer plugin for Adobe XD, allowing image compression withi
 
 ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E) 
 
----
+
 <!-- ---
 
 ### Category Name 2
@@ -176,6 +172,12 @@ Created an Image Optimizer plugin for Adobe XD, allowing image compression withi
 - [Project 5 Title](http://example.com/)
 
 --- -->
+
+
+
+## Blogs
+
+[![Vector Database Introduction Blog](/images/blogs/vector-db-thumbnail.png)](https://rshekar.notion.site/Vector-Database-dcf1604e3d604052be8d7070887084e9?pvs=4)
 
 ## GitHub Stats
 
