@@ -78,6 +78,7 @@ My tenure at GROUNDHOG APPS was marked by continuous innovation, collaboration w
 ![scikit-learn](https://img.shields.io/badge/scikit--learn-%23F7931E.svg?style=for-the-badge&logo=scikit-learn&logoColor=white)
 ![Git](https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white) 
 
+---
 
 ### [Real Time Data Pipeline](https://github.com/shekar-raja/meet-up-dot-com-realtime-pipeline)
 Developed comprehensive real-time and batch data processing pipelines leveraging the meetup.com API. In this project, raw real-time data was efficiently stored into MongoDB objects, while processed real-time data was seamlessly integrated into SQL databases. Employing a robust tech stack encompassing Python, Scala, Apache Spark, Apache Kafka, SQL, and MongoDB, the system ensured optimal data management and processing capabilities, empowering streamlined analytics and insights generation.
