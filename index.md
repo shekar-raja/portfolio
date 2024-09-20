@@ -12,20 +12,24 @@
 
 <p style="text-align: justify;
   text-justify: inter-word;">
-    Tech enthusiast with 3+ years of <b>Software Development</b>, now delving into the captivating world of Data Science. Currently honing skills at the <a href="https://www.herts.ac.uk/"><b>University of Hertfordshire</b></a> for an MSc in Data Science and Analytics. In my previous roles, I have found myself regularly called upon to tackle technical challenges, resolve coding issues and collaborating seamlessly across diverse teams and projects. My love of coding drives me internally and I relish every opportunity to tackle the deepest technical challenges. Ready to embark on new challenges!
+    A passionate software engineer turned data science enthusiast, I bring over <b>3 years</b> of hands-on <b>software development</b> experience, now further enriched by my pursuit of an MSc in Data Science and Analytics at the University of Hertfordshire. My journey has been one of solving complex coding problems, optimizing data systems, and leading innovative projects that drive business success. From developing high-performance APIs to crafting real-time data pipelines, I am excited about pushing the boundaries of data and technology. With a relentless drive for learning and a proven track record in tech, I am ready to embrace new challenges in the evolving landscape of data science.
     <br> 
 </p>
 
 <p align="center">
-    <b><i>"---Functions describe the world---"</i></b>
+    <b><i>"---Functions describe the world--let’s write ours together..."</i></b>
 </p>
+
 
 ## EDUCATION
 
 - **MSc in Data Science and Analytics**
-  University of Hertfordshire, Hertfordshire, England
+  <a href="https://www.herts.ac.uk/">University of Hertfordshire</a>, Hertfordshire, England
   <br>
   Sept 2022 – Present
+  <br>
+  - <b>Relevant Coursework:</b> Data Mining, Machine Learning, Neural Networks, Research Methods, Data Ethics
+  - <b>Expected Completion:</b> Sept 2024
 
 - **Bachelor of Engineering in Computer Science Engineering**
   Hyderabad Institute of Technology and Management, Hyderabad, India
@@ -40,19 +44,18 @@
 Oct 2022 - Jan 2024
 <br>
 - Collaborated with clients to understand requirements and delivered tailored solutions, aligning with business objectives
-- Applied data analysis techniques to identify user trends and preferences, influencing the design and functionality of the social media platform
 -	Optimized database operations, improving data retrieval speed by 30% and ensuring data quality and integrity
 -	Integrated external APIs, enhancing data accuracy and enriching user experience
 -	Deployed new releases using Amazon Web Services (AWS), resulting in a 20% increase in the user base
 
 
-**Software Engineer | [GroundHog](https://groundhogapps.com/)**
+**Software Engineer | [GroundHog Apps](https://groundhogapps.com/)**
 <br>
 Dec 2019 – Aug 2022
 <br>
-With over 3+ years of experience at GROUNDHOG, I played a key role in developing robust data pipelines and web applications for the mining industry. My responsibilities and achievements include:
--	Developed and maintained data pipelines in the mining industry, ensuring seamless integration and processing of diverse data across systems
--	Implemented automation techniques using Power BI and CRON jobs to generate analytical reports autonomously, improving efficiency and productivity
+With over 3+ years of experience at GroundHog Apps, I played a key role in developing robust data pipelines and web applications for the mining industry. My responsibilities and achievements include:
+-	Engineered MEAN Stack web applications that increased mining industry productivity by 40%, delivering data-driven insights and enhancing operational efficiency
+-	Implemented automation techniques using CRON jobs to generate analytical reports autonomously, improving efficiency and productivity
 -	Utilized Excel to generate in-depth shift end reports, leading to a 40% increase in miners' productivity rate
 -	Integrated external APIs and data sources, enhancing data accuracy and accessibility for informed decision-making
 -	Collaborated with cross-functional teams to optimize database performance and problem-solving approaches
@@ -62,62 +65,11 @@ With over 3+ years of experience at GROUNDHOG, I played a key role in developing
 My tenure at GROUNDHOG APPS was marked by continuous innovation, collaboration with cross-functional teams, and a focus on delivering high-impact solutions to clients in the mining industry.
 
 
-## MY SKILLS
-
-**Programming Languages:**
-<br>
-![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54) 
-![R](https://img.shields.io/badge/r-%23276DC3.svg?style=for-the-badge&logo=r&logoColor=white) 
-![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white)
-![Scala](https://img.shields.io/badge/scala-%23DC322F.svg?style=for-the-badge&logo=scala&logoColor=white) 
-![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white) 
-![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E) 
-![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)
-![C](https://img.shields.io/badge/c-%2300599C.svg?style=for-the-badge&logo=c&logoColor=white)
-
-**Libraries:**
-<br>
-![NumPy](https://img.shields.io/badge/numpy-%23013243.svg?style=for-the-badge&logo=numpy&logoColor=white)
-![Pandas](https://img.shields.io/badge/pandas-%23150458.svg?style=for-the-badge&logo=pandas&logoColor=white)
-![Matplotlib](https://img.shields.io/badge/Matplotlib-%23ffffff.svg?style=for-the-badge&logo=Matplotlib&logoColor=black)
-![Seaborn](https://img.shields.io/badge/seaborn-%23ffffff.svg?style=for-the-badge&logo=seaborn&logoColor=white)
-![scikit-learn](https://img.shields.io/badge/scikit--learn-%23F7931E.svg?style=for-the-badge&logo=scikit-learn&logoColor=white)
-
-**Frameworks & Tools:**
-<br>
-![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white)
-![Angular](https://img.shields.io/badge/angular-%23DD0031.svg?style=for-the-badge&logo=angular&logoColor=white) 
-![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white) 
-![Apache Kafka](https://img.shields.io/badge/Apache%20Kafka-000?style=for-the-badge&logo=apachekafka)
-![Apache Spark](https://img.shields.io/badge/Apache%20Spark-FDEE21?style=flat-square&logo=apachespark&logoColor=black)
-
-**Databases:**
-<br>
-![MySQL](https://img.shields.io/badge/mysql-%2300f.svg?style=for-the-badge&logo=mysql&logoColor=white)
-![SQLite](https://img.shields.io/badge/sqlite-%2307405e.svg?style=for-the-badge&logo=sqlite&logoColor=white) 
-![MongoDB](https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white) ![Couchbase](https://img.shields.io/badge/Couchbase-EA2328?style=for-the-badge&logo=couchbase&logoColor=white) 
-![Redis](https://img.shields.io/badge/redis-%23DD0031.svg?style=for-the-badge&logo=redis&logoColor=white) 
-
-**Project Management Tools:**
-<br>
-![Git](https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white) 
-![Jira](https://img.shields.io/badge/jira-%230A0FFF.svg?style=for-the-badge&logo=jira&logoColor=white)
-
-**OS:**
-<br>
-![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black) 
-![Windows](https://img.shields.io/badge/Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white)
-
-
-
 ## Projects 
 
 ### University Thesis Project: Exoplanet Detection using Machine Learning
-- Conducting research on exoplanet detection using machine learning algorithms
--	Collecting and pre-processing astronomical data for training and testing machine learning models
--	Implementing various machine learning algorithms to classify exoplanets from NASA exoplanet archive
--	Analysing and interpreting results to contribute to the field of exoplanet detection
--	Expected completion: August 2024
+- Developed a machine learning model with 97% accuracy for detecting exoplanets, using data from NASA’s Kepler mission.
+- Applied SMOTE for class balancing and PCA for dimensionality reduction, optimizing the MLP neural network, which enhanced both accuracy and computational efficiency.
 
 ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
 ![NumPy](https://img.shields.io/badge/numpy-%23013243.svg?style=for-the-badge&logo=numpy&logoColor=white)
@@ -175,6 +127,51 @@ Created an Image Optimizer plugin for Adobe XD, allowing image compression withi
 
 --- -->
 
+## MY SKILLS
+
+**Programming Languages:**
+<br>
+![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54) 
+![R](https://img.shields.io/badge/r-%23276DC3.svg?style=for-the-badge&logo=r&logoColor=white) 
+![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white)
+![Scala](https://img.shields.io/badge/scala-%23DC322F.svg?style=for-the-badge&logo=scala&logoColor=white) 
+![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white) 
+![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E) 
+![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)
+![C](https://img.shields.io/badge/c-%2300599C.svg?style=for-the-badge&logo=c&logoColor=white)
+
+**Libraries:**
+<br>
+![NumPy](https://img.shields.io/badge/numpy-%23013243.svg?style=for-the-badge&logo=numpy&logoColor=white)
+![Pandas](https://img.shields.io/badge/pandas-%23150458.svg?style=for-the-badge&logo=pandas&logoColor=white)
+![Matplotlib](https://img.shields.io/badge/Matplotlib-%23ffffff.svg?style=for-the-badge&logo=Matplotlib&logoColor=black)
+![Seaborn](https://img.shields.io/badge/seaborn-%23ffffff.svg?style=for-the-badge&logo=seaborn&logoColor=white)
+![scikit-learn](https://img.shields.io/badge/scikit--learn-%23F7931E.svg?style=for-the-badge&logo=scikit-learn&logoColor=white)
+
+**Frameworks & Tools:**
+<br>
+![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white)
+![Angular](https://img.shields.io/badge/angular-%23DD0031.svg?style=for-the-badge&logo=angular&logoColor=white) 
+![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white) 
+![Apache Kafka](https://img.shields.io/badge/Apache%20Kafka-000?style=for-the-badge&logo=apachekafka)
+![Apache Spark](https://img.shields.io/badge/Apache%20Spark-FDEE21?style=flat-square&logo=apachespark&logoColor=black)
+
+**Databases:**
+<br>
+![MySQL](https://img.shields.io/badge/mysql-%2300f.svg?style=for-the-badge&logo=mysql&logoColor=white)
+![SQLite](https://img.shields.io/badge/sqlite-%2307405e.svg?style=for-the-badge&logo=sqlite&logoColor=white) 
+![MongoDB](https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white) ![Couchbase](https://img.shields.io/badge/Couchbase-EA2328?style=for-the-badge&logo=couchbase&logoColor=white) 
+![Redis](https://img.shields.io/badge/redis-%23DD0031.svg?style=for-the-badge&logo=redis&logoColor=white) 
+
+**Project Management Tools:**
+<br>
+![Git](https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white) 
+![Jira](https://img.shields.io/badge/jira-%230A0FFF.svg?style=for-the-badge&logo=jira&logoColor=white)
+
+**OS:**
+<br>
+![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black) 
+![Windows](https://img.shields.io/badge/Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white)
 
 
 ## Blogs
