@@ -43,23 +43,22 @@
 <br>
 Oct 2022 - Jan 2024
 <br>
-- Collaborated with clients to understand requirements and delivered tailored solutions, aligning with business objectives
--	Optimized database operations, improving data retrieval speed by 30% and ensuring data quality and integrity
--	Integrated external APIs, enhancing data accuracy and enriching user experience
--	Deployed new releases using Amazon Web Services (AWS), resulting in a 20% increase in the user base
-
+-	Led the development of a social media web application using the MEAN stack, serving over 5,000+ users worldwide.
+-	Deployed application releases using AWS, ensuring smooth, reliable updates and minimised downtime for global users.
+-	Managed and optimised databases, ensuring high availability, data integrity, and enhanced performance for critical application functions.
+- Designed, developed, and optimised both NoSQL and SQL databases, ensuring high availability, data integrity, and improved performance across diverse application use cases.
 
 **Software Engineer | [GroundHog Apps](https://groundhogapps.com/)**
 <br>
 Dec 2019 – Aug 2022
 <br>
 With over 3+ years of experience at GroundHog Apps, I played a key role in developing robust data pipelines and web applications for the mining industry. My responsibilities and achievements include:
--	Engineered MEAN Stack web applications that increased mining industry productivity by 40%, delivering data-driven insights and enhancing operational efficiency
--	Implemented automation techniques using CRON jobs to generate analytical reports autonomously, improving efficiency and productivity
--	Utilized Excel to generate in-depth shift end reports, leading to a 40% increase in miners' productivity rate
--	Integrated external APIs and data sources, enhancing data accuracy and accessibility for informed decision-making
--	Collaborated with cross-functional teams to optimize database performance and problem-solving approaches
--	Leveraged Amazon Web Services (AWS) for efficient deployment and scalability of applications, reflecting experience in cloud computing
+-	Designed, developed, and maintained scalable web applications for mining industry using the MEAN stack, enhancing their production capacity by 40 per cent more tonnes per shift.
+-	Developed autonomous systems to generate shift-end reports, reducing manual reporting efforts by 50 per cent.
+-	Developed scalable REST APIs to support new features and functionality, enhancing the overall application performance.
+-	Improved database retrieval efficiency by optimising and creating new indexes, significantly reducing query times by 20 per cent.
+-	Led the full development cycle of a project from scratch, gathering client requirements and delivering a final product with positive feedback.
+-	Collaborated with product managers in planning and executing new product releases, ensuring smooth project delivery and alignment with client expectations.
 
 
 My tenure at GROUNDHOG APPS was marked by continuous innovation, collaboration with cross-functional teams, and a focus on delivering high-impact solutions to clients in the mining industry.
