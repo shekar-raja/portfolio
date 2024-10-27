@@ -1,6 +1,6 @@
 <h1 align="center">Hi <img src="https://raw.githubusercontent.com/ABSphreak/ABSphreak/master/gifs/Hi.gif" width="30px">, I'm Raja Shekar</h1>
 <p align="center">
-    <a href="https://git.io/typing-svg"><img width=350 src="https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&size=18&color=267CB9&center=true&vCenter=true&random=true&width=435&lines=Aspiring+Data+Science+Professional;DS+%7C+ML+%7C+AI+Enthusiast;3.5%2BYrs+Full+Stack+Web+App+Dev+Experience" alt="Typing SVG" /></a>
+    <a href="https://git.io/typing-svg"><img width=350 src="https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&size=18&color=267CB9&center=true&vCenter=true&random=true&width=435&lines=Aspiring+Data+Science+Professional;DS+%7C+ML+%7C+AI+Enthusiast;3.5%2BYrs+of+Software+Engineer+Experience" alt="Typing SVG" /></a>
     <p align="center"><b>
         (Open for hiring!)
     </b></p>
@@ -12,12 +12,13 @@
 
 <p style="text-align: justify;
   text-justify: inter-word;">
-    A passionate software engineer turned data science enthusiast, I bring over <b>3 years</b> of hands-on <b>software development</b> experience, now further enriched by my pursuit of an MSc in Data Science and Analytics at the University of Hertfordshire. My journey has been one of solving complex coding problems, optimizing data systems, and leading innovative projects that drive business success. From developing high-performance APIs to crafting real-time data pipelines, I am excited about pushing the boundaries of data and technology. With a relentless drive for learning and a proven track record in tech, I am ready to embrace new challenges in the evolving landscape of data science.
+    <!-- A passionate software engineer turned data science enthusiast, I bring over <b>3.5 years</b> of hands-on <b>software development</b> experience, now further enriched by my pursuit of an MSc in Data Science and Analytics at the University of Hertfordshire. My journey has been one of solving complex coding problems, optimizing data systems, and leading innovative projects that drive business success. From developing high-performance APIs to crafting real-time data pipelines, I am excited about pushing the boundaries of data and technology. With a relentless drive for learning and a proven track record in tech, I am ready to embrace new challenges in the evolving landscape of data science. -->
+    A software engineer with a distinguished MSc in Data Science and Analytics from the University of Hertfordshire, I bring over <b>3.5 years</b> of robust software development experience, now focused on advanced data science applications. My journey has centered on solving complex technical challenges, optimizing data systems, and leading projects that directly impact business outcomes. From engineering high-performance APIs to architecting real-time data pipelines, I am driven by a commitment to excellence and innovation. With a continuous drive to expand my expertise and a proven record in technology, I am well-prepared to contribute to and thrive in the dynamic field of data science.
     <br> 
 </p>
 
 <p align="center">
-    <b><i>"---Functions describe the world--let’s write ours together..."</i></b>
+    <b><i>~ Functions describe the world. let’s write ours together.</i></b>
 </p>
 
 
@@ -26,15 +27,16 @@
 - **MSc in Data Science and Analytics**
   <a href="https://www.herts.ac.uk/">University of Hertfordshire</a>, Hertfordshire, England
   <br>
-  Sept 2022 – Present
+  September 2022 – October 2024
   <br>
-  - <b>Relevant Coursework:</b> Data Mining, Machine Learning, Neural Networks, Research Methods, Data Ethics
-  - <b>Expected Completion:</b> Sept 2024
+  - <b>Coursework:</b> Foundations of Data Science, Applied Data Science, Data Mining, Neural Networks and Machine Learning, Legal and Ethics, Research Methods, Team Research and Project Development, Computer Science Masters Project.
 
 - **Bachelor of Engineering in Computer Science Engineering**
   Hyderabad Institute of Technology and Management, Hyderabad, India
   <br>
   Aug 2015 – Jul 2019
+  <br>
+  - Developed a strong foundation in core computer science principles, including data structures, algorithms, databases, operating systems, and software engineering.
 
 
 ## WORK EXPERIENCE
@@ -43,30 +45,32 @@
 <br>
 Oct 2022 - Jan 2024
 <br>
--	Led the development of a social media web application using the MEAN stack, serving over 5,000+ users worldwide.
--	Deployed application releases using AWS, ensuring smooth, reliable updates and minimised downtime for global users.
--	Managed and optimised databases, ensuring high availability, data integrity, and enhanced performance for critical application functions.
-- Designed, developed, and optimised both NoSQL and SQL databases, ensuring high availability, data integrity, and improved performance across diverse application use cases.
+- Led the development of a social media web application using the MEAN stack, serving over 5,000+ users worldwide.
+- Led the migration of data storage infrastructure from Wasabi storage service to Amazon Web Services (AWS) S3.
+- Designed, developed, and optimised both NoSQL and SQL databases, ensuring high availability, data integrity, and improved performance by 20 percent.
+- Developed RESTful APIs using Node.js, Express for secure and efficient data exchange.
+- Provided post-launch technical support and troubleshooting, resolving bugs and implementing feature enhancements based on user feedback.
+- Implemented authentication and authorization using JWT (JSON Web Tokens) to ensure secure access control for all users and third-party applications.
 
 **Software Engineer | [GroundHog Apps](https://groundhogapps.com/)**
 <br>
 Dec 2019 – Aug 2022
 <br>
-With over 3+ years of experience at GroundHog Apps, I played a key role in developing robust data pipelines and web applications for the mining industry. My responsibilities and achievements include:
--	Designed, developed, and maintained scalable web applications for mining industry using the MEAN stack, enhancing their production capacity by 40 per cent more tonnes per shift.
--	Developed autonomous systems to generate shift-end reports, reducing manual reporting efforts by 50 per cent.
--	Developed scalable REST APIs to support new features and functionality, enhancing the overall application performance.
--	Improved database retrieval efficiency by optimising and creating new indexes, significantly reducing query times by 20 per cent.
--	Led the full development cycle of a project from scratch, gathering client requirements and delivering a final product with positive feedback.
--	Collaborated with product managers in planning and executing new product releases, ensuring smooth project delivery and alignment with client expectations.
-
+I played a key role in developing robust scalable web applications for the mining industry. My responsibilities and achievements include:
+- Designed, developed, and maintained scalable web applications using MEAN stack for mining industry, increasing their production capacity by 40 percent more tonnes per shift.
+- Designed and implemented data models to support applications, ensuring data is accurate and consistent across multiple systems and environments. 
+- Performed code reviews using Git to ensure quality, identify and fix bugs, and optimize system performance.
+- Developed automation solutions that generates shift-end reports, which reduced mine manager’s manual reporting efforts by 50 percent.
+- Integrated third-party APIs to enhance application functionality, such as real-time data analytics and external reporting services, improving operational insights for stakeholders.
+- Collaborated with cross-functional teams in planning and executing new product releases, and ensuring projects delivered on time.
+- Actively participated in daily Scrum meetings within an Agile environment, ensuring team alignment and efficient progress tracking.
+- Built reusable components and modules within the MEAN stack, reducing development time for future projects.
 
 My tenure at GROUNDHOG APPS was marked by continuous innovation, collaboration with cross-functional teams, and a focus on delivering high-impact solutions to clients in the mining industry.
 
-
 ## Projects 
 
-### University Thesis Project: Exoplanet Detection using Machine Learning
+### University Thesis Project: [Exoplanet Detection using Machine Learning](https://github.com/shekar-raja/exoplanet-detection-system-ml/tree/main)
 - Developed a machine learning model with 97% accuracy for detecting exoplanets, using data from NASA’s Kepler mission.
 - Applied SMOTE for class balancing and PCA for dimensionality reduction, optimizing the MLP neural network, which enhanced both accuracy and computational efficiency.
 
@@ -76,6 +80,7 @@ My tenure at GROUNDHOG APPS was marked by continuous innovation, collaboration w
 ![Matplotlib](https://img.shields.io/badge/Matplotlib-%23ffffff.svg?style=for-the-badge&logo=Matplotlib&logoColor=black)
 ![scikit-learn](https://img.shields.io/badge/scikit--learn-%23F7931E.svg?style=for-the-badge&logo=scikit-learn&logoColor=white)
 ![Git](https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white) 
+![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white)
 
 ---
 
@@ -90,7 +95,6 @@ Developed comprehensive real-time and batch data processing pipelines leveraging
 ![MongoDB](https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white)
 
 ---
-
 ### [Titanic EDA](https://rpubs.com/rj_2104/titanicdisaster)
 
 Conducted in-depth exploratory data analysis utilizing R language to analyze the Titanic dataset. Employed various statistical techniques and visualization methods to uncover insights into the demographics and survival rates of passengers aboard the Titanic. This analysis involved data cleaning, visualization of key trends and patterns, and statistical modeling to gain a deeper understanding of the factors influencing survival outcomes. The findings from this project contributed to a better understanding of historical events and provided valuable insights into the factors associated with survival on the Titanic.
@@ -98,7 +102,13 @@ Conducted in-depth exploratory data analysis utilizing R language to analyze the
 ![R](https://img.shields.io/badge/r-%23276DC3.svg?style=for-the-badge&logo=r&logoColor=white) 
 
 ---
+### [Image Optimizer Plugin for Adobe XD](https://github.com/shekar-raja/Image-Optimizer-AdobeXD)
 
+Created an Image Optimizer plugin for Adobe XD, allowing image compression within the platform. Empowering designers with seamless optimization capabilities directly within Adobe XD, this plugin has been successfully launched and is now available on the Adobe XD plugins store. Leveraging a robust tech stack comprising Javascript and JSON, the plugin delivers unparalleled efficiency and convenience for designers striving for pixel-perfect results.
+
+![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
+
+---
 ### [ChatBot](https://github.com/shekar-raja/Leo-TheCollegeBot)
 
 Implemented a sophisticated chatbot using Python to provide comprehensive assistance and answer inquiries related to the university's services, programs, and facilities. The chatbot offers intelligent responses to a wide range of user queries, enhancing accessibility and user experience within the university community.
@@ -107,13 +117,6 @@ Implemented a sophisticated chatbot using Python to provide comprehensive assist
 ![SQLite](https://img.shields.io/badge/sqlite-%2307405e.svg?style=for-the-badge&logo=sqlite&logoColor=white) 
 
 ---
-
-### [Image Optimizer Plugin for Adobe XD](https://github.com/shekar-raja/Image-Optimizer-AdobeXD)
-
-Created an Image Optimizer plugin for Adobe XD, allowing image compression within the platform. Empowering designers with seamless optimization capabilities directly within Adobe XD, this plugin has been successfully launched and is now available on the Adobe XD plugins store. Leveraging a robust tech stack comprising Javascript and JSON, the plugin delivers unparalleled efficiency and convenience for designers striving for pixel-perfect results.
-
-![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E) 
-
 
 <!-- ---
 
