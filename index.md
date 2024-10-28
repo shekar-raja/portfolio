@@ -24,14 +24,14 @@
 
 ## EDUCATION
 
-- **MSc in Data Science and Analytics**
+- **Masters in Data Science and Analytics**
   <a href="https://www.herts.ac.uk/">University of Hertfordshire</a>, Hertfordshire, England
   <br>
   September 2022 – October 2024
   <br>
   - <b>Coursework:</b> Foundations of Data Science, Applied Data Science, Data Mining, Neural Networks and Machine Learning, Legal and Ethics, Research Methods, Team Research and Project Development, Computer Science Masters Project.
 
-- **Bachelor of Engineering in Computer Science Engineering**
+- **Bachelors in Computer Science Engineering**
   Hyderabad Institute of Technology and Management, Hyderabad, India
   <br>
   Aug 2015 – Jul 2019
