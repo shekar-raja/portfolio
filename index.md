@@ -58,7 +58,7 @@ Oct 2022 - Jan 2024
 <br>
 Dec 2019 – Aug 2022
 <br>
-I played a key role in developing robust scalable web applications for the mining industry. My responsibilities and achievements include:
+I played a key role in developing robust scalable web applications' for the mining industry. My responsibilities and achievements include:
 
 - Designed, developed, and maintained scalable web applications using MEAN stack for mining industry, increasing their production capacity by 40 percent more tonnes per shift.
 - Designed and implemented data models to support applications, ensuring data is accurate and consistent across multiple systems and environments.
