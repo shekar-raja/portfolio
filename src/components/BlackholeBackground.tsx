@@ -11,7 +11,14 @@ export default function BlackholeBackground() {
     const video = videoRef.current;
     if (!video) return;
 
+    // Disable lateral parallax on mobile — it causes disorienting horizontal drift
+    const isMobile = () => window.innerWidth <= 768;
+
     const onScroll = () => {
+      if (isMobile()) {
+        targetX.current = 0;
+        return;
+      }
       const max = document.body.scrollHeight - window.innerHeight;
       const frac = max > 0 ? Math.min(window.scrollY / max, 1) : 0;
       // centre → left → centre → right → centre over full page scroll
