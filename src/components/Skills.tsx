@@ -2,6 +2,7 @@
 import { useEffect, useRef } from "react";
 import portfolioConfig from "@/data/portfolio.config";
 import CharReveal from "@/components/CharReveal";
+import { getSkillMeta } from "@/data/skillIcons";
 
 const skillGroups = portfolioConfig.skills;
 
@@ -26,12 +27,13 @@ export default function Skills() {
     return () => observer.disconnect();
   }, []);
 
-  // Magnetic skill tags
+  // Subtle wiggle on hovered skill tag
   useEffect(() => {
     const grid = gridRef.current;
     if (!grid) return;
-    const MAG_RADIUS = 110;
-    const MAG_STRENGTH = 14;
+    // Only the tag under the cursor moves, and only by up to 3px
+    const WIGGLE_RADIUS = 40;
+    const WIGGLE_STRENGTH = 3;
 
     const onMove = (e: MouseEvent) => {
       const tags = grid.querySelectorAll<HTMLElement>(".skill-tag");
@@ -42,8 +44,8 @@ export default function Skills() {
         const dx = e.clientX - cx;
         const dy = e.clientY - cy;
         const dist = Math.sqrt(dx * dx + dy * dy);
-        if (dist < MAG_RADIUS) {
-          const factor = (1 - dist / MAG_RADIUS) * MAG_STRENGTH;
+        if (dist < WIGGLE_RADIUS && dist > 0) {
+          const factor = (1 - dist / WIGGLE_RADIUS) * WIGGLE_STRENGTH;
           tag.style.transform = `translate(${(dx / dist) * factor}px, ${(dy / dist) * factor}px)`;
         } else {
           tag.style.transform = "translate(0,0)";
@@ -103,7 +105,7 @@ export default function Skills() {
           background: rgba(99,102,241,0.2) !important;
         }
         .skill-tag {
-          transition: background 0.2s, transform 0.12s ease !important;
+          transition: background 0.2s, transform 0.2s ease-out !important;
           will-change: transform;
         }
       `}</style>
@@ -202,25 +204,39 @@ export default function Skills() {
                     gap: "0.5rem",
                   }}
                 >
-                  {group.skills.map((skill) => (
-                    <span
-                      key={skill}
-                      className="skill-tag"
-                      style={{
-                        padding: "0.3rem 0.7rem",
-                        borderRadius: "6px",
-                        fontSize: "0.75rem",
-                        fontWeight: 500,
-                        background: `${group.color}0d`,
-                        border: `1px solid ${group.color}20`,
-                        color: "var(--text-secondary)",
-                        cursor: "default",
-                        transition: "background 0.2s",
-                      }}
-                    >
-                      {skill}
-                    </span>
-                  ))}
+                  {group.skills.map((skill) => {
+                    const { icon: Icon, color: iconColor } =
+                      getSkillMeta(skill);
+                    return (
+                      <span
+                        key={skill}
+                        className="skill-tag"
+                        style={{
+                          padding: "0.3rem 0.7rem",
+                          borderRadius: "6px",
+                          fontSize: "0.75rem",
+                          fontWeight: 500,
+                          background: `${group.color}0d`,
+                          border: `1px solid ${group.color}20`,
+                          color: "var(--text-secondary)",
+                          cursor: "default",
+                          transition: "background 0.2s",
+                          display: "inline-flex",
+                          alignItems: "center",
+                          gap: "0.35rem",
+                        }}
+                      >
+                        {Icon && (
+                          <Icon
+                            size={12}
+                            color={iconColor ?? undefined}
+                            style={{ flexShrink: 0, opacity: 0.9 }}
+                          />
+                        )}
+                        {skill}
+                      </span>
+                    );
+                  })}
                 </div>
               </div>
             </div>
