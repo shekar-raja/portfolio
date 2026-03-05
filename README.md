@@ -1,76 +1,36 @@
-# 💼 Raja Shekar - Software Engineer | Data Scientist | Tech Enthusiast
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-Welcome to my GitHub portfolio! I’m Raja Shekar, a software engineer with over 3+ years of experience, now transitioning into the field of Data Science and Analytics. Currently pursuing my MSc in Data Science at the University of Hertfordshire, I’m passionate about solving complex technical challenges, building data-driven solutions, and driving innovation through machine learning and software development.
+## Getting Started
 
-Feel free to explore my projects, connect with me, or collaborate on something exciting!
+First, run the development server:
 
----
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
+```
 
-## 🧑‍💻 About Me
-A curious problem-solver and tech enthusiast, I specialize in software development, data analysis, and real-time data processing pipelines. My experience spans across freelancing, developing web applications, optimizing databases, and working with large-scale data in the mining industry. I'm constantly learning and experimenting with new tools and technologies in the exciting field of Data Science.
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-> "Functions describe the world—let’s write ours together."
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-### 🎯 **Current Focus:**
-- Machine Learning & AI
-- Data Science Projects
-- Real-time Data Processing
+This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-### 🌱 **Currently Learning:**  
-Advanced Data Mining | Neural Networks | Scalable Machine Learning Architectures
+## Learn More
 
----
+To learn more about Next.js, take a look at the following resources:
 
-## 🛠️ Projects
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-### 🚀 **[Exoplanet Detection using Machine Learning](#)** 
-> Detecting exoplanets using NASA’s Kepler data, leveraging machine learning algorithms with 91% accuracy.
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-- **Tools & Tech:** Python, PyTorch, SMOTE, PCA  
-- **Summary:** Trained a neural network to detect exoplanets, applied PCA for dimensionality reduction, and achieved high accuracy on a challenging classification problem.
+## Deploy on Vercel
 
-### ⚡ **[Meetup.com Real-Time Data Pipeline](#)**
-> Architected a real-time data pipeline for batch and streaming data processing from the Meetup.com API.
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-- **Tools & Tech:** Python, Apache Spark, Kafka, Scala, MySQL, MongoDB  
-- **Summary:** Built and optimized a real-time and batch processing system using distributed technologies like Kafka and Spark for scalable analytics.
-
-### 📊 **[Titanic Disaster Survival Analysis](#)**
-> In-depth exploratory data analysis of the Titanic dataset using R, uncovering survival trends.
-
-- **Tools & Tech:** R, ggplot2, dplyr  
-- **Summary:** Conducted EDA on the Titanic dataset, visualizing and analyzing survival rates, highlighting key demographic factors affecting survival.
-
-### 🖼️ **[Image Optimizer Plugin for Adobe XD](#)**  
-> A plugin to compress images directly within Adobe XD, available on the Adobe XD Plugin Store.
-
-- **Tools & Tech:** JavaScript, JSON  
-- **Summary:** Created an easy-to-use plugin that helps designers optimize images for performance, improving workflow efficiency within Adobe XD.
-
----
-
-## 🧑‍💻 Skills & Expertise
-- **Programming Languages:** Python, R, Java, JavaScript, Scala, C, SQL  
-- **Data Science Tools:** scikit-learn, PyTorch, Pandas, NumPy, Matplotlib  
-- **Frameworks & Tools:** Apache Spark, Kafka, MEAN Stack, Node.js  
-- **Databases:** SQL, NoSQL (MongoDB, CouchDB, Redis, ChromaDB)  
-- **Cloud & DevOps:** AWS, Git, Docker  
-- **Other:** Data analysis, real-time data processing, API development, automation
-
----
-
-## 📈 GitHub Stats
-![Raja's GitHub Stats](https://github-readme-stats.vercel.app/api?username=shekar-raja&show_icons=true&theme=radical)
-
----
-
-## 📝 Latest Blog Posts
-- **[Vector Database Introduction](#)** - An introduction to vector databases, exploring how they optimize AI and ML workloads.
-
----
-
-## 🔗 Connect with Me
-- **LinkedIn:** [Raja Shekar](https://www.linkedin.com/in/your-linkedin)
-- **Portfolio Website:** [rajashekar.com](https://yourwebsite.com)
-- **Email:** rajashekar@email.com
-- **Twitter:** [@shekar_raja](https://twitter.com/your-twitter)
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.

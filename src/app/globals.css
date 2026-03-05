@@ -1,0 +1,162 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-void: #050508;
+  --color-surface: #0d0d14;
+  --color-border: rgba(99, 102, 241, 0.15);
+  --color-indigo: #6366f1;
+  --color-indigo-light: #818cf8;
+  --color-cyan: #22d3ee;
+  --color-cyan-light: #67e8f9;
+  --color-text-primary: #f1f5f9;
+  --color-text-secondary: #b8c5d6;
+  --font-sans: "Inter", sans-serif;
+  --font-display: "Sora", sans-serif;
+}
+
+:root {
+  --bg: #050508;
+  --surface: #0d0d14;
+  --border: rgba(99, 102, 241, 0.15);
+  --indigo: #6366f1;
+  --indigo-light: #818cf8;
+  --cyan: #22d3ee;
+  --cyan-light: #67e8f9;
+  --text-primary: #f1f5f9;
+  --text-secondary: #b8c5d6;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Hide default cursor on desktop — replaced by custom cursor component */
+@media (pointer: fine) {
+  html, body, * {
+    cursor: none !important;
+  }
+}
+
+body {
+  background: transparent;
+  color: var(--text-primary);
+  font-family: "Inter", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+::selection {
+  background: rgba(99, 102, 241, 0.35);
+  color: #f1f5f9;
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--indigo);
+  border-radius: 2px;
+}
+
+/* Gradient text utility */
+.grad-text {
+  background: linear-gradient(135deg, var(--indigo-light) 0%, var(--cyan) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Glass card */
+.glass {
+  background: rgba(13, 13, 20, 0.6);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--border);
+}
+
+/* Noise overlay for depth */
+.noise::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  opacity: 0.03;
+  pointer-events: none;
+  z-index: 9999;
+}
+
+/* Section base */
+section {
+  position: relative;
+}
+
+/* Animated gradient border */
+@keyframes border-spin {
+  from { --angle: 0deg; }
+  to   { --angle: 360deg; }
+}
+
+@property --angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+.animated-border {
+  border: 1px solid;
+  border-image: conic-gradient(from var(--angle), var(--indigo), var(--cyan), var(--indigo)) 1;
+  animation: border-spin 4s linear infinite;
+}
+
+/* ── Character-by-character heading reveal ─────────────────────────────────── */
+.char-reveal .char {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(32px) rotate(3deg);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+.char-reveal.revealed .char {
+  opacity: 1;
+  transform: none;
+}
+
+/* CharReveal component */
+.char-wrap .char {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(28px) rotate(2deg);
+  transition: opacity 0.55s cubic-bezier(0.22,1,0.36,1), transform 0.55s cubic-bezier(0.22,1,0.36,1);
+}
+.char-wrap.char-revealed .char {
+  opacity: 1;
+  transform: none;
+}
+
+/* ── Scroll-triggered section reveal ──────────────────────────────────────── */
+.scroll-reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.scroll-reveal.revealed {
+  opacity: 1;
+  transform: none;
+}
+
+/* ── Magnetic skill tag ────────────────────────────────────────────────────── */
+.mag-tag {
+  transition: transform 0.15s ease, background 0.2s, box-shadow 0.2s !important;
+  will-change: transform;
+}
