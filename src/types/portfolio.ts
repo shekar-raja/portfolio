@@ -94,6 +94,16 @@ export interface BlogPost {
   tags: string[];
 }
 
+// ─── Testimonials ────────────────────────────────────────────────────────────
+export interface Testimonial {
+  name: string;
+  role: string;
+  relationship: string;
+  quote: string;
+  initials: string;
+  accent: string;
+}
+
 // ─── Contact ──────────────────────────────────────────────────────────────────
 export interface Contact {
   heading: string;
@@ -110,6 +120,7 @@ export interface PortfolioConfig {
   projects: Project[];
   skills: SkillGroup[];
   education: EducationEntry[];
+  testimonials: Testimonial[];
   writing: BlogPost[];
   contact: Contact;
 }

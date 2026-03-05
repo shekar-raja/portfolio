@@ -52,6 +52,7 @@ const portfolioConfig: PortfolioConfig = {
     { label: "Skills", href: "#skills" },
     { label: "Education", href: "#education" },
     { label: "Writing", href: "#writing" },
+    { label: "Testimonials", href: "#testimonials" },
     { label: "Contact", href: "#contact" },
   ],
 
@@ -59,10 +60,12 @@ const portfolioConfig: PortfolioConfig = {
   // bio: array of paragraphs — each entry becomes a separate <p>
   // stats: the four highlight numbers shown below the bio
   about: {
-    heading: "Engineering data systems that scale.",
+    heading: "Curious engineer. Data-driven builder.",
     bio: [
-      "I'm a Cloud Data Engineer with 5+ years building production-grade data infrastructure on AWS. I specialise in serverless architectures, real-time IoT pipelines, and ML systems that move from prototype to prod.",
-      "Currently at Koolmill Systems, I own the full data stack — from DynamoDB schema design and zero-downtime migrations to Terraform-managed infrastructure and GitHub Actions CI/CD. Previously at TruNums and Groundhog Apps, I shipped ETL pipelines, microservices, and analytics platforms serving tens of thousands of users.",
+      "I've always been curious about how things work. That curiosity first led me into building full stack web applications and, over time, into the world of data, cloud engineering, and applied AI.",
+      "With over four years of experience as a software engineer, I now focus on designing and delivering data driven systems that turn ideas into real world solutions. My journey has evolved from crafting user facing applications to engineering smart, connected systems that can make a tangible difference, from improving operational efficiency to supporting sustainability goals.",
+      "I'm currently a Cloud Data Engineer at Koolmill Systems Limited, contributing to an Innovate UK funded project developing next generation smart systems for rice milling. It's a role that blends my technical background with my passion for creating meaningful, impactful technology.",
+      "What drives me is the opportunity to keep learning, keep building and create solutions that matter.",
     ],
     stats: [
       { value: "5+", label: "Years Shipping" },
@@ -80,49 +83,55 @@ const portfolioConfig: PortfolioConfig = {
     {
       role: "Cloud Data Engineer",
       company: "Koolmill Systems",
-      period: "Apr 2025 – Present",
-      location: "Remote, UK",
+      period: "Jun 2025 – Present",
+      location: "Sheffield, UK",
       bullets: [
-        "Redesigned DynamoDB schema with single-table design, cutting storage costs by 50% and eliminating cross-table joins.",
-        "Led a 14-hour zero-downtime migration of 2M+ IoT records from legacy MySQL to DynamoDB using Lambda fan-out and SQS FIFO.",
-        "Provisioned entire cloud infrastructure (API Gateway, Lambda, DynamoDB, IoT Core) with Terraform; reduced deployment drift to zero.",
-        "Replaced manual deployments with GitHub Actions CI/CD pipelines, cutting release cycle from days to under 30 minutes.",
-        "Implemented ABAC on AWS IoT Core with Cognito identity pools, locking device data to authenticated tenant scopes.",
-        "Architected an IoT ingestion pipeline handling 10,000+ concurrent device streams with Lambda concurrency reservations and DLQ alerting.",
+        "Contributed to the Innovate UK funded Digital Rice Mill Demonstrator project, developing a scalable cloud data platform for real-time monitoring of industrial rice milling machines.",
+        "Architected end-to-end data architecture to ingest and process second-level industrial time-series telemetry from PLC-controlled milling systems via edge devices.",
+        "Designed multi-tenant time-series data model, reducing large-range query latency from 25–35s to sub-second responses.",
+        "Led zero-downtime production data migration (14-hour rollout) with validation checks, reducing database RCU/WCU consumption and operational costs.",
+        "Built real-time telemetry ingestion pipelines using AWS IoT platform alongside batch ETL workflows for daily and monthly operational analytics.",
+        "Implemented CI/CD and infrastructure automation using GitHub Actions, Docker, ECR, ECS and Terraform across multi-environment deployments.",
+        "Designed secure API layer using IAM, ABAC policies and Cognito enabling tenant-level access control to industrial machine telemetry.",
       ],
       tags: [
         "AWS",
-        "DynamoDB",
-        "Terraform",
         "IoT Core",
+        "DynamoDB",
         "Lambda",
+        "Terraform",
         "GitHub Actions",
+        "Docker",
+        "ECS",
+        "Cognito",
+        "CloudWatch",
+        "SNS",
       ],
     },
     {
-      role: "Data Engineer",
+      role: "Software Engineer",
       company: "TruNums",
       period: "Oct 2022 – Jan 2024",
-      location: "Remote",
+      location: "Remote, US",
       bullets: [
-        "Built ETL pipelines processing 5M+ financial records daily using PySpark and AWS Glue.",
-        "Designed star-schema data warehouse on Redshift, reducing query latency by 40% for business intelligence workloads.",
-        "Automated anomaly detection workflows with SageMaker, flagging data quality issues before downstream consumption.",
+        "Developed and deployed a MEAN-stack social media platform serving 5,000+ global users, delivering scalable user interactions and real-time content features.",
+        "Designed scalable MongoDB and Redis data models improving application performance and session handling.",
+        "Deployed production releases via AWS, reducing downtime and ensuring stable global updates.",
       ],
-      tags: ["PySpark", "AWS Glue", "Redshift", "SageMaker", "ETL"],
+      tags: ["Node.js", "Angular", "MongoDB", "Redis", "AWS"],
     },
     {
-      role: "Software Engineer – Backend & Data",
+      role: "Software Engineer",
       company: "Groundhog Apps",
       period: "Dec 2019 – Aug 2022",
       location: "Hyderabad, India",
       bullets: [
-        "Developed RESTful microservices with Node.js and Express, serving 50k+ active users.",
-        "Built real-time event streaming pipeline using Kafka and MongoDB, replacing batch jobs with sub-second latency feeds.",
-        "Containerised services with Docker and orchestrated deployments on Kubernetes, achieving 99.9% uptime over 18 months.",
-        "Created internal analytics dashboards with Python (Pandas, Matplotlib) for product and growth teams.",
+        "Developed and maintained MEAN-stack applications for mining operations, contributing to a 40% increase in production throughput per shift.",
+        "Automated shift-end reporting workflows, reducing manual reporting effort by 50%.",
+        "Optimised database indexing strategies, reducing query latency by 20%.",
+        "Designed and maintained REST APIs supporting operational analytics and reporting dashboards.",
       ],
-      tags: ["Node.js", "Kafka", "MongoDB", "Docker", "Kubernetes", "Python"],
+      tags: ["Node.js", "Angular", "MongoDB", "Python", "REST API"],
     },
   ],
 
@@ -136,8 +145,8 @@ const portfolioConfig: PortfolioConfig = {
     {
       title: "AlertOps AI",
       description:
-        "LLM-powered on-call assistant that parses PagerDuty alerts, queries runbooks, and drafts a root-cause summary — reducing MTTR by 35%.",
-      tags: ["Python", "OpenAI API", "LangChain", "PagerDuty", "FastAPI"],
+        "Real-time DevOps log classification system using NLP and supervised learning (Random Forest, XGBoost, LSTM) to automatically prioritise operational alerts (P1–P4), reducing manual triaging and accelerating incident resolution.",
+      tags: ["Python", "Kafka", "PyTorch", "Scikit-Learn", "FastAPI"],
       github: "https://github.com/shekar-raja",
       image: "",
       accent: "#22d3ee",
@@ -154,8 +163,8 @@ const portfolioConfig: PortfolioConfig = {
     {
       title: "Exoplanet Detection ML",
       description:
-        "Trained a CNN on NASA Kepler light-curve data to classify planetary transit signals with 97% F1-score, beating transit-search baselines.",
-      tags: ["Python", "TensorFlow", "NASA Kepler", "Signal Processing"],
+        "Developed and evaluated an MLP model using the NASA Kepler dataset, applying feature engineering, model tuning, and cross-validation to classify planetary transit signals. MSc thesis project.",
+      tags: ["Python", "PyTorch", "Pandas", "Scikit-Learn"],
       github: "https://github.com/shekar-raja",
       image: "",
       accent: "#22d3ee",
@@ -187,77 +196,63 @@ const portfolioConfig: PortfolioConfig = {
   // skills: list of tool/technology names
   skills: [
     {
-      category: "Cloud & Platform",
+      category: "Cloud & AWS",
       icon: "☁️",
       color: "#6366f1",
       skills: [
-        "AWS Lambda",
-        "DynamoDB",
         "S3",
-        "Kinesis",
+        "AWS Lambda",
+        "ECS",
         "IoT Core",
         "API Gateway",
         "Cognito",
         "CloudWatch",
+        "SNS",
       ],
     },
     {
       category: "DevOps & IaC",
       icon: "⚙️",
       color: "#22d3ee",
-      skills: [
-        "Terraform",
-        "GitHub Actions",
-        "Docker",
-        "Kubernetes",
-        "Jenkins",
-        "ArgoCD",
-      ],
-    },
-    {
-      category: "Data & ML",
-      icon: "🧠",
-      color: "#6366f1",
-      skills: [
-        "PySpark",
-        "AWS Glue",
-        "Redshift",
-        "SageMaker",
-        "TensorFlow",
-        "LangChain",
-        "Pinecone",
-      ],
-    },
-    {
-      category: "Observability",
-      icon: "📊",
-      color: "#22d3ee",
-      skills: [
-        "Grafana",
-        "Prometheus",
-        "CloudWatch",
-        "Datadog",
-        "OpenTelemetry",
-      ],
+      skills: ["Terraform", "Docker", "GitHub Actions", "IAM", "ABAC"],
     },
     {
       category: "Databases",
       icon: "🗄️",
       color: "#6366f1",
+      skills: ["DynamoDB", "PostgreSQL", "MongoDB", "Redis", "CouchDB"],
+    },
+    {
+      category: "Data Engineering",
+      icon: "🔄",
+      color: "#22d3ee",
       skills: [
-        "DynamoDB",
-        "PostgreSQL",
-        "MongoDB",
-        "Redis",
-        "Redshift",
-        "MySQL",
+        "ETL/ELT Pipelines",
+        "Real-Time Streaming",
+        "Time-Series Modelling",
+        "Schema Design",
+        "Query Optimisation",
       ],
     },
     {
-      category: "Languages",
+      category: "ML & Data Science",
+      icon: "🧠",
+      color: "#6366f1",
+      skills: ["PyTorch", "Scikit-Learn", "Pandas", "NumPy", "Matplotlib"],
+    },
+    {
+      category: "Languages & Backend",
       icon: "💻",
       color: "#22d3ee",
-      skills: ["Python", "TypeScript", "JavaScript", "SQL", "Bash", "HCL"],
+      skills: [
+        "Python",
+        "SQL",
+        "JavaScript",
+        "FastAPI",
+        "Node.js",
+        "React",
+        "Angular",
+      ],
     },
   ],
 
@@ -265,21 +260,21 @@ const portfolioConfig: PortfolioConfig = {
   // Most recent first.
   education: [
     {
-      degree: "MSc Computer Science",
+      degree: "MSc Data Science and Analytics",
       institution: "University of Hertfordshire",
       period: "Sep 2022 – Nov 2024",
       location: "Hatfield, UK",
       detail:
-        "Focused on Machine Learning, Cloud Computing and Distributed Systems. Dissertation on real-time anomaly detection in IoT sensor data using LSTM autoencoders.",
+        "Focused on Machine Learning, Cloud Computing and Data Analytics. Dissertation on exoplanet detection using machine learning with NASA Kepler dataset.",
       accent: "#6366f1",
     },
     {
-      degree: "BSc Computer Science & Engineering",
-      institution: "HITM (JNTU Hyderabad)",
+      degree: "BSc Computer Science",
+      institution: "Hyderabad Institute of Technology and Management",
       period: "Jun 2015 – Aug 2019",
       location: "Hyderabad, India",
       detail:
-        "Core curriculum covering algorithms, data structures, database systems and software engineering. Final-year project on NLP-based automated ticket classification.",
+        "Core curriculum covering algorithms, data structures, database systems and software engineering.",
       accent: "#22d3ee",
     },
   ],
@@ -298,6 +293,31 @@ const portfolioConfig: PortfolioConfig = {
       thumbnail: "/images/blogs/vector-db-thumbnail.png",
       readTime: "8 min read",
       tags: ["Vector DB", "RAG", "LLM", "Pinecone"],
+    },
+  ],
+
+  // ── Testimonials ─────────────────────────────────────────────────────────────
+  // LinkedIn recommendations — add more entries to grow the list.
+  // initials: 2-letter abbreviation used as avatar placeholder
+  // accent: card highlight colour
+  testimonials: [
+    {
+      name: "Bhaskar Ramachandran",
+      role: "Senior .Net Core Architect",
+      relationship: "Client at TruNums · June 2024",
+      quote:
+        "Raja consistently impressed me with his critical thinking and problem-solving skills. These strengths were invaluable as we navigated challenging situations that arose during the development process at TruNums. Raja's ability to analyze problems, come up with creative solutions, and implement them effectively made him a key asset to the project. Without a doubt, Raja would be a valuable addition to any development team. His technical expertise, combined with his quick learning, critical thinking and problem-solving skills, makes him a truly exceptional candidate.",
+      initials: "BR",
+      accent: "#6366f1",
+    },
+    {
+      name: "Prudhviraj Pampana",
+      role: "Engineering Manager",
+      relationship: "Direct Manager · May 2024",
+      quote:
+        "I had the pleasure of managing Raja for a significant duration, I was consistently impressed by his ability to remain calm and composed under pressure. His strong problem-solving skills and ability to think strategically helped navigate challenging situations effectively.",
+      initials: "PP",
+      accent: "#22d3ee",
     },
   ],
 
