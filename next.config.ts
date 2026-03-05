@@ -11,6 +11,19 @@ const nextConfig: NextConfig = {
   turbopack: {
     root: path.resolve(__dirname),
   },
+  // Dev-only: redirect root → /portfolio so localhost:3000/ works.
+  // Must return [] in production — static export errors if redirects are non-empty.
+  async redirects() {
+    if (process.env.NODE_ENV === "production") return [];
+    return [
+      {
+        source: "/",
+        destination: "/portfolio",
+        basePath: false,
+        permanent: false,
+      },
+    ];
+  },
 };
 
 export default nextConfig;
