@@ -68,10 +68,10 @@ const portfolioConfig: PortfolioConfig = {
       "What drives me is the opportunity to keep learning, keep building and create solutions that matter.",
     ],
     stats: [
-      { value: "5+", label: "Years Shipping" },
-      { value: "10k+", label: "Device Streams" },
-      { value: "50%", label: "Cost Reduction" },
-      { value: "3", label: "Cloud Projects" },
+      { value: "5+", label: "Years Industry Experience" },
+      // { value: "", label: "" },
+      // { value: "50%", label: "Cost Reduction" },
+      // { value: "3", label: "Cloud Projects" },
     ],
   },
 
@@ -96,16 +96,12 @@ const portfolioConfig: PortfolioConfig = {
       ],
       tags: [
         "AWS",
-        "IoT Core",
-        "DynamoDB",
-        "Lambda",
-        "Terraform",
+        "Python",
         "GitHub Actions",
+        "CI/CD",
         "Docker",
-        "ECS",
-        "Cognito",
-        "CloudWatch",
-        "SNS",
+        "Data Modelling",
+        "Terraform",
       ],
     },
     {
@@ -196,6 +192,20 @@ const portfolioConfig: PortfolioConfig = {
   // skills: list of tool/technology names
   skills: [
     {
+      category: "Languages & Backend",
+      icon: "💻",
+      color: "#22d3ee",
+      skills: [
+        "Python",
+        "SQL",
+        "JavaScript",
+        "FastAPI",
+        "Node.js",
+        "React",
+        "Angular",
+      ],
+    },
+    {
       category: "Cloud & AWS",
       icon: "☁️",
       color: "#6366f1",
@@ -239,20 +249,6 @@ const portfolioConfig: PortfolioConfig = {
       icon: "🧠",
       color: "#6366f1",
       skills: ["PyTorch", "Scikit-Learn", "Pandas", "NumPy", "Matplotlib"],
-    },
-    {
-      category: "Languages & Backend",
-      icon: "💻",
-      color: "#22d3ee",
-      skills: [
-        "Python",
-        "SQL",
-        "JavaScript",
-        "FastAPI",
-        "Node.js",
-        "React",
-        "Angular",
-      ],
     },
   ],
 

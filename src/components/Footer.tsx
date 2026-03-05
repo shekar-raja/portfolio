@@ -8,7 +8,7 @@ export default function Footer() {
     <footer
       style={{
         padding: "2.5rem 0",
-        background: "rgba(5,5,8,0.92)",
+        background: "rgba(5,5,8,0.78)",
         borderTop: "1px solid rgba(99,102,241,0.1)",
       }}
     >

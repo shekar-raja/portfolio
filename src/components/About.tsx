@@ -60,7 +60,7 @@ export default function About() {
       ref={sectionRef}
       style={{
         padding: "8rem 0",
-        background: "rgba(4,4,10,0.93)",
+        background: "rgba(4,4,10,0.78)",
         backdropFilter: "blur(18px) saturate(160%)",
         WebkitBackdropFilter: "blur(18px) saturate(160%)",
         borderTop: "1px solid rgba(255,255,255,0.06)",

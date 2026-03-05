@@ -10,7 +10,7 @@ export default function Contact() {
       id="contact"
       style={{
         padding: "8rem 0",
-        background: "rgba(6,4,12,0.95)",
+        background: "rgba(6,4,12,0.80)",
         backdropFilter: "blur(18px) saturate(160%)",
         WebkitBackdropFilter: "blur(18px) saturate(160%)",
         borderTop: "1px solid rgba(255,255,255,0.06)",

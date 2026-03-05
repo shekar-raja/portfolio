@@ -5,6 +5,7 @@ import Nav from "@/components/Nav";
 import Cursor from "@/components/Cursor";
 import SmoothScroll from "@/components/SmoothScroll";
 import BlackholeBackground from "@/components/BlackholeBackground";
+import SpaceBackground from "@/components/SpaceBackground";
 import Script from "next/script";
 
 const { personal } = portfolioConfig;
@@ -55,6 +56,7 @@ export default function RootLayout({
           `}
         </Script>
         <BlackholeBackground />
+        <SpaceBackground />
         <Cursor />
         <SmoothScroll />
         <Nav />

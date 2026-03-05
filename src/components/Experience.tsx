@@ -52,7 +52,7 @@ export default function Experience() {
       ref={sectionRef}
       style={{
         padding: "8rem 0",
-        background: "rgba(6,4,12,0.93)",
+        background: "rgba(6,4,12,0.78)",
         backdropFilter: "blur(18px) saturate(160%)",
         WebkitBackdropFilter: "blur(18px) saturate(160%)",
         borderTop: "1px solid rgba(255,255,255,0.06)",

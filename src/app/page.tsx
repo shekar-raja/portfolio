@@ -8,11 +8,13 @@ import Testimonials from "@/components/Testimonials";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import HeroWrapper from "@/components/HeroWrapper";
+import ScrollReactiveBand from "@/components/ScrollReactiveBand";
 
 export default function Home() {
   return (
     <main>
       <HeroWrapper />
+      <ScrollReactiveBand />
       <About />
       <Experience />
       <Projects />
