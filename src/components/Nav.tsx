@@ -5,6 +5,20 @@ import portfolioConfig from "@/data/portfolio.config";
 const links = portfolioConfig.nav;
 const { personal } = portfolioConfig;
 
+function scrollToSection(href: string) {
+  const id = href.replace(/^#/, "");
+  const el = document.getElementById(id);
+  if (!el) return;
+  const lenis = (window as unknown as Record<string, unknown>).__lenis as
+    | { scrollTo: (target: Element, opts?: Record<string, unknown>) => void }
+    | undefined;
+  if (lenis) {
+    lenis.scrollTo(el, { offset: -64, duration: 1.4 });
+  } else {
+    el.scrollIntoView({ behavior: "smooth" });
+  }
+}
+
 export default function Nav() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
@@ -47,6 +61,10 @@ export default function Nav() {
         {/* Logo */}
         <a
           href="#hero"
+          onClick={(e) => {
+            e.preventDefault();
+            scrollToSection("#hero");
+          }}
           style={{
             fontFamily: "Sora, sans-serif",
             fontWeight: 700,
@@ -74,12 +92,17 @@ export default function Nav() {
             <li key={l.href}>
               <a
                 href={l.href}
+                onClick={(e) => {
+                  e.preventDefault();
+                  scrollToSection(l.href);
+                }}
                 style={{
                   color: "var(--text-secondary)",
                   textDecoration: "none",
                   fontSize: "0.875rem",
                   fontWeight: 500,
                   transition: "color 0.2s",
+                  cursor: "pointer",
                 }}
                 onMouseEnter={(e) =>
                   ((e.target as HTMLAnchorElement).style.color =
@@ -176,7 +199,11 @@ export default function Nav() {
             <a
               key={l.href}
               href={l.href}
-              onClick={() => setMenuOpen(false)}
+              onClick={(e) => {
+                e.preventDefault();
+                setMenuOpen(false);
+                scrollToSection(l.href);
+              }}
               style={{
                 display: "block",
                 padding: "0.65rem 0",
@@ -184,6 +211,7 @@ export default function Nav() {
                 textDecoration: "none",
                 borderBottom: "1px solid rgba(99,102,241,0.08)",
                 fontSize: "1rem",
+                cursor: "pointer",
               }}
             >
               {l.label}

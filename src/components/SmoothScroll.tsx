@@ -11,6 +11,8 @@ export default function SmoothScroll() {
       infinite: false,
     });
 
+    (window as unknown as Record<string, unknown>).__lenis = lenis;
+
     const raf = (time: number) => {
       lenis.raf(time);
       requestAnimationFrame(raf);
@@ -19,6 +21,7 @@ export default function SmoothScroll() {
 
     return () => {
       lenis.destroy();
+      delete (window as unknown as Record<string, unknown>).__lenis;
     };
   }, []);
 

@@ -45,6 +45,42 @@ export default function Projects() {
     };
   }, []);
 
+  useEffect(() => {
+    const containers = document.querySelectorAll<HTMLDivElement>(".proj-desc");
+    const rafMap = new Map<HTMLDivElement, number>();
+    const pausedMap = new Map<HTMLDivElement, boolean>();
+
+    const startScroll = (el: HTMLDivElement) => {
+      const tick = () => {
+        if (!pausedMap.get(el) && el.scrollHeight > el.clientHeight) {
+          el.scrollTop += 0.6;
+          if (el.scrollTop + el.clientHeight >= el.scrollHeight) {
+            el.scrollTop = 0;
+          }
+        }
+        rafMap.set(el, requestAnimationFrame(tick));
+      };
+      rafMap.set(el, requestAnimationFrame(tick));
+    };
+
+    containers.forEach((el) => {
+      pausedMap.set(el, false);
+      startScroll(el);
+      el.addEventListener("mouseenter", () => {
+        pausedMap.set(el, true);
+        el.style.overflowY = "auto";
+      });
+      el.addEventListener("mouseleave", () => {
+        pausedMap.set(el, false);
+        el.style.overflowY = "hidden";
+      });
+    });
+
+    return () => {
+      rafMap.forEach((id) => cancelAnimationFrame(id));
+    };
+  }, []);
+
   return (
     <section
       id="projects"
@@ -115,6 +151,7 @@ export default function Projects() {
               style={{
                 flexShrink: 0,
                 width: "360px",
+                height: "420px",
                 perspective: "900px",
               }}
               onMouseMove={(e) => {
@@ -171,6 +208,9 @@ export default function Projects() {
                   overflow: "hidden",
                   transformStyle: "preserve-3d",
                   willChange: "transform",
+                  height: "100%",
+                  display: "flex",
+                  flexDirection: "column",
                 }}
                 onMouseEnter={(e) => {
                   const el = e.currentTarget as HTMLDivElement;
@@ -214,30 +254,24 @@ export default function Projects() {
                 />
 
                 {/* Card content */}
-                <div style={{ position: "relative", zIndex: 1 }}>
+                <div
+                  style={{
+                    position: "relative",
+                    zIndex: 1,
+                    display: "flex",
+                    flexDirection: "column",
+                    flex: 1,
+                    minHeight: 0,
+                  }}
+                >
                   <div
                     style={{
                       display: "flex",
-                      justifyContent: "space-between",
+                      justifyContent: "flex-end",
                       alignItems: "flex-start",
                       marginBottom: "1rem",
                     }}
                   >
-                    <div
-                      style={{
-                        width: "40px",
-                        height: "40px",
-                        borderRadius: "10px",
-                        background: `${project.accent}18`,
-                        border: `1px solid ${project.accent}30`,
-                        display: "flex",
-                        alignItems: "center",
-                        justifyContent: "center",
-                        fontSize: "1.2rem",
-                      }}
-                    >
-                      {["🤖", "⚡", "🔭", "💬", "🎨", "📊"][i % 6]}
-                    </div>
                     {project.github && (
                       <a
                         href={project.github}
@@ -279,16 +313,25 @@ export default function Projects() {
                     {project.title}
                   </h3>
 
-                  <p
+                  <div
+                    className="proj-desc"
                     style={{
-                      color: "var(--text-secondary)",
-                      fontSize: "0.875rem",
-                      lineHeight: 1.7,
+                      flex: 1,
+                      overflowY: "hidden",
                       marginBottom: "1.25rem",
+                      minHeight: 0,
                     }}
                   >
-                    {project.description}
-                  </p>
+                    <p
+                      style={{
+                        color: "var(--text-secondary)",
+                        fontSize: "0.875rem",
+                        lineHeight: 1.7,
+                      }}
+                    >
+                      {project.description}
+                    </p>
+                  </div>
 
                   <div
                     style={{ display: "flex", flexWrap: "wrap", gap: "0.4rem" }}
@@ -320,6 +363,8 @@ export default function Projects() {
 
       <style>{`
         .projects-strip { user-select: none; }
+        .proj-desc::-webkit-scrollbar { display: none; }
+        .proj-desc { -ms-overflow-style: none; scrollbar-width: none; }
       `}</style>
     </section>
   );

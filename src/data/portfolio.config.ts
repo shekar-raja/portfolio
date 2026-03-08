@@ -14,17 +14,18 @@ const portfolioConfig: PortfolioConfig = {
   // Used in: Nav logo tooltip, Hero, About, Contact, Footer, <title>, OG tags
   personal: {
     name: "Raja Shekar",
-    initials: "",
+    initials: "RS.",
     title: "Cloud Data Engineer",
-    tagline: "Building scalable data systems on the cloud.",
+    tagline: "I'm a software engineer that is fascinated by all things data.",
     description:
-      "Cloud Data Engineer specialising in AWS serverless, IoT pipelines, ML systems and Infrastructure as Code.",
+      "That includes building data pipelines, AI solutions, and applications.",
     email: "rshekar.contact@gmail.com",
     linkedin: "https://www.linkedin.com/in/raja-shekar/",
     github: "https://github.com/shekar-raja",
     resume:
       "https://drive.google.com/file/d/1GvuQLTMwQZvWREcrDMe2kdtXRybcVzuw/view?usp=sharing",
-    avatar: "/portfolio/images/headshot.png",
+    avatar:
+      "https://drive.google.com/file/d/1c3G5PztdC2BoHsJANh33-YY-Axa9CrmZ/view?usp=sharing",
     googleAnalytics: "G-TH5VEMBXCG",
     siteUrl: "https://shekar-raja.github.io/portfolio/",
   },
@@ -63,7 +64,7 @@ const portfolioConfig: PortfolioConfig = {
     heading: "Curious engineer. Data-driven builder.",
     bio: [
       "I've always been curious about how things work. That curiosity first led me into building full stack web applications and, over time, into the world of data, cloud engineering, and applied AI.",
-      "With over four years of experience as a software engineer, I now focus on designing and delivering data driven systems that turn ideas into real world solutions. My journey has evolved from crafting user facing applications to engineering smart, connected systems that can make a tangible difference, from improving operational efficiency to supporting sustainability goals.",
+      "With over five years of experience as a software engineer, I now focus on designing and delivering data driven systems that turn ideas into real world solutions. My journey has evolved from crafting user facing applications to engineering smart, connected systems that can make a tangible difference, from improving operational efficiency to supporting sustainability goals.",
       "I'm currently a Cloud Data Engineer at Koolmill Systems Limited, contributing to an Innovate UK funded project developing next generation smart systems for rice milling. It's a role that blends my technical background with my passion for creating meaningful, impactful technology.",
       "What drives me is the opportunity to keep learning, keep building and create solutions that matter.",
     ],
@@ -102,6 +103,9 @@ const portfolioConfig: PortfolioConfig = {
         "Docker",
         "Data Modelling",
         "Terraform",
+        "Excel",
+        "IOT",
+        "Time-Series Data",
       ],
     },
     {
@@ -114,7 +118,15 @@ const portfolioConfig: PortfolioConfig = {
         "Designed scalable MongoDB and Redis data models improving application performance and session handling.",
         "Deployed production releases via AWS, reducing downtime and ensuring stable global updates.",
       ],
-      tags: ["Node.js", "Angular", "MongoDB", "Redis", "AWS"],
+      tags: [
+        "Node.js",
+        "Angular",
+        "MongoDB",
+        "Redis",
+        "AWS",
+        "Rest API",
+        "CI/CD",
+      ],
     },
     {
       role: "Software Engineer",
@@ -127,7 +139,7 @@ const portfolioConfig: PortfolioConfig = {
         "Optimised database indexing strategies, reducing query latency by 20%.",
         "Designed and maintained REST APIs supporting operational analytics and reporting dashboards.",
       ],
-      tags: ["Node.js", "Angular", "MongoDB", "Python", "REST API"],
+      tags: ["Node.js", "Angular", "MongoDB", "Python", "REST API", "Redis"],
     },
   ],
 
@@ -139,40 +151,22 @@ const portfolioConfig: PortfolioConfig = {
   // accent: hex color used for the card glow + tag pills
   projects: [
     {
-      title: "AlertOps AI",
-      description:
-        "Real-time DevOps log classification system using NLP and supervised learning (Random Forest, XGBoost, LSTM) to automatically prioritise operational alerts (P1–P4), reducing manual triaging and accelerating incident resolution.",
-      tags: ["Python", "Kafka", "PyTorch", "Scikit-Learn", "FastAPI"],
-      github: "https://github.com/shekar-raja",
-      image: "",
-      accent: "#22d3ee",
-    },
-    {
-      title: "Real-Time IoT Pipeline",
-      description:
-        "End-to-end AWS serverless pipeline (IoT Core → Kinesis → Lambda → DynamoDB) handling 10k concurrent device streams with < 100ms p99.",
-      tags: ["AWS IoT Core", "Kinesis", "Lambda", "DynamoDB", "Terraform"],
-      github: "https://github.com/shekar-raja",
-      image: "",
-      accent: "#6366f1",
-    },
-    {
       title: "Exoplanet Detection ML",
       description:
         "Developed and evaluated an MLP model using the NASA Kepler dataset, applying feature engineering, model tuning, and cross-validation to classify planetary transit signals. MSc thesis project.",
       tags: ["Python", "PyTorch", "Pandas", "Scikit-Learn"],
-      github: "https://github.com/shekar-raja",
+      github: "https://github.com/shekar-raja/exoplanet-detection-system-ml",
       image: "",
       accent: "#22d3ee",
     },
     {
-      title: "Leo — AI Chatbot",
+      title: "AlertOps AI",
       description:
-        "Conversational AI assistant built on fine-tuned GPT-3.5 with RAG over a custom knowledge base; integrated into Slack and WhatsApp.",
-      tags: ["GPT-3.5", "LangChain", "RAG", "Pinecone", "Slack API"],
-      github: "https://github.com/shekar-raja",
+        "Real-time DevOps log classification system using NLP and supervised learning (Random Forest, XGBoost, LSTM) to automatically prioritise operational alerts (P1–P4), reducing manual triaging and accelerating incident resolution.",
+      tags: ["Python", "Kafka", "PyTorch", "Scikit-Learn", "FastAPI", "Azure"],
+      github: "https://github.com/shekar-raja/alertops-ai",
       image: "",
-      accent: "#6366f1",
+      accent: "#22d3ee",
     },
     {
       title: "Adobe XD Layout Plugin",
@@ -182,6 +176,15 @@ const portfolioConfig: PortfolioConfig = {
       github: "https://github.com/shekar-raja",
       image: "",
       accent: "#22d3ee",
+    },
+    {
+      title: "AG Grid Dash",
+      description:
+        "Full-stack data dashboard with hybrid semantic search and a recommendation engine. Textual records are embedded into dense vectors via a FastAPI microservice and indexed in FAISS. At query time, both a traditional keyword filter and a FAISS nearest-neighbour search run in parallel — results are fused by score and ranked by semantic similarity, surfacing relevant rows even when exact terms don't match. The same embedding pipeline powers a recommendation system that suggests related records based on vector proximity, enabling discovery-style navigation across the dataset.",
+      tags: ["Python", "FastAPI", "FAISS", "Node.js", "TypeScript", "MongoDB"],
+      github: "https://github.com/shekar-raja/Image-Optimizer-AdobeXD",
+      image: "",
+      accent: "#6366f1",
     },
   ],
 
@@ -199,6 +202,7 @@ const portfolioConfig: PortfolioConfig = {
         "Python",
         "SQL",
         "JavaScript",
+        "Scala",
         "FastAPI",
         "Node.js",
         "React",
@@ -218,6 +222,11 @@ const portfolioConfig: PortfolioConfig = {
         "Cognito",
         "CloudWatch",
         "SNS",
+        "DynamoDB",
+        "IAM",
+        "SageMaker",
+        "ECR",
+        "ECS",
       ],
     },
     {
@@ -240,7 +249,7 @@ const portfolioConfig: PortfolioConfig = {
         "ETL/ELT Pipelines",
         "Real-Time Streaming",
         "Time-Series Modelling",
-        "Schema Design",
+        "Data Modelling",
         "Query Optimisation",
       ],
     },
@@ -321,9 +330,9 @@ const portfolioConfig: PortfolioConfig = {
   // heading + subtext are displayed above the contact links.
   // Email + LinkedIn + GitHub are pulled from personal above — no duplication.
   contact: {
-    heading: "Let's build something.",
+    heading: "Get in Touch",
     subtext:
-      "Open to senior data engineering roles, contract work, and interesting technical problems. Drop me a line.",
+      "Drop me a message to ask a question, offer an opportunity or just say hi. I'll get back to you!",
   },
 };
 

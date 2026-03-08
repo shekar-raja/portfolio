@@ -1,9 +1,16 @@
 "use client";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import portfolioConfig from "@/data/portfolio.config";
 
 const { about, personal } = portfolioConfig;
+
+/** Converts Google Drive share links to a direct image URL; passes other URLs/paths through unchanged. */
+function resolveAvatarSrc(src: string): string {
+  const match = src.match(/drive\.google\.com\/file\/d\/([^/?]+)/);
+  if (match) return `https://lh3.googleusercontent.com/d/${match[1]}`;
+  return src;
+}
 
 function parseStatValue(val: string): { num: number; suffix: string } {
   const match = val.match(/^([\d.]+)(.*)$/);
@@ -14,6 +21,7 @@ function parseStatValue(val: string): { num: number; suffix: string } {
 export default function About() {
   const sectionRef = useRef<HTMLElement>(null);
   const animated = useRef(false);
+  const [avatarLoaded, setAvatarLoaded] = useState(false);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -256,12 +264,20 @@ export default function About() {
                   zIndex: 1,
                 }}
               >
+                {/* Skeleton shown until image loads */}
+                {!avatarLoaded && <div className="avatar-skeleton" />}
                 <Image
-                  src={personal.avatar}
+                  src={resolveAvatarSrc(personal.avatar)}
                   alt={personal.name}
                   width={280}
                   height={280}
-                  style={{ objectFit: "cover", objectPosition: "top" }}
+                  style={{
+                    objectFit: "cover",
+                    objectPosition: "top",
+                    opacity: avatarLoaded ? 1 : 0,
+                    transition: "opacity 0.4s ease",
+                  }}
+                  onLoad={() => setAvatarLoaded(true)}
                 />
               </div>
             </div>
@@ -270,6 +286,23 @@ export default function About() {
       </div>
 
       <style>{`
+        @keyframes shimmer {
+          0% { background-position: -560px 0; }
+          100% { background-position: 560px 0; }
+        }
+        .avatar-skeleton {
+          position: absolute;
+          inset: 0;
+          border-radius: 50%;
+          background: linear-gradient(
+            90deg,
+            rgba(99,102,241,0.08) 25%,
+            rgba(99,102,241,0.18) 50%,
+            rgba(99,102,241,0.08) 75%
+          );
+          background-size: 560px 100%;
+          animation: shimmer 1.6s infinite linear;
+        }
         @keyframes orbit {
           from { transform: rotate(0deg); }
           to { transform: rotate(360deg); }

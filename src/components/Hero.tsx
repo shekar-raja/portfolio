@@ -296,7 +296,7 @@ export default function Hero() {
               animation: "fadeUp 0.8s 0.2s forwards",
             }}
           >
-            Cloud · Data · ML
+            Data · AI · Cloud
           </p>
 
           <h1
@@ -372,34 +372,6 @@ export default function Hero() {
             }}
           >
             <a
-              href={hero.cta.href}
-              style={{
-                padding: "0.85rem 2rem",
-                borderRadius: "8px",
-                background:
-                  "linear-gradient(135deg, var(--indigo) 0%, #818cf8 100%)",
-                color: "#fff",
-                fontWeight: 700,
-                fontSize: "0.95rem",
-                textDecoration: "none",
-                letterSpacing: "0.01em",
-                transition: "transform 0.2s, box-shadow 0.2s",
-                boxShadow: "0 0 30px rgba(99,102,241,0.3)",
-              }}
-              onMouseEnter={(e) => {
-                const el = e.currentTarget as HTMLAnchorElement;
-                el.style.transform = "translateY(-2px)";
-                el.style.boxShadow = "0 0 40px rgba(99,102,241,0.5)";
-              }}
-              onMouseLeave={(e) => {
-                const el = e.currentTarget as HTMLAnchorElement;
-                el.style.transform = "translateY(0)";
-                el.style.boxShadow = "0 0 30px rgba(99,102,241,0.3)";
-              }}
-            >
-              {hero.cta.label}
-            </a>
-            <a
               href={hero.secondaryCta.href}
               target={
                 hero.secondaryCta.href.startsWith("http") ? "_blank" : undefined
@@ -431,6 +403,48 @@ export default function Hero() {
               }}
             >
               {hero.secondaryCta.label}
+            </a>
+            <a
+              href="#contact"
+              onClick={(e) => {
+                e.preventDefault();
+                const lenis = (window as unknown as Record<string, unknown>)
+                  .__lenis as
+                  | {
+                      scrollTo: (
+                        target: Element,
+                        opts?: Record<string, unknown>,
+                      ) => void;
+                    }
+                  | undefined;
+                const el = document.getElementById("contact");
+                if (el)
+                  lenis
+                    ? lenis.scrollTo(el, { offset: -64, duration: 1.4 })
+                    : el.scrollIntoView({ behavior: "smooth" });
+              }}
+              style={{
+                padding: "0.85rem 2rem",
+                borderRadius: "8px",
+                border: "1px solid rgba(34,211,238,0.35)",
+                color: "var(--cyan)",
+                fontWeight: 600,
+                fontSize: "0.95rem",
+                textDecoration: "none",
+                transition: "border-color 0.2s, background 0.2s",
+              }}
+              onMouseEnter={(e) => {
+                const el = e.currentTarget as HTMLAnchorElement;
+                el.style.borderColor = "var(--cyan)";
+                el.style.background = "rgba(34,211,238,0.08)";
+              }}
+              onMouseLeave={(e) => {
+                const el = e.currentTarget as HTMLAnchorElement;
+                el.style.borderColor = "rgba(34,211,238,0.35)";
+                el.style.background = "transparent";
+              }}
+            >
+              Get in Touch
             </a>
           </div>
         </div>

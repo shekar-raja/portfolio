@@ -1,10 +1,19 @@
 "use client";
+import { useState } from "react";
 import portfolioConfig from "@/data/portfolio.config";
 import CharReveal from "@/components/CharReveal";
 
 const { personal, contact: contactInfo } = portfolioConfig;
 
 export default function Contact() {
+  const [copied, setCopied] = useState(false);
+
+  const copyEmail = () => {
+    navigator.clipboard.writeText(personal.email).then(() => {
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    });
+  };
   return (
     <section
       id="contact"
@@ -81,38 +90,117 @@ export default function Contact() {
           {contactInfo.subtext}
         </p>
 
-        <a
-          href={`mailto:${personal.email}`}
+        <div
           style={{
-            display: "inline-block",
-            padding: "1rem 2.5rem",
-            borderRadius: "10px",
-            background:
-              "linear-gradient(135deg, var(--indigo) 0%, #818cf8 100%)",
-            color: "#fff",
-            fontWeight: 700,
-            fontSize: "1rem",
-            textDecoration: "none",
-            letterSpacing: "0.01em",
-            boxShadow: "0 0 40px rgba(99,102,241,0.35)",
-            transition: "transform 0.2s, box-shadow 0.2s",
+            display: "inline-flex",
+            alignItems: "center",
+            gap: "0.5rem",
             marginBottom: "2.5rem",
           }}
-          onMouseEnter={(e) => {
-            (e.currentTarget as HTMLAnchorElement).style.transform =
-              "translateY(-3px)";
-            (e.currentTarget as HTMLAnchorElement).style.boxShadow =
-              "0 0 55px rgba(99,102,241,0.5)";
-          }}
-          onMouseLeave={(e) => {
-            (e.currentTarget as HTMLAnchorElement).style.transform =
-              "translateY(0)";
-            (e.currentTarget as HTMLAnchorElement).style.boxShadow =
-              "0 0 40px rgba(99,102,241,0.35)";
-          }}
         >
-          personal.email
-        </a>
+          <a
+            href={`mailto:${personal.email}`}
+            style={{
+              display: "inline-block",
+              padding: "1rem 2.5rem",
+              borderRadius: "10px",
+              background:
+                "linear-gradient(135deg, var(--indigo) 0%, #818cf8 100%)",
+              color: "#fff",
+              fontWeight: 700,
+              fontSize: "1rem",
+              textDecoration: "none",
+              letterSpacing: "0.01em",
+              boxShadow: "0 0 40px rgba(99,102,241,0.35)",
+              transition: "transform 0.2s, box-shadow 0.2s",
+            }}
+            onMouseEnter={(e) => {
+              (e.currentTarget as HTMLAnchorElement).style.transform =
+                "translateY(-3px)";
+              (e.currentTarget as HTMLAnchorElement).style.boxShadow =
+                "0 0 55px rgba(99,102,241,0.5)";
+            }}
+            onMouseLeave={(e) => {
+              (e.currentTarget as HTMLAnchorElement).style.transform =
+                "translateY(0)";
+              (e.currentTarget as HTMLAnchorElement).style.boxShadow =
+                "0 0 40px rgba(99,102,241,0.35)";
+            }}
+          >
+            {personal.email}
+          </a>
+
+          <button
+            onClick={copyEmail}
+            title="Copy email address"
+            style={{
+              display: "inline-flex",
+              alignItems: "center",
+              justifyContent: "center",
+              gap: "0.4rem",
+              padding: "0.9rem 1rem",
+              borderRadius: "10px",
+              border: "1px solid rgba(99,102,241,0.4)",
+              background: copied
+                ? "rgba(34,211,238,0.12)"
+                : "rgba(99,102,241,0.08)",
+              color: copied ? "var(--cyan)" : "var(--indigo-light)",
+              cursor: "pointer",
+              fontWeight: 600,
+              fontSize: "1.1rem",
+              letterSpacing: "0.02em",
+              transition: "background 0.2s, color 0.2s, border-color 0.2s",
+              lineHeight: 1,
+              overflow: "hidden",
+            }}
+          >
+            {/* Icon: swaps between copy and checkmark */}
+            {copied ? (
+              <svg
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <polyline points="20 6 9 17 4 12" />
+              </svg>
+            ) : (
+              <svg
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <rect x="9" y="9" width="13" height="13" rx="2" ry="2" />
+                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" />
+              </svg>
+            )}
+
+            {/* "Copied!" slides in from right */}
+            <span
+              style={{
+                display: "inline-block",
+                maxWidth: copied ? "80px" : "0px",
+                opacity: copied ? 1 : 0,
+                overflow: "hidden",
+                whiteSpace: "nowrap",
+                fontSize: "0.82rem",
+                transition:
+                  "max-width 0.35s cubic-bezier(0.22,1,0.36,1), opacity 0.25s ease",
+              }}
+            >
+              Copied!
+            </span>
+          </button>
+        </div>
 
         {/* Social row */}
         <div
