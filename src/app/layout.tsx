@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import portfolioConfig from "@/data/portfolio.config";
 import Nav from "@/components/Nav";
-import Cursor from "@/components/Cursor";
+import CursorWrapper from "@/components/CursorWrapper";
 import SmoothScroll from "@/components/SmoothScroll";
 import BlackholeBackground from "@/components/BlackholeBackground";
 import SpaceBackground from "@/components/SpaceBackground";
@@ -62,7 +62,7 @@ export default function RootLayout({
         </Script>
         <BlackholeBackground />
         <SpaceBackground />
-        <Cursor />
+        <CursorWrapper />
         <SmoothScroll />
         <Nav />
         {children}

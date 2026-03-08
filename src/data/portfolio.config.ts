@@ -22,7 +22,8 @@ const portfolioConfig: PortfolioConfig = {
     email: "rshekar.contact@gmail.com",
     linkedin: "https://www.linkedin.com/in/raja-shekar/",
     github: "https://github.com/shekar-raja",
-    resume:
+    resume: "/portfolio/resume",
+    resumeSource:
       "https://drive.google.com/file/d/1GvuQLTMwQZvWREcrDMe2kdtXRybcVzuw/view?usp=sharing",
     avatar:
       "https://drive.google.com/file/d/1c3G5PztdC2BoHsJANh33-YY-Axa9CrmZ/view?usp=sharing",
@@ -39,7 +40,7 @@ const portfolioConfig: PortfolioConfig = {
     cta: { label: "View My Work", href: "#projects" },
     secondaryCta: {
       label: "Download CV",
-      href: "https://drive.google.com/file/d/1GvuQLTMwQZvWREcrDMe2kdtXRybcVzuw/view?usp=sharing",
+      href: "/portfolio/resume",
     },
   },
 
@@ -226,7 +227,6 @@ const portfolioConfig: PortfolioConfig = {
         "IAM",
         "SageMaker",
         "ECR",
-        "ECS",
       ],
     },
     {
@@ -294,7 +294,7 @@ const portfolioConfig: PortfolioConfig = {
       summary:
         "A practical deep-dive into how vector DBs work, when to use Pinecone vs pgvector vs Weaviate, and patterns for RAG pipelines at scale.",
       date: "2025-01-15",
-      url: "https://medium.com/@rshekar",
+      url: "https://rshekar.notion.site/Vector-Database-a-Brief-Introduction-dcf1604e3d604052be8d7070887084e9",
       thumbnail: "/images/blogs/vector-db-thumbnail.png",
       readTime: "8 min read",
       tags: ["Vector DB", "RAG", "LLM", "Pinecone"],

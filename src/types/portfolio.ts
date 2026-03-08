@@ -9,6 +9,7 @@ export interface Personal {
   linkedin: string;
   github: string;
   resume: string;
+  resumeSource: string;
   avatar: string;
   googleAnalytics: string;
   siteUrl: string;
