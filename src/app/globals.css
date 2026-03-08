@@ -3,11 +3,11 @@
 @theme inline {
   --color-void: #050508;
   --color-surface: #0d0d14;
-  --color-border: rgba(99, 102, 241, 0.15);
-  --color-indigo: #6366f1;
-  --color-indigo-light: #818cf8;
-  --color-cyan: #22d3ee;
-  --color-cyan-light: #67e8f9;
+  --color-border: rgba(245, 158, 11, 0.15);
+  --color-indigo: #f59e0b;
+  --color-indigo-light: #fbbf24;
+  --color-cyan: #2dd4bf;
+  --color-cyan-light: #5eead4;
   --color-text-primary: #f1f5f9;
   --color-text-secondary: #b8c5d6;
   --font-sans: "Inter", sans-serif;
@@ -17,11 +17,11 @@
 :root {
   --bg: #050508;
   --surface: #0d0d14;
-  --border: rgba(99, 102, 241, 0.15);
-  --indigo: #6366f1;
-  --indigo-light: #818cf8;
-  --cyan: #22d3ee;
-  --cyan-light: #67e8f9;
+  --border: rgba(245, 158, 11, 0.15);
+  --indigo: #f59e0b;
+  --indigo-light: #fbbf24;
+  --cyan: #2dd4bf;
+  --cyan-light: #5eead4;
   --text-primary: #f1f5f9;
   --text-secondary: #b8c5d6;
 }
@@ -56,7 +56,7 @@ body {
 }
 
 ::selection {
-  background: rgba(99, 102, 241, 0.35);
+  background: rgba(245, 158, 11, 0.35);
   color: #f1f5f9;
 }
 
@@ -96,6 +96,39 @@ body {
   opacity: 0.03;
   pointer-events: none;
   z-index: 9999;
+}
+
+/* ── Black hole theme: section transitions ────────────────────────────────
+   Each content section sits over the fixed BH video. A top-fade pseudo-element
+   softens the hard border-top cut so sections feel like they emerge from space. */
+#about,
+#experience,
+#projects,
+#skills,
+#education,
+#writing,
+#testimonials,
+#contact {
+  position: relative;
+}
+
+#about::before,
+#experience::before,
+#projects::before,
+#skills::before,
+#education::before,
+#writing::before,
+#testimonials::before,
+#contact::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 90px;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.22) 0%, transparent 100%);
+  pointer-events: none;
+  z-index: 1;
 }
 
 /* Section base */

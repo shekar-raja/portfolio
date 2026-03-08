@@ -49,12 +49,18 @@ export default function Projects() {
     const containers = document.querySelectorAll<HTMLDivElement>(".proj-desc");
     const rafMap = new Map<HTMLDivElement, number>();
     const pausedMap = new Map<HTMLDivElement, boolean>();
+    const resumeTimers = new Map<
+      HTMLDivElement,
+      ReturnType<typeof setTimeout>
+    >();
+
+    const SCROLL_SPEED = 0.18; // px per frame — slow, comfortable reading pace
 
     const startScroll = (el: HTMLDivElement) => {
       const tick = () => {
         if (!pausedMap.get(el) && el.scrollHeight > el.clientHeight) {
-          el.scrollTop += 0.6;
-          if (el.scrollTop + el.clientHeight >= el.scrollHeight) {
+          el.scrollTop += SCROLL_SPEED;
+          if (el.scrollTop + el.clientHeight >= el.scrollHeight - 1) {
             el.scrollTop = 0;
           }
         }
@@ -66,18 +72,51 @@ export default function Projects() {
     containers.forEach((el) => {
       pausedMap.set(el, false);
       startScroll(el);
+
       el.addEventListener("mouseenter", () => {
         pausedMap.set(el, true);
         el.style.overflowY = "auto";
       });
       el.addEventListener("mouseleave", () => {
-        pausedMap.set(el, false);
+        // Resume auto-scroll only if no pending user-scroll timer
+        if (!resumeTimers.has(el)) {
+          pausedMap.set(el, false);
+        }
         el.style.overflowY = "hidden";
       });
+
+      // Allow manual wheel scrolling at any time
+      el.addEventListener(
+        "wheel",
+        (e: WheelEvent) => {
+          e.preventDefault();
+          e.stopPropagation();
+          el.scrollTop += e.deltaY * 0.4;
+          // Clamp
+          el.scrollTop = Math.max(
+            0,
+            Math.min(el.scrollTop, el.scrollHeight - el.clientHeight),
+          );
+          // Pause auto-scroll, then resume 2s after last wheel input
+          pausedMap.set(el, true);
+          clearTimeout(resumeTimers.get(el));
+          resumeTimers.set(
+            el,
+            setTimeout(() => {
+              resumeTimers.delete(el);
+              if (!el.matches(":hover")) {
+                pausedMap.set(el, false);
+              }
+            }, 2000),
+          );
+        },
+        { passive: false },
+      );
     });
 
     return () => {
       rafMap.forEach((id) => cancelAnimationFrame(id));
+      resumeTimers.forEach((id) => clearTimeout(id));
     };
   }, []);
 
@@ -86,10 +125,10 @@ export default function Projects() {
       id="projects"
       style={{
         padding: "8rem 0",
-        background: "rgba(4,4,10,0.78)",
-        backdropFilter: "blur(18px) saturate(160%)",
-        WebkitBackdropFilter: "blur(18px) saturate(160%)",
-        borderTop: "1px solid rgba(255,255,255,0.06)",
+        background: "rgba(4,4,10,0.62)",
+        backdropFilter: "blur(20px) saturate(180%)",
+        WebkitBackdropFilter: "blur(20px) saturate(180%)",
+        borderTop: "1px solid rgba(245,158,11,0.15)",
         overflow: "hidden",
       }}
     >
@@ -199,9 +238,10 @@ export default function Projects() {
                 style={{
                   padding: "2rem",
                   borderRadius: "20px",
-                  background: "rgba(13,13,20,0.92)",
+                  background: "rgba(8,8,18,0.52)",
                   border: `1px solid ${project.accent}22`,
-                  backdropFilter: "blur(8px)",
+                  backdropFilter: "blur(18px) saturate(160%)",
+                  WebkitBackdropFilter: "blur(18px) saturate(160%)",
                   cursor: "default",
                   transition: "border-color 0.3s, box-shadow 0.3s",
                   position: "relative",
@@ -214,8 +254,8 @@ export default function Projects() {
                 }}
                 onMouseEnter={(e) => {
                   const el = e.currentTarget as HTMLDivElement;
-                  el.style.borderColor = `${project.accent}55`;
-                  el.style.boxShadow = `0 24px 64px ${project.accent}18`;
+                  el.style.borderColor = `${project.accent}66`;
+                  el.style.boxShadow = `0 0 40px ${project.accent}28, 0 24px 60px ${project.accent}18`;
                 }}
                 onMouseLeave={(e) => {
                   const el = e.currentTarget as HTMLDivElement;

@@ -68,10 +68,10 @@ export default function About() {
       ref={sectionRef}
       style={{
         padding: "8rem 0",
-        background: "rgba(4,4,10,0.78)",
-        backdropFilter: "blur(18px) saturate(160%)",
-        WebkitBackdropFilter: "blur(18px) saturate(160%)",
-        borderTop: "1px solid rgba(255,255,255,0.06)",
+        background: "rgba(4,4,10,0.62)",
+        backdropFilter: "blur(20px) saturate(180%)",
+        WebkitBackdropFilter: "blur(20px) saturate(180%)",
+        borderTop: "1px solid rgba(245,158,11,0.15)",
       }}
     >
       <style>{`
@@ -168,8 +168,8 @@ export default function About() {
                     style={{
                       padding: "1.25rem",
                       borderRadius: "12px",
-                      background: "rgba(99,102,241,0.06)",
-                      border: "1px solid rgba(99,102,241,0.15)",
+                      background: "rgba(245,158,11,0.06)",
+                      border: "1px solid rgba(245,158,11,0.15)",
                     }}
                   >
                     <div
@@ -225,7 +225,7 @@ export default function About() {
                   position: "absolute",
                   inset: "-24px",
                   borderRadius: "50%",
-                  border: "1px solid rgba(99,102,241,0.2)",
+                  border: "1px solid rgba(245,158,11,0.2)",
                   animation: "orbit 8s linear infinite",
                 }}
               />
@@ -234,7 +234,7 @@ export default function About() {
                   position: "absolute",
                   inset: "-48px",
                   borderRadius: "50%",
-                  border: "1px solid rgba(34,211,238,0.12)",
+                  border: "1px solid rgba(45,212,191,0.12)",
                   animation: "orbit 14s linear infinite reverse",
                 }}
               />
@@ -259,7 +259,7 @@ export default function About() {
                   height: "280px",
                   borderRadius: "50%",
                   overflow: "hidden",
-                  border: "2px solid rgba(99,102,241,0.3)",
+                  border: "2px solid rgba(245,158,11,0.3)",
                   position: "relative",
                   zIndex: 1,
                 }}
@@ -296,9 +296,9 @@ export default function About() {
           border-radius: 50%;
           background: linear-gradient(
             90deg,
-            rgba(99,102,241,0.08) 25%,
-            rgba(99,102,241,0.18) 50%,
-            rgba(99,102,241,0.08) 75%
+            rgba(245,158,11,0.08) 25%,
+            rgba(245,158,11,0.18) 50%,
+            rgba(245,158,11,0.08) 75%
           );
           background-size: 560px 100%;
           animation: shimmer 1.6s infinite linear;

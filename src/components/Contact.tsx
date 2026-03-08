@@ -19,10 +19,10 @@ export default function Contact() {
       id="contact"
       style={{
         padding: "8rem 0",
-        background: "rgba(6,4,12,0.80)",
-        backdropFilter: "blur(18px) saturate(160%)",
-        WebkitBackdropFilter: "blur(18px) saturate(160%)",
-        borderTop: "1px solid rgba(255,255,255,0.06)",
+        background: "rgba(4,4,10,0.62)",
+        backdropFilter: "blur(20px) saturate(180%)",
+        WebkitBackdropFilter: "blur(20px) saturate(180%)",
+        borderTop: "1px solid rgba(245,158,11,0.15)",
         position: "relative",
         overflow: "hidden",
       }}
@@ -37,7 +37,7 @@ export default function Contact() {
           width: "700px",
           height: "400px",
           background:
-            "radial-gradient(ellipse, rgba(99,102,241,0.1) 0%, transparent 65%)",
+            "radial-gradient(ellipse, rgba(245,158,11,0.1) 0%, transparent 65%)",
           pointerEvents: "none",
         }}
       />
@@ -105,26 +105,26 @@ export default function Contact() {
               padding: "1rem 2.5rem",
               borderRadius: "10px",
               background:
-                "linear-gradient(135deg, var(--indigo) 0%, #818cf8 100%)",
+                "linear-gradient(135deg, var(--indigo) 0%, #fbbf24 100%)",
               color: "#fff",
               fontWeight: 700,
               fontSize: "1rem",
               textDecoration: "none",
               letterSpacing: "0.01em",
-              boxShadow: "0 0 40px rgba(99,102,241,0.35)",
+              boxShadow: "0 0 40px rgba(245,158,11,0.35)",
               transition: "transform 0.2s, box-shadow 0.2s",
             }}
             onMouseEnter={(e) => {
               (e.currentTarget as HTMLAnchorElement).style.transform =
                 "translateY(-3px)";
               (e.currentTarget as HTMLAnchorElement).style.boxShadow =
-                "0 0 55px rgba(99,102,241,0.5)";
+                "0 0 55px rgba(245,158,11,0.5)";
             }}
             onMouseLeave={(e) => {
               (e.currentTarget as HTMLAnchorElement).style.transform =
                 "translateY(0)";
               (e.currentTarget as HTMLAnchorElement).style.boxShadow =
-                "0 0 40px rgba(99,102,241,0.35)";
+                "0 0 40px rgba(245,158,11,0.35)";
             }}
           >
             {personal.email}
@@ -140,10 +140,10 @@ export default function Contact() {
               gap: "0.4rem",
               padding: "0.9rem 1rem",
               borderRadius: "10px",
-              border: "1px solid rgba(99,102,241,0.4)",
+              border: "1px solid rgba(245,158,11,0.4)",
               background: copied
-                ? "rgba(34,211,238,0.12)"
-                : "rgba(99,102,241,0.08)",
+                ? "rgba(45,212,191,0.12)"
+                : "rgba(245,158,11,0.08)",
               color: copied ? "var(--cyan)" : "var(--indigo-light)",
               cursor: "pointer",
               fontWeight: 600,

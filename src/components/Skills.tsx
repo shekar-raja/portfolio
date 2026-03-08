@@ -74,10 +74,10 @@ export default function Skills() {
       ref={sectionRef}
       style={{
         padding: "8rem 0",
-        background: "rgba(4,4,10,0.78)",
-        backdropFilter: "blur(18px) saturate(160%)",
-        WebkitBackdropFilter: "blur(18px) saturate(160%)",
-        borderTop: "1px solid rgba(255,255,255,0.06)",
+        background: "rgba(4,4,10,0.62)",
+        backdropFilter: "blur(20px) saturate(180%)",
+        WebkitBackdropFilter: "blur(20px) saturate(180%)",
+        borderTop: "1px solid rgba(245,158,11,0.15)",
       }}
     >
       <style>{`
@@ -97,12 +97,12 @@ export default function Skills() {
         .skill-card:nth-child(5) { transition-delay: 0.33s; }
         .skill-card:nth-child(6) { transition-delay: 0.40s; }
         .skill-inner:hover {
-          border-color: rgba(99,102,241,0.45) !important;
-          box-shadow: 0 0 40px rgba(99,102,241,0.1) !important;
+          border-color: rgba(245,158,11,0.45) !important;
+          box-shadow: 0 0 40px rgba(245,158,11,0.1) !important;
           transform: translateY(-4px) !important;
         }
         .skill-tag:hover {
-          background: rgba(99,102,241,0.2) !important;
+          background: rgba(245,158,11,0.2) !important;
         }
         .skill-tag {
           transition: background 0.2s, transform 0.2s ease-out !important;
@@ -154,7 +154,7 @@ export default function Skills() {
                   padding: "1.75rem",
                   borderRadius: "16px",
                   background: "rgba(13,13,20,0.6)",
-                  border: "1px solid rgba(99,102,241,0.12)",
+                  border: "1px solid rgba(245,158,11,0.12)",
                   backdropFilter: "blur(12px)",
                   transition:
                     "border-color 0.3s, box-shadow 0.3s, transform 0.3s",

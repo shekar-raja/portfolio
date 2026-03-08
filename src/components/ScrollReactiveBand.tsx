@@ -144,11 +144,11 @@ export default function ScrollReactiveBand() {
                   style={{
                     padding: "0.45rem 1rem",
                     borderRadius: "999px",
-                    border: `1px solid ${i % 2 === 0 ? "rgba(99,102,241,0.22)" : "rgba(34,211,238,0.2)"}`,
+                    border: `1px solid ${i % 2 === 0 ? "rgba(245,158,11,0.22)" : "rgba(45,212,191,0.2)"}`,
                     background:
                       i % 2 === 0
-                        ? "rgba(99,102,241,0.06)"
-                        : "rgba(34,211,238,0.05)",
+                        ? "rgba(245,158,11,0.06)"
+                        : "rgba(45,212,191,0.05)",
                     color:
                       i % 2 === 0
                         ? "rgba(165,180,252,0.75)"

@@ -19,8 +19,11 @@ export default function Experience() {
     const onScroll = () => {
       if (!sectionRef.current) return;
       const rect = sectionRef.current.getBoundingClientRect();
+      const viewH = window.innerHeight;
+      // Start filling when the section heading enters view (rect.top < 50vh),
+      // reach 100% before the section scrolls off — same speed as original.
       const visibleFraction = Math.min(
-        Math.max((-rect.top / rect.height) * 1.8, 0),
+        Math.max((-rect.top + viewH * 0.5) / (rect.height * 0.55), 0),
         1,
       );
       line.style.height = `${visibleFraction * 100}%`;
@@ -52,10 +55,10 @@ export default function Experience() {
       ref={sectionRef}
       style={{
         padding: "8rem 0",
-        background: "rgba(6,4,12,0.78)",
-        backdropFilter: "blur(18px) saturate(160%)",
-        WebkitBackdropFilter: "blur(18px) saturate(160%)",
-        borderTop: "1px solid rgba(255,255,255,0.06)",
+        background: "rgba(4,4,10,0.62)",
+        backdropFilter: "blur(20px) saturate(180%)",
+        WebkitBackdropFilter: "blur(20px) saturate(180%)",
+        borderTop: "1px solid rgba(245,158,11,0.15)",
       }}
     >
       <style>{`
@@ -107,7 +110,7 @@ export default function Experience() {
               position: "relative",
               width: "2px",
               flexShrink: 0,
-              background: "rgba(99,102,241,0.12)",
+              background: "rgba(245,158,11,0.12)",
               borderRadius: "2px",
             }}
           >
@@ -144,27 +147,28 @@ export default function Experience() {
                   padding: "2rem",
                   borderRadius: "16px",
                   background: "rgba(5,5,8,0.6)",
-                  border: "1px solid rgba(99,102,241,0.12)",
+                  border: "1px solid rgba(245,158,11,0.12)",
                   backdropFilter: "blur(12px)",
                   position: "relative",
                 }}
                 onMouseEnter={(e) => {
                   (e.currentTarget as HTMLDivElement).style.borderColor =
-                    "rgba(99,102,241,0.4)";
+                    "rgba(245,158,11,0.45)";
                   (e.currentTarget as HTMLDivElement).style.boxShadow =
-                    "0 0 30px rgba(99,102,241,0.08)";
+                    "0 0 40px rgba(245,158,11,0.12), inset 0 0 40px rgba(245,158,11,0.04)";
                 }}
                 onMouseLeave={(e) => {
                   (e.currentTarget as HTMLDivElement).style.borderColor =
-                    "rgba(99,102,241,0.12)";
+                    "rgba(245,158,11,0.12)";
                   (e.currentTarget as HTMLDivElement).style.boxShadow = "none";
                 }}
               >
                 {/* Dot on spine */}
                 <div
+                  className="exp-dot"
                   style={{
                     position: "absolute",
-                    left: "-3.75rem",
+                    left: "calc(-3rem - 6px)",
                     top: "2rem",
                     width: "10px",
                     height: "10px",
@@ -281,8 +285,8 @@ export default function Experience() {
                         borderRadius: "20px",
                         fontSize: "0.72rem",
                         fontWeight: 600,
-                        background: "rgba(99,102,241,0.1)",
-                        border: "1px solid rgba(99,102,241,0.2)",
+                        background: "rgba(245,158,11,0.1)",
+                        border: "1px solid rgba(245,158,11,0.2)",
                         color: "var(--indigo-light)",
                         letterSpacing: "0.02em",
                       }}
@@ -300,6 +304,7 @@ export default function Experience() {
       <style>{`
         @media (max-width: 768px) {
           .exp-layout { gap: 1.5rem !important; }
+          .exp-dot { left: calc(-1.5rem - 6px) !important; }
         }
       `}</style>
     </section>

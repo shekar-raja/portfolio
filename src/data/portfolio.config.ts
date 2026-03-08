@@ -66,7 +66,7 @@ const portfolioConfig: PortfolioConfig = {
       "I've always been curious about how things work. That curiosity first led me into building full stack web applications and, over time, into the world of data, cloud engineering, and applied AI.",
       "With over five years of experience as a software engineer, I now focus on designing and delivering data driven systems that turn ideas into real world solutions. My journey has evolved from crafting user facing applications to engineering smart, connected systems that can make a tangible difference, from improving operational efficiency to supporting sustainability goals.",
       "I'm currently a Cloud Data Engineer at Koolmill Systems Limited, contributing to an Innovate UK funded project developing next generation smart systems for rice milling. It's a role that blends my technical background with my passion for creating meaningful, impactful technology.",
-      "What drives me is the opportunity to keep learning, keep building and create solutions that matter.",
+      "What drives me is the opportunity to keep learning, keep building and create solutions that matter. Apart from siting in front of computer I love ",
     ],
     stats: [
       { value: "5+", label: "Years Industry Experience" },
@@ -157,7 +157,7 @@ const portfolioConfig: PortfolioConfig = {
       tags: ["Python", "PyTorch", "Pandas", "Scikit-Learn"],
       github: "https://github.com/shekar-raja/exoplanet-detection-system-ml",
       image: "",
-      accent: "#22d3ee",
+      accent: "#f59e0b",
     },
     {
       title: "AlertOps AI",
@@ -166,7 +166,7 @@ const portfolioConfig: PortfolioConfig = {
       tags: ["Python", "Kafka", "PyTorch", "Scikit-Learn", "FastAPI", "Azure"],
       github: "https://github.com/shekar-raja/alertops-ai",
       image: "",
-      accent: "#22d3ee",
+      accent: "#2dd4bf",
     },
     {
       title: "Adobe XD Layout Plugin",
@@ -175,7 +175,7 @@ const portfolioConfig: PortfolioConfig = {
       tags: ["JavaScript", "Adobe XD APIs", "CSS Grid", "Accessibility"],
       github: "https://github.com/shekar-raja",
       image: "",
-      accent: "#22d3ee",
+      accent: "#f59e0b",
     },
     {
       title: "AG Grid Dash",
@@ -184,7 +184,7 @@ const portfolioConfig: PortfolioConfig = {
       tags: ["Python", "FastAPI", "FAISS", "Node.js", "TypeScript", "MongoDB"],
       github: "https://github.com/shekar-raja/Image-Optimizer-AdobeXD",
       image: "",
-      accent: "#6366f1",
+      accent: "#2dd4bf",
     },
   ],
 
@@ -197,7 +197,7 @@ const portfolioConfig: PortfolioConfig = {
     {
       category: "Languages & Backend",
       icon: "💻",
-      color: "#22d3ee",
+      color: "#2dd4bf",
       skills: [
         "Python",
         "SQL",
@@ -212,7 +212,7 @@ const portfolioConfig: PortfolioConfig = {
     {
       category: "Cloud & AWS",
       icon: "☁️",
-      color: "#6366f1",
+      color: "#f59e0b",
       skills: [
         "S3",
         "AWS Lambda",
@@ -232,19 +232,19 @@ const portfolioConfig: PortfolioConfig = {
     {
       category: "DevOps & IaC",
       icon: "⚙️",
-      color: "#22d3ee",
+      color: "#2dd4bf",
       skills: ["Terraform", "Docker", "GitHub Actions", "IAM", "ABAC"],
     },
     {
       category: "Databases",
       icon: "🗄️",
-      color: "#6366f1",
+      color: "#f59e0b",
       skills: ["DynamoDB", "PostgreSQL", "MongoDB", "Redis", "CouchDB"],
     },
     {
       category: "Data Engineering",
       icon: "🔄",
-      color: "#22d3ee",
+      color: "#2dd4bf",
       skills: [
         "ETL/ELT Pipelines",
         "Real-Time Streaming",
@@ -256,7 +256,7 @@ const portfolioConfig: PortfolioConfig = {
     {
       category: "ML & Data Science",
       icon: "🧠",
-      color: "#6366f1",
+      color: "#f59e0b",
       skills: ["PyTorch", "Scikit-Learn", "Pandas", "NumPy", "Matplotlib"],
     },
   ],
@@ -271,7 +271,7 @@ const portfolioConfig: PortfolioConfig = {
       location: "Hatfield, UK",
       detail:
         "Focused on Machine Learning, Cloud Computing and Data Analytics. Dissertation on exoplanet detection using machine learning with NASA Kepler dataset.",
-      accent: "#6366f1",
+      accent: "#f59e0b",
     },
     {
       degree: "BSc Computer Science",
@@ -280,7 +280,7 @@ const portfolioConfig: PortfolioConfig = {
       location: "Hyderabad, India",
       detail:
         "Core curriculum covering algorithms, data structures, database systems and software engineering.",
-      accent: "#22d3ee",
+      accent: "#2dd4bf",
     },
   ],
 
@@ -313,7 +313,7 @@ const portfolioConfig: PortfolioConfig = {
       quote:
         "Raja consistently impressed me with his critical thinking and problem-solving skills. These strengths were invaluable as we navigated challenging situations that arose during the development process at TruNums. Raja's ability to analyze problems, come up with creative solutions, and implement them effectively made him a key asset to the project. Without a doubt, Raja would be a valuable addition to any development team. His technical expertise, combined with his quick learning, critical thinking and problem-solving skills, makes him a truly exceptional candidate.",
       initials: "BR",
-      accent: "#6366f1",
+      accent: "#f59e0b",
     },
     {
       name: "Prudhviraj Pampana",
@@ -322,7 +322,7 @@ const portfolioConfig: PortfolioConfig = {
       quote:
         "I had the pleasure of managing Raja for a significant duration, I was consistently impressed by his ability to remain calm and composed under pressure. His strong problem-solving skills and ability to think strategically helped navigate challenging situations effectively.",
       initials: "PP",
-      accent: "#22d3ee",
+      accent: "#2dd4bf",
     },
   ],
 

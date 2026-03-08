@@ -62,7 +62,7 @@ export default function Hero() {
 
     const pointMat = new THREE.PointsMaterial({
       size: 0.055,
-      color: 0x818cf8,
+      color: 0xfbbf24,
       transparent: true,
       opacity: 0.75,
       sizeAttenuation: true,
@@ -132,9 +132,9 @@ export default function Hero() {
 
       // Rebuild line buffer in-place
       let lineCount = 0;
-      const r = 0.38,
-        g = 0.4,
-        b = 0.95; // indigo colour
+      const r = 0.96,
+        g = 0.62,
+        b = 0.04; // amber disk colour
       for (let i = 0; i < PARTICLE_COUNT && lineCount < MAX_LINES; i++) {
         for (let j = i + 1; j < PARTICLE_COUNT && lineCount < MAX_LINES; j++) {
           const dx = positions[i * 3] - positions[j * 3];
@@ -262,7 +262,7 @@ export default function Hero() {
           height: "700px",
           borderRadius: "50%",
           background:
-            "radial-gradient(circle, rgba(99,102,241,0.14) 0%, rgba(34,211,238,0.07) 45%, transparent 70%)",
+            "radial-gradient(circle, rgba(245,158,11,0.14) 0%, rgba(45,212,191,0.07) 45%, transparent 70%)",
           pointerEvents: "none",
           zIndex: 2,
           transition: "transform 0.6s cubic-bezier(0.25,0.46,0.45,0.94)",
@@ -384,7 +384,7 @@ export default function Hero() {
               style={{
                 padding: "0.85rem 2rem",
                 borderRadius: "8px",
-                border: "1px solid rgba(99,102,241,0.35)",
+                border: "1px solid rgba(245,158,11,0.35)",
                 color: "var(--text-primary)",
                 fontWeight: 600,
                 fontSize: "0.95rem",
@@ -394,11 +394,11 @@ export default function Hero() {
               onMouseEnter={(e) => {
                 const el = e.currentTarget as HTMLAnchorElement;
                 el.style.borderColor = "var(--indigo)";
-                el.style.background = "rgba(99,102,241,0.08)";
+                el.style.background = "rgba(245,158,11,0.08)";
               }}
               onMouseLeave={(e) => {
                 const el = e.currentTarget as HTMLAnchorElement;
-                el.style.borderColor = "rgba(99,102,241,0.35)";
+                el.style.borderColor = "rgba(245,158,11,0.35)";
                 el.style.background = "transparent";
               }}
             >
@@ -426,7 +426,7 @@ export default function Hero() {
               style={{
                 padding: "0.85rem 2rem",
                 borderRadius: "8px",
-                border: "1px solid rgba(34,211,238,0.35)",
+                border: "1px solid rgba(45,212,191,0.35)",
                 color: "var(--cyan)",
                 fontWeight: 600,
                 fontSize: "0.95rem",
@@ -436,11 +436,11 @@ export default function Hero() {
               onMouseEnter={(e) => {
                 const el = e.currentTarget as HTMLAnchorElement;
                 el.style.borderColor = "var(--cyan)";
-                el.style.background = "rgba(34,211,238,0.08)";
+                el.style.background = "rgba(45,212,191,0.08)";
               }}
               onMouseLeave={(e) => {
                 const el = e.currentTarget as HTMLAnchorElement;
-                el.style.borderColor = "rgba(34,211,238,0.35)";
+                el.style.borderColor = "rgba(45,212,191,0.35)";
                 el.style.background = "transparent";
               }}
             >

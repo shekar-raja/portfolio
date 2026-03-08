@@ -6,13 +6,13 @@ function isMobile() {
 }
 
 const PALETTE = [
-  "#818cf8", // indigo-light
-  "#6366f1", // indigo
-  "#22d3ee", // cyan
-  "#a78bfa", // violet
-  "#c4b5fd", // violet-light
-  "#94a3b8", // slate
-  "#e2e8f0", // near-white
+  "#fbbf24", // disk gold
+  "#f59e0b", // disk amber
+  "#2dd4bf", // lensing teal
+  "#f97316", // inner disk orange
+  "#fde68a", // warm highlight
+  "#94a3b8", // stellar grey
+  "#e2e8f0", // near-white star
 ];
 
 type Particle = {

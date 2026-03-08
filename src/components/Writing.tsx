@@ -9,10 +9,10 @@ export default function Writing() {
       id="writing"
       style={{
         padding: "8rem 0",
-        background: "rgba(4,4,10,0.78)",
-        backdropFilter: "blur(18px) saturate(160%)",
-        WebkitBackdropFilter: "blur(18px) saturate(160%)",
-        borderTop: "1px solid rgba(255,255,255,0.06)",
+        background: "rgba(4,4,10,0.62)",
+        backdropFilter: "blur(20px) saturate(180%)",
+        WebkitBackdropFilter: "blur(20px) saturate(180%)",
+        borderTop: "1px solid rgba(245,158,11,0.15)",
       }}
     >
       <div style={{ maxWidth: "1200px", margin: "0 auto", padding: "0 2rem" }}>
@@ -65,7 +65,7 @@ export default function Writing() {
                   padding: "2rem",
                   borderRadius: "16px",
                   background: "rgba(13,13,20,0.7)",
-                  border: "1px solid rgba(99,102,241,0.12)",
+                  border: "1px solid rgba(245,158,11,0.12)",
                   backdropFilter: "blur(12px)",
                   transition:
                     "border-color 0.3s, transform 0.3s, box-shadow 0.3s",
@@ -73,13 +73,13 @@ export default function Writing() {
                 }}
                 onMouseEnter={(e) => {
                   const el = e.currentTarget as HTMLDivElement;
-                  el.style.borderColor = "rgba(99,102,241,0.4)";
+                  el.style.borderColor = "rgba(245,158,11,0.4)";
                   el.style.transform = "translateY(-4px)";
-                  el.style.boxShadow = "0 20px 50px rgba(99,102,241,0.1)";
+                  el.style.boxShadow = "0 20px 50px rgba(245,158,11,0.1)";
                 }}
                 onMouseLeave={(e) => {
                   const el = e.currentTarget as HTMLDivElement;
-                  el.style.borderColor = "rgba(99,102,241,0.12)";
+                  el.style.borderColor = "rgba(245,158,11,0.12)";
                   el.style.transform = "translateY(0)";
                   el.style.boxShadow = "none";
                 }}
@@ -103,8 +103,8 @@ export default function Writing() {
                           borderRadius: "20px",
                           fontSize: "0.68rem",
                           fontWeight: 600,
-                          background: "rgba(99,102,241,0.1)",
-                          border: "1px solid rgba(99,102,241,0.2)",
+                          background: "rgba(245,158,11,0.1)",
+                          border: "1px solid rgba(245,158,11,0.2)",
                           color: "var(--indigo-light)",
                         }}
                       >

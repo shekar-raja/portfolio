@@ -8,8 +8,10 @@ export default function Footer() {
     <footer
       style={{
         padding: "2.5rem 0",
-        background: "rgba(5,5,8,0.78)",
-        borderTop: "1px solid rgba(99,102,241,0.1)",
+        background: "rgba(4,4,10,0.62)",
+        backdropFilter: "blur(20px) saturate(180%)",
+        WebkitBackdropFilter: "blur(20px) saturate(180%)",
+        borderTop: "1px solid rgba(245,158,11,0.15)",
       }}
     >
       <div

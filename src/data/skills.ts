@@ -9,7 +9,7 @@ export const skillGroups: SkillGroup[] = [
   {
     category: "Cloud & Platform",
     icon: "☁️",
-    color: "#6366f1",
+    color: "#f59e0b",
     skills: [
       "AWS Lambda",
       "DynamoDB",
@@ -24,7 +24,7 @@ export const skillGroups: SkillGroup[] = [
   {
     category: "DevOps & IaC",
     icon: "⚙️",
-    color: "#22d3ee",
+    color: "#2dd4bf",
     skills: [
       "Terraform",
       "GitHub Actions",
@@ -37,7 +37,7 @@ export const skillGroups: SkillGroup[] = [
   {
     category: "Data & ML",
     icon: "🧠",
-    color: "#6366f1",
+    color: "#f59e0b",
     skills: [
       "PySpark",
       "AWS Glue",
@@ -51,19 +51,19 @@ export const skillGroups: SkillGroup[] = [
   {
     category: "Observability",
     icon: "📊",
-    color: "#22d3ee",
+    color: "#2dd4bf",
     skills: ["Grafana", "Prometheus", "CloudWatch", "Datadog", "OpenTelemetry"],
   },
   {
     category: "Databases",
     icon: "🗄️",
-    color: "#6366f1",
+    color: "#f59e0b",
     skills: ["DynamoDB", "PostgreSQL", "MongoDB", "Redis", "Redshift", "MySQL"],
   },
   {
     category: "Languages",
     icon: "💻",
-    color: "#22d3ee",
+    color: "#2dd4bf",
     skills: ["Python", "TypeScript", "JavaScript", "SQL", "Bash", "HCL"],
   },
 ];

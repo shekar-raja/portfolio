@@ -1,6 +1,7 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
 import portfolioConfig from "@/data/portfolio.config";
+import Logo from "@/components/Logo";
 
 const links = portfolioConfig.nav;
 const { personal } = portfolioConfig;
@@ -43,7 +44,7 @@ export default function Nav() {
         background: scrolled ? "rgba(5, 5, 8, 0.85)" : "transparent",
         backdropFilter: scrolled ? "blur(16px)" : "none",
         borderBottom: scrolled
-          ? "1px solid rgba(99,102,241,0.15)"
+          ? "1px solid rgba(245,158,11,0.15)"
           : "1px solid transparent",
       }}
     >
@@ -66,16 +67,13 @@ export default function Nav() {
             scrollToSection("#hero");
           }}
           style={{
-            fontFamily: "Sora, sans-serif",
-            fontWeight: 700,
-            fontSize: "1.1rem",
-            color: "#f1f5f9",
             textDecoration: "none",
-            letterSpacing: "-0.02em",
+            display: "flex",
+            alignItems: "center",
           }}
+          title={personal.name}
         >
-          <span style={{ color: "var(--indigo-light)" }}>rs</span>
-          <span style={{ color: "var(--text-secondary)" }}>.</span>
+          <Logo size={40} />
         </a>
 
         {/* Desktop links */}
@@ -134,7 +132,7 @@ export default function Nav() {
               }}
               onMouseEnter={(e) => {
                 (e.currentTarget as HTMLAnchorElement).style.background =
-                  "rgba(99,102,241,0.12)";
+                  "rgba(245,158,11,0.12)";
               }}
               onMouseLeave={(e) => {
                 (e.currentTarget as HTMLAnchorElement).style.background =
@@ -191,7 +189,7 @@ export default function Nav() {
         <div
           style={{
             background: "rgba(5,5,8,0.97)",
-            borderTop: "1px solid rgba(99,102,241,0.15)",
+            borderTop: "1px solid rgba(245,158,11,0.15)",
             padding: "1rem 2rem 1.5rem",
           }}
         >
@@ -209,7 +207,7 @@ export default function Nav() {
                 padding: "0.65rem 0",
                 color: "var(--text-secondary)",
                 textDecoration: "none",
-                borderBottom: "1px solid rgba(99,102,241,0.08)",
+                borderBottom: "1px solid rgba(245,158,11,0.08)",
                 fontSize: "1rem",
                 cursor: "pointer",
               }}
