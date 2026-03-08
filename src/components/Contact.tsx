@@ -214,7 +214,7 @@ export default function Contact() {
           {[
             { label: "LinkedIn", href: personal.linkedin },
             { label: "GitHub", href: personal.github },
-            { label: "Resume ↗", href: personal.resume },
+            { label: "CV ↗", href: personal.resume },
           ].map((s) => (
             <a
               key={s.label}

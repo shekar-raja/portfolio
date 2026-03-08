@@ -373,6 +373,11 @@ export default function Hero() {
           >
             <a
               href={hero.secondaryCta.href}
+              download={
+                hero.secondaryCta.href.endsWith(".pdf")
+                  ? "raja_shekar_cv.pdf"
+                  : undefined
+              }
               target={
                 hero.secondaryCta.href.startsWith("http") ? "_blank" : undefined
               }

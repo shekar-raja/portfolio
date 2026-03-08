@@ -91,7 +91,8 @@ personal: {
   email: "you@example.com",
   linkedin: "https://www.linkedin.com/in/your-profile/",
   github: "https://github.com/your-username",
-  resume: "https://link-to-your-resume.pdf",
+  resume: "/portfolio/resume",
+  resumeSource: "https://drive.google.com/file/d/YOUR_FILE_ID/view?usp=sharing",
   avatar: "/<your-repo-name>/images/headshot.png",  // local file in /public — OR a Google Drive share link
   googleAnalytics: "G-XXXXXXXXXX",  // your GA4 ID — leave "" to disable
   siteUrl: "https://<your-username>.github.io/<your-repo-name>/",
@@ -289,6 +290,88 @@ contact: {
   subtext: "Open to roles, freelance projects and interesting conversations. Drop me a line.",
 }
 ```
+
+---
+
+## Configuring Your CV / Resume
+
+The portfolio automatically downloads your resume PDF from Google Drive at build time and serves it as a native browser PDF (with zoom, page navigation, download and print controls — no iframes, no Drive branding).
+
+### How it works
+
+1. `npm run dev` or `npm run build` runs `scripts/fetch-resume.js` first.
+2. The script downloads your PDF from Google Drive and saves it to `public/resume.pdf`.
+3. All resume buttons on the site link to `/portfolio/resume`, which redirects the browser directly to `/portfolio/resume.pdf`.
+4. The browser's native PDF viewer opens with full controls.
+5. If the download fails, the site falls back to opening your Google Drive URL directly.
+
+`public/resume.pdf` is gitignored — it is generated fresh on every build and never committed to the repo.
+
+### Setup
+
+**Step 1 — Upload your PDF to Google Drive**
+
+1. Go to [drive.google.com](https://drive.google.com) and upload your resume PDF.
+
+**Step 2 — Set sharing to public**
+
+1. Right-click the file → **Share**.
+2. Under _General access_, change **Restricted** to **Anyone with the link**.
+3. Make sure the role is set to **Viewer**.
+4. Click **Copy link**, then **Done**.
+
+The share link looks like:
+
+```
+https://drive.google.com/file/d/1AbCdEfGhIjKlMnOpQrStUvWxYz/view?usp=sharing
+```
+
+**Step 3 — Add it to your config**
+
+Open `src/data/portfolio.config.ts` and set `personal.resumeSource` to your share link:
+
+```ts
+personal: {
+  // ...
+  resume: "/portfolio/resume",       // ← keep this as-is (points to the redirect page)
+  resumeSource: "https://drive.google.com/file/d/YOUR_FILE_ID/view?usp=sharing", // ← paste your link here
+}
+```
+
+> **Note:** `resume` should stay as `"/portfolio/resume"` (or `"/<your-repo-name>/resume"`). It tells all buttons where to go. `resumeSource` is the Google Drive link — only the fetch script and fallback logic read it.
+
+**Step 4 — Done**
+
+Run `npm run dev` — you will see fetch logs in the terminal:
+
+```
+📄  Resume PDF fetcher starting…
+🔗  Source URL: https://drive.google.com/file/d/…
+⬇️  Downloading from: https://drive.google.com/uc?export=download&id=…
+✅  Saved to public/resume.pdf (142.3 KB)
+```
+
+Click **Resume** on the site — the browser opens your PDF with native controls.
+
+### Updating your resume
+
+To update the PDF:
+
+- **Same Drive file:** just upload a new version to the same Drive file. The next build or `npm run dev` will automatically fetch the latest version — no config changes needed.
+- **New Drive file:** upload a new file, update `personal.resumeSource` with the new share link, then redeploy.
+
+### CI / GitHub Actions
+
+The deploy workflow runs the fetch script as a dedicated step before the build:
+
+```yaml
+- name: Fetch Resume PDF
+  run: node scripts/fetch-resume.js
+```
+
+You will see the same fetch logs in the GitHub Actions job output under the **Fetch Resume PDF** step.
+
+If the download fails in CI (e.g. temporary network issue), the build still completes and the site falls back at runtime to opening the Google Drive URL. No manual intervention needed.
 
 ---
 

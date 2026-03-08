@@ -40,7 +40,7 @@ const portfolioConfig: PortfolioConfig = {
     cta: { label: "View My Work", href: "#projects" },
     secondaryCta: {
       label: "Download CV",
-      href: "/portfolio/resume",
+      href: "/portfolio/resume.pdf",
     },
   },
 

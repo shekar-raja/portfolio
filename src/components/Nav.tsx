@@ -139,12 +139,10 @@ export default function Nav() {
                   "transparent";
               }}
             >
-              Resume
+              View CV
             </a>
           </li>
         </ul>
-
-        {/* Mobile hamburger */}
         <button
           onClick={() => setMenuOpen(!menuOpen)}
           className="mobile-menu-btn"
@@ -230,7 +228,7 @@ export default function Nav() {
               fontWeight: 600,
             }}
           >
-            Resume
+            CV
           </a>
         </div>
       )}
