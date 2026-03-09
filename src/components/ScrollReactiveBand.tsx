@@ -1,20 +1,28 @@
 "use client";
 import { useEffect, useRef } from "react";
 import portfolioConfig from "@/data/portfolio.config";
+import { getSkillMeta } from "@/data/skillIcons";
 
-// Flatten all skills into a single list then distribute across rows
-const allSkills = portfolioConfig.skills.flatMap((g) => g.skills);
-const ROW_COUNT = 4;
+// Only include skills that have an icon resolved
+const allSkills = portfolioConfig.skills
+  .flatMap((g) => g.skills)
+  .filter((s) => {
+    const { icon } = getSkillMeta(s);
+    return icon !== null;
+  });
+
+// Deduplicate while preserving order
+const uniqueSkills = [...new Set(allSkills)];
+
+const ROW_COUNT = 2;
 const rows: string[][] = Array.from({ length: ROW_COUNT }, (_, i) =>
-  allSkills.filter((_, idx) => idx % ROW_COUNT === i),
+  uniqueSkills.filter((_, idx) => idx % ROW_COUNT === i),
 );
 
 // Per-row config: base drift speed (px/frame) and scroll-delta multiplier
 const ROW_CONFIG = [
-  { speed: 0.25, scrollFactor: 0.7, accent: "var(--indigo)" },
-  { speed: -0.2, scrollFactor: -0.6, accent: "var(--cyan)" },
-  { speed: 0.3, scrollFactor: 0.8, accent: "var(--indigo)" },
-  { speed: -0.18, scrollFactor: -0.55, accent: "var(--cyan)" },
+  { speed: 0.3, scrollFactor: 0.7 },
+  { speed: -0.25, scrollFactor: -0.6 },
 ];
 
 export default function ScrollReactiveBand() {
@@ -61,7 +69,7 @@ export default function ScrollReactiveBand() {
       style={{
         position: "relative",
         overflow: "hidden",
-        padding: "4.5rem 0",
+        padding: "3.5rem 0",
         background: "rgba(6,4,12,0.97)",
         borderTop: "1px solid rgba(255,255,255,0.04)",
       }}
@@ -121,7 +129,7 @@ export default function ScrollReactiveBand() {
         style={{
           display: "flex",
           flexDirection: "column",
-          gap: "0.875rem",
+          gap: "1rem",
         }}
       >
         {rows.map((row, i) => (
@@ -132,37 +140,66 @@ export default function ScrollReactiveBand() {
               }}
               style={{
                 display: "flex",
-                gap: "0.65rem",
+                gap: "1rem",
                 width: "max-content",
                 willChange: "transform",
+                alignItems: "stretch",
               }}
             >
               {/* Duplicate for seamless loop */}
-              {[...row, ...row].map((skill, j) => (
-                <span
-                  key={j}
-                  style={{
-                    padding: "0.45rem 1rem",
-                    borderRadius: "999px",
-                    border: `1px solid ${i % 2 === 0 ? "rgba(245,158,11,0.22)" : "rgba(45,212,191,0.2)"}`,
-                    background:
-                      i % 2 === 0
-                        ? "rgba(245,158,11,0.06)"
-                        : "rgba(45,212,191,0.05)",
-                    color:
-                      i % 2 === 0
-                        ? "rgba(165,180,252,0.75)"
-                        : "rgba(103,232,249,0.75)",
-                    fontSize: "0.78rem",
-                    fontFamily: "Sora, sans-serif",
-                    whiteSpace: "nowrap",
-                    letterSpacing: "0.025em",
-                    userSelect: "none",
-                  }}
-                >
-                  {skill}
-                </span>
-              ))}
+              {[...row, ...row].map((skill, j) => {
+                const { icon: Icon, color: iconColor } = getSkillMeta(skill);
+                return (
+                  <span
+                    key={j}
+                    style={{
+                      width: "90px",
+                      padding: "1rem 0.5rem 0.85rem",
+                      borderRadius: "14px",
+                      border: `1px solid ${
+                        i % 2 === 0
+                          ? "rgba(245,158,11,0.18)"
+                          : "rgba(45,212,191,0.16)"
+                      }`,
+                      background:
+                        i % 2 === 0
+                          ? "rgba(245,158,11,0.05)"
+                          : "rgba(45,212,191,0.04)",
+                      userSelect: "none",
+                      display: "inline-flex",
+                      flexDirection: "column",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      gap: "0.55rem",
+                    }}
+                  >
+                    {Icon && (
+                      <Icon
+                        size={30}
+                        color={iconColor ?? undefined}
+                        style={{ flexShrink: 0, opacity: 0.88 }}
+                      />
+                    )}
+                    <span
+                      style={{
+                        fontSize: "0.65rem",
+                        fontFamily: "Sora, sans-serif",
+                        fontWeight: 500,
+                        letterSpacing: "0.02em",
+                        color:
+                          i % 2 === 0
+                            ? "rgba(165,180,252,0.7)"
+                            : "rgba(103,232,249,0.7)",
+                        whiteSpace: "nowrap",
+                        textAlign: "center",
+                        lineHeight: 1.2,
+                      }}
+                    >
+                      {skill}
+                    </span>
+                  </span>
+                );
+              })}
             </div>
           </div>
         ))}
