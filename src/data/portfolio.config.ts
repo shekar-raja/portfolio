@@ -307,6 +307,16 @@ const portfolioConfig: PortfolioConfig = {
   // accent: card highlight colour
   testimonials: [
     {
+      name: "Tanvi A",
+      role: "Project Manager",
+      relationship: "Direct Manager at Koolmill · March 2026",
+      quote:
+        "Raja is an exceptional engineer and someone I had the privilege of managing on an Innovate UK funded industrial IoT project. Early on, it was clear he had the ability to take a complex challenge and run with it independently. He designed and built a complete data platform from scratch, entirely in-house, saving us a planned £60K external contract and delivering something we were genuinely proud of. His hard work and technical credibility quickly earned the trust of stakeholders across both the business and technical sides of the project. When the platform needed a major overhaul, Raja led it without a single minute of downtime, cutting costs by 70% and making the system significantly faster in the process. What stood out most about Raja was his attitude, he never waited to be told what to do, stayed calm when things got tough, and always took full ownership of what he delivered. I highly recommend Raja, he will be a real asset to any team fortunate enough to work with him.",
+      initials: "TA",
+      accent: "#2dd4bf",
+      linkedin: "https://www.linkedin.com/in/tanvi-anil/",
+    },
+    {
       name: "Bhaskar Ramachandran",
       role: "Senior .Net Core Architect",
       relationship: "Client at TruNums · June 2024",
@@ -314,6 +324,7 @@ const portfolioConfig: PortfolioConfig = {
         "Raja consistently impressed me with his critical thinking and problem-solving skills. These strengths were invaluable as we navigated challenging situations that arose during the development process at TruNums. Raja's ability to analyze problems, come up with creative solutions, and implement them effectively made him a key asset to the project. Without a doubt, Raja would be a valuable addition to any development team. His technical expertise, combined with his quick learning, critical thinking and problem-solving skills, makes him a truly exceptional candidate.",
       initials: "BR",
       accent: "#f59e0b",
+      linkedin: "https://www.linkedin.com/in/bhaskar-ramachandran-3411294/",
     },
     {
       name: "Prudhviraj Pampana",
@@ -323,6 +334,7 @@ const portfolioConfig: PortfolioConfig = {
         "I had the pleasure of managing Raja for a significant duration, I was consistently impressed by his ability to remain calm and composed under pressure. His strong problem-solving skills and ability to think strategically helped navigate challenging situations effectively.",
       initials: "PP",
       accent: "#2dd4bf",
+      linkedin: "https://www.linkedin.com/in/prudhvirajpampana/",
     },
   ],
 
