@@ -177,17 +177,45 @@ export default function Testimonials() {
                   </div>
 
                   <div>
-                    <p
-                      style={{
-                        fontFamily: "Sora, sans-serif",
-                        fontWeight: 700,
-                        fontSize: "0.9rem",
-                        color: "var(--text-primary)",
-                        marginBottom: "0.2rem",
-                      }}
-                    >
-                      {t.name}
-                    </p>
+                    {t.linkedin ? (
+                      <a
+                        href={t.linkedin}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        style={{
+                          fontFamily: "Sora, sans-serif",
+                          fontWeight: 700,
+                          fontSize: "0.9rem",
+                          color: "var(--text-primary)",
+                          marginBottom: "0.2rem",
+                          display: "block",
+                          textDecoration: "none",
+                          transition: "color 0.2s",
+                        }}
+                        onMouseEnter={(e) => {
+                          (e.currentTarget as HTMLAnchorElement).style.color =
+                            t.accent;
+                        }}
+                        onMouseLeave={(e) => {
+                          (e.currentTarget as HTMLAnchorElement).style.color =
+                            "var(--text-primary)";
+                        }}
+                      >
+                        {t.name}
+                      </a>
+                    ) : (
+                      <p
+                        style={{
+                          fontFamily: "Sora, sans-serif",
+                          fontWeight: 700,
+                          fontSize: "0.9rem",
+                          color: "var(--text-primary)",
+                          marginBottom: "0.2rem",
+                        }}
+                      >
+                        {t.name}
+                      </p>
+                    )}
                     <p
                       style={{
                         fontSize: "0.78rem",

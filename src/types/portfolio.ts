@@ -103,6 +103,7 @@ export interface Testimonial {
   quote: string;
   initials: string;
   accent: string;
+  linkedin?: string;
 }
 
 // ─── Contact ──────────────────────────────────────────────────────────────────
