@@ -6,7 +6,7 @@ const { personal } = portfolioConfig;
 
 export default function ResumePage() {
   useEffect(() => {
-    const localPdf = "/portfolio/resume.pdf";
+    const localPdf = "/resume.pdf";
 
     fetch(localPdf, { method: "HEAD" })
       .then((res) => {

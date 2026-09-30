@@ -4,7 +4,7 @@ import { useEffect } from "react";
 
 export default function NotFound() {
   useEffect(() => {
-    window.location.replace("/portfolio");
+    window.location.replace("/");
   }, []);
 
   return (
@@ -23,7 +23,7 @@ export default function NotFound() {
     >
       <p style={{ color: "#888", fontSize: "1rem" }}>Redirecting…</p>
       <a
-        href="/portfolio"
+        href="/"
         style={{
           color: "#fff",
           fontWeight: 600,
