@@ -56,7 +56,7 @@ export default function BlackholeBackground() {
       {/* Actual Gargantua footage */}
       <video
         ref={videoRef}
-        src="/portfolio/videos/gargantua_loop.mp4"
+        src="/videos/gargantua_loop.mp4"
         autoPlay
         loop
         muted

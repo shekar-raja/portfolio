@@ -22,13 +22,13 @@ const portfolioConfig: PortfolioConfig = {
     email: "rshekar.contact@gmail.com",
     linkedin: "https://www.linkedin.com/in/raja-shekar/",
     github: "https://github.com/shekar-raja",
-    resume: "/portfolio/resume",
+    resume: "/resume",
     resumeSource:
       "https://drive.google.com/file/d/1e3yACeZd0tu_MoEZa-VYf_7NrO9p2ZTX/view?usp=share_link",
     avatar:
       "https://drive.google.com/file/d/1c3G5PztdC2BoHsJANh33-YY-Axa9CrmZ/view?usp=sharing",
     googleAnalytics: "G-TH5VEMBXCG",
-    siteUrl: "https://shekar-raja.github.io/portfolio/",
+    siteUrl: "https://rshekar.me",
   },
 
   // ── Hero section ────────────────────────────────────────────────────────────
@@ -40,7 +40,7 @@ const portfolioConfig: PortfolioConfig = {
     cta: { label: "View My Work", href: "#projects" },
     secondaryCta: {
       label: "Download CV",
-      href: "/portfolio/resume.pdf",
+      href: "/resume.pdf",
     },
   },
 
