@@ -1,6 +1,6 @@
 # Portfolio
 
-A personal portfolio template built with Next.js, Three.js, GSAP and Framer Motion. All content is driven by a single TypeScript config file — fork the repo, fill in your details, and deploy to GitHub Pages in minutes.
+A personal portfolio template built with Next.js, Three.js, GSAP and Framer Motion. All content is driven by a single TypeScript config file — fork the repo, fill in your details, and deploy to GitHub Pages in minutes. 
 
 **Live demo:** https://shekar-raja.github.io/portfolio/
 
