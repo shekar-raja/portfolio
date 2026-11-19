@@ -1,9 +1,10 @@
 import { NextResponse } from "next/server";
+import { SITE_URL } from "@/lib/site";
 import { getPosts } from "@/lib/queries";
 
 export async function GET() {
   const posts = await getPosts();
-  const siteUrl = "https://beebombshell.com";
+  const siteUrl = SITE_URL;
 
   const escapeXml = (unsafe: string) => {
     return unsafe.replace(/[<>&'"]/g, (c) => {
@@ -36,7 +37,7 @@ export async function GET() {
       <guid isPermaLink="true">${postUrl}</guid>
       <description>${escapeXml(post.excerpt)}</description>
       <pubDate>${pubDate}</pubDate>
-      <author>bhavya@beebombshell.com (Bhavya Verma)</author>
+      <author>rshekar.contact@gmail.com (Raja Shekar)</author>
       ${post.tags.map((tag) => `<category>${escapeXml(tag)}</category>`).join("\n      ")}
     </item>`;
     })
@@ -45,9 +46,9 @@ export async function GET() {
   const rssFeed = `<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>BeeBombshell · Bhavya Verma</title>
+    <title>Raja Shekar · Cloud Data Engineer</title>
     <link>${siteUrl}/writing</link>
-    <description>Essays, notes, and technical articles on systems and design by Bhavya Verma.</description>
+    <description>Essays, notes, and technical articles on data engineering and cloud by Raja Shekar.</description>
     <language>en-us</language>
     <lastBuildDate>${new Date().toUTCString()}</lastBuildDate>
     <atom:link href="${siteUrl}/feed.xml" rel="self" type="application/rss+xml" />

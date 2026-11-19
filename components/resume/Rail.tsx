@@ -11,7 +11,7 @@ const SECTIONS = [
   { id: "contact", label: "contact" },
 ];
 
-export function Rail() {
+export function Rail({ hidden = [] }: { hidden?: string[] }) {
   const handleClick = (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
     e.preventDefault();
     const el = document.getElementById(id);
@@ -26,10 +26,9 @@ export function Rail() {
   return (
     <nav
       className="rail"
-      data-swarm-ignore
       aria-label="Sections"
     >
-      {SECTIONS.map((section) => (
+      {SECTIONS.filter((section) => !hidden.includes(section.id)).map((section) => (
         <a
           key={section.id}
           href={`#${section.id}`}

@@ -3,7 +3,7 @@ import { getPosts } from "@/lib/queries";
 import { WritingContent } from "@/components/writing/writing-content";
 
 export const metadata: Metadata = {
-  title: "Writing · BeeBombshell",
+  title: "Writing",
   description: "Essays, notes, and technical articles on systems and design.",
   alternates: {
     canonical: "/writing",

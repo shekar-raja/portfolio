@@ -383,11 +383,7 @@ body:has(#resume-page) {
     color: #000000 !important;
   }
 
-  #resume-page .rail,
-  #resume-page [data-swarm-ignore],
-  [class*="swarm"],
-  button[data-swarm-trigger],
-  #swarm-trigger {
+  #resume-page .rail {
     display: none !important;
   }
 

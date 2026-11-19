@@ -1,7 +1,7 @@
+import { SITE_URL } from "@/lib/site";
 import { getProfile, getProjects, getPosts } from "@/lib/queries";
 import { COPY } from "@/lib/copy";
 
-const SITE_URL = "https://beebombshell.com";
 
 function cleanInline(value: string) {
   return value.replace(/\s+/g, " ").trim();

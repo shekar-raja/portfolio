@@ -2,7 +2,7 @@ import { ImageResponse } from "next/og";
 import { getPost } from "@/lib/queries";
 import { calculateReadingTime } from "@/lib/reading-time";
 
-export const alt = "BeeBombshell Article";
+export const alt = "Raja Shekar Article";
 export const size = {
   width: 1200,
   height: 630,
@@ -17,8 +17,8 @@ export default async function Image({
   const { slug } = await params;
   const post = await getPost(slug);
 
-  const title = post?.title || "Writing · BeeBombshell";
-  const excerpt = post?.excerpt || "Essays and technical notes by Bhavya Verma.";
+  const title = post?.title || "Writing · Raja Shekar";
+  const excerpt = post?.excerpt || "Essays and technical notes by Raja Shekar.";
   const publishedDate = post
     ? new Date(post.publishedAt).toLocaleDateString("en-US", {
         year: "numeric",
@@ -80,7 +80,7 @@ export default async function Image({
               textTransform: "uppercase",
             }}
           >
-            <span>BEEBOMBSHELL</span>
+            <span>RAJA SHEKAR</span>
             <span>·</span>
             <span>DISPATCH</span>
           </div>
@@ -170,7 +170,7 @@ export default async function Image({
                 fontWeight: 500,
               }}
             >
-              Bhavya Verma
+              Raja Shekar
             </div>
           </div>
 

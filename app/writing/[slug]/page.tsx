@@ -1,3 +1,4 @@
+import { SITE_URL, AUTHOR_NAME } from "@/lib/site";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import type { Metadata } from "next";
@@ -21,10 +22,10 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { slug } = await params;
   const post = await getPost(slug);
-  if (!post) return { title: "Post Not Found · BeeBombshell" };
+  if (!post) return { title: "Post Not Found" };
 
   return {
-    title: `${post.title} · Writing · BeeBombshell`,
+    title: `${post.title} · Writing`,
     description: post.excerpt,
     alternates: {
       canonical: `/writing/${slug}`,
@@ -35,7 +36,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       type: "article",
       publishedTime: post.publishedAt,
       tags: post.tags,
-      authors: ["Bhavya Verma"],
+      authors: [AUTHOR_NAME],
     },
     twitter: {
       card: "summary_large_image",
@@ -80,10 +81,10 @@ export default async function BlogPostPage({ params }: PageProps) {
     dateModified: post.updatedAt || post.publishedAt,
     author: {
       "@type": "Person",
-      name: "Bhavya Verma",
-      url: "https://beebombshell.com",
+      name: AUTHOR_NAME,
+      url: SITE_URL,
     },
-    url: `https://beebombshell.com/writing/${slug}`,
+    url: `${SITE_URL}/writing/${slug}`,
     keywords: post.tags.join(", "),
   };
 

@@ -3,8 +3,8 @@ import type { Metadata } from "next";
 import { WorkContent } from "@/components/work/work-content";
 
 export const metadata: Metadata = {
-  title: "Work · BeeBombshell",
-  description: "Selected projects and software craftsmanship by Bhavya Verma.",
+  title: "Work",
+  description: "Selected projects and software craftsmanship by Raja Shekar.",
   alternates: {
     canonical: "/work",
   },

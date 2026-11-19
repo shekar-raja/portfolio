@@ -9,6 +9,8 @@ import { LlmsModal } from "@/components/llms/llms-modal";
 import { JsonLd } from "@/components/seo/json-ld";
 import { getConfig, getProfile } from "@/lib/queries";
 import { COPY } from "@/lib/copy";
+import { SITE_URL, SITE_NAME, AUTHOR_NAME, AUTHOR_ROLE, GITHUB_URL, LINKEDIN_URL, GA_ID } from "@/lib/site";
+import Script from "next/script";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -24,29 +26,31 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://beebombshell.com"),
+  metadataBase: new URL(SITE_URL),
   title: {
-    default: "BeeBombshell · Bhavya Verma",
-    template: "%s · BeeBombshell",
+    default: `${SITE_NAME} · ${AUTHOR_ROLE}`,
+    template: `%s · ${SITE_NAME}`,
   },
   description:
-    "Bhavya Verma is a product engineer focused on developer experience. Dev tools, open source, writing, and views nobody asked for.",
+    "Raja Shekar is a Cloud Data Engineer fascinated by all things data: data pipelines, AI solutions, and applications.",
   keywords: [
-    "Bhavya Verma",
-    "BeeBombshell",
-    "Product Engineer",
-    "Developer Experience",
-    "DX",
+    "Raja Shekar",
+    "Cloud Data Engineer",
+    "Data Engineering",
+    "Data Pipelines",
+    "AWS",
+    "AI",
+    "Time-Series Data",
     "Frontend Physics",
     "Verlet Integration",
     "Canvas 2D",
     "Next.js",
     "TypeScript",
   ],
-  authors: [{ name: "Bhavya Verma", url: "https://beebombshell.com" }],
-  creator: "Bhavya Verma",
+  authors: [{ name: AUTHOR_NAME, url: SITE_URL }],
+  creator: AUTHOR_NAME,
   alternates: {
-    canonical: "https://beebombshell.com",
+    canonical: SITE_URL,
   },
   icons: {
     icon: [
@@ -58,16 +62,17 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://beebombshell.com",
-    title: "Bhavya Verma · I make dev tools feel like someone cared",
-    description: "Product engineer, developer experience. Open source, writing, and a lanyard that swings.",
-    siteName: "BeeBombshell",
+    url: SITE_URL,
+    title: `${AUTHOR_NAME} · ${AUTHOR_ROLE}`,
+    description:
+      "Cloud data engineer building data pipelines, AI solutions, and applications.",
+    siteName: SITE_NAME,
   },
   twitter: {
     card: "summary_large_image",
-    title: "Bhavya Verma · I make dev tools feel like someone cared",
-    description: "Product engineer, developer experience. Open source, writing, and a lanyard that swings.",
-    creator: "@beebombshell",
+    title: `${AUTHOR_NAME} · ${AUTHOR_ROLE}`,
+    description:
+      "Cloud data engineer building data pipelines, AI solutions, and applications.",
   },
   robots: {
     index: true,
@@ -93,17 +98,18 @@ export default async function RootLayout({
     "@context": "https://schema.org",
     "@type": "Person",
     name: profile.name,
-    jobTitle: profile.role,
-    url: "https://beebombshell.com",
+    jobTitle: AUTHOR_ROLE,
+    url: SITE_URL,
     description:
-      "Product engineer focused on developer experience, open source contributor and mentor.",
-    sameAs: profile.socials.map((s) => s.url),
+      "Cloud Data Engineer building data pipelines, AI solutions, and applications.",
+    sameAs: [GITHUB_URL, LINKEDIN_URL],
     knowsAbout: [
-      "Product Engineering",
-      "Developer Experience",
-      "Interactive Canvas Physics",
-      "Spring Dynamics",
-      "Distributed Systems",
+      "Cloud Data Engineering",
+      "Data Pipelines",
+      "Time-Series Data",
+      "AWS",
+      "Applied AI",
+      "Python",
       "TypeScript",
       "Next.js",
     ],
@@ -112,9 +118,9 @@ export default async function RootLayout({
   const websiteJsonLd = {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    name: "BeeBombshell",
-    url: "https://beebombshell.com",
-    description: "Personal portfolio of Bhavya Verma.",
+    name: SITE_NAME,
+    url: SITE_URL,
+    description: "Personal portfolio of Raja Shekar.",
     author: {
       "@type": "Person",
       name: profile.name,
@@ -172,6 +178,18 @@ export default async function RootLayout({
           {/* Global Styled Plain-Text LLMS.TXT Modal */}
           <LlmsModal />
         </ThemeProvider>
+
+        {/* Google Analytics (gtag.js) */}
+        <Script
+          src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', '${GA_ID}');`}
+        </Script>
       </body>
     </html>
   );

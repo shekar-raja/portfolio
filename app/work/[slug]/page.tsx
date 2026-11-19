@@ -18,10 +18,10 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { slug } = await params;
   const project = await getProject(slug);
-  if (!project) return { title: "Project Not Found · BeeBombshell" };
+  if (!project) return { title: "Project Not Found" };
 
   return {
-    title: `${project.title} · Case Study · BeeBombshell`,
+    title: `${project.title} · Case Study`,
     description: project.blurb,
     alternates: {
       canonical: `/work/${slug}`,

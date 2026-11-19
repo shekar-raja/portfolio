@@ -6,9 +6,10 @@ interface HeaderProps {
   role: string;
   lede: string;
   links: ResumeLink[];
+  pdfHref?: string;
 }
 
-export function Header({ name, role, lede, links }: HeaderProps) {
+export function Header({ name, role, lede, links, pdfHref }: HeaderProps) {
   return (
     <header>
       <h1>{name}</h1>
@@ -29,6 +30,11 @@ export function Header({ name, role, lede, links }: HeaderProps) {
             </a>
           );
         })}
+        {pdfHref && (
+          <a href={pdfHref} download>
+            Download PDF
+          </a>
+        )}
       </nav>
     </header>
   );

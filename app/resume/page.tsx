@@ -11,7 +11,7 @@ import { LaunchList } from "@/components/resume/LaunchList";
 import { Skills } from "@/components/resume/Skills";
 import { Tags } from "@/components/resume/Tags";
 import { Rail } from "@/components/resume/Rail";
-import SwarmScript from "@/components/resume/SwarmScript";
+import { SITE_URL, SITE_NAME, AUTHOR_NAME, AUTHOR_ROLE, GITHUB_URL, LINKEDIN_URL } from "@/lib/site";
 import "./resume.css";
 
 const instrumentSerif = Instrument_Serif({
@@ -21,51 +21,50 @@ const instrumentSerif = Instrument_Serif({
   display: "swap",
 });
 
+const RESUME_TITLE = `${AUTHOR_NAME} · ${AUTHOR_ROLE}`;
+const RESUME_DESC =
+  "Cloud Data Engineer with 5+ years of experience building data pipelines, AI solutions, and applications.";
+
 export const metadata: Metadata = {
   title: {
-    absolute: "Bhavya Verma · Product & Developer Experience Engineer",
+    absolute: RESUME_TITLE,
   },
-  description:
-    "Product engineer who ships the feature, writes the docs and runs the community. 3+ years at BuildShip and Rowy.",
+  description: RESUME_DESC,
   alternates: {
-    canonical: "https://beebombshell.com/resume",
+    canonical: `${SITE_URL}/resume`,
   },
   openGraph: {
     type: "profile",
     locale: "en_US",
-    url: "https://beebombshell.com/resume",
-    title: "Bhavya Verma · Product & Developer Experience Engineer",
-    description:
-      "Product engineer who ships the feature, writes the docs and runs the community. 3+ years at BuildShip and Rowy.",
-    siteName: "BeeBombshell",
+    url: `${SITE_URL}/resume`,
+    title: RESUME_TITLE,
+    description: RESUME_DESC,
+    siteName: SITE_NAME,
   },
   twitter: {
     card: "summary",
-    title: "Bhavya Verma · Product & Developer Experience Engineer",
-    description:
-      "Product engineer who ships the feature, writes the docs and runs the community. 3+ years at BuildShip and Rowy.",
-    creator: "@Bee_Bombshell",
+    title: RESUME_TITLE,
+    description: RESUME_DESC,
   },
 };
 
 const personJsonLd = {
   "@context": "https://schema.org",
   "@type": "Person",
-  name: "Bhavya Verma",
-  jobTitle: "Product & Developer Experience Engineer",
-  url: "https://beebombshell.com/resume",
-  sameAs: [
-    "https://x.com/Bee_Bombshell",
-    "https://github.com/BeeBombshell",
-    "https://www.producthunt.com/@beebombshell",
-  ],
+  name: AUTHOR_NAME,
+  jobTitle: AUTHOR_ROLE,
+  url: `${SITE_URL}/resume`,
+  sameAs: [GITHUB_URL, LINKEDIN_URL],
   alumniOf: {
     "@type": "CollegeOrUniversity",
-    name: "Cluster Innovation Centre, University of Delhi",
+    name: "University of Hertfordshire",
   },
 };
 
 export default function ResumePage() {
+  const hasLaunches = resume.launches.items.length > 0;
+  const hasCommunity = resume.community.bullets.length > 0;
+
   return (
     <div
       id="resume-page"
@@ -77,7 +76,12 @@ export default function ResumePage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }}
       />
 
-      <Rail />
+      <Rail
+        hidden={[
+          ...(hasLaunches ? [] : ["launches"]),
+          ...(hasCommunity ? [] : ["community"]),
+        ]}
+      />
 
       <main>
         <Header
@@ -85,6 +89,7 @@ export default function ResumePage() {
           role={resume.role}
           lede={resume.lede}
           links={resume.links}
+          pdfHref="/resume.pdf"
         />
 
         <SectionBand id="about" title="About" />
@@ -109,21 +114,29 @@ export default function ResumePage() {
           ))}
         </section>
 
-        <SectionBand id="launches" title="Launches" />
-        <section>
-          <Prose content={resume.launches.intro} />
-          <LaunchList launches={resume.launches.items} />
-        </section>
+        {hasLaunches && (
+          <>
+          <SectionBand id="launches" title="Launches" />
+          <section>
+            <Prose content={resume.launches.intro} />
+            <LaunchList launches={resume.launches.items} />
+          </section>
+          </>
+        )}
 
-        <SectionBand id="community" title="Community & open source" />
-        <section>
-          <Prose content={resume.community.intro} />
-          <ul className="bullets">
-            {resume.community.bullets.map((bullet, idx) => (
-              <li key={idx}>{formatText(bullet)}</li>
-            ))}
-          </ul>
-        </section>
+        {hasCommunity && (
+          <>
+          <SectionBand id="community" title="Community & open source" />
+          <section>
+            <Prose content={resume.community.intro} />
+            <ul className="bullets">
+              {resume.community.bullets.map((bullet, idx) => (
+                <li key={idx}>{formatText(bullet)}</li>
+              ))}
+            </ul>
+          </section>
+          </>
+        )}
 
         <SectionBand title="Skills & education" />
         <section>
@@ -159,19 +172,8 @@ export default function ResumePage() {
 
         <footer>
           <div>{resume.footer.hint}</div>
-          <div style={{ marginTop: "8px" }}>
-            <a
-              href={resume.footer.credit.href}
-              rel="noopener noreferrer"
-              target="_blank"
-            >
-              {resume.footer.credit.label}
-            </a>
-          </div>
         </footer>
       </main>
-
-      <SwarmScript />
     </div>
   );
 }

@@ -1,7 +1,7 @@
 import { ImageResponse } from "next/og";
 
 
-export const alt = "BeeBombshell · Bhavya Verma - Product Engineer & Builder";
+export const alt = "Raja Shekar · Cloud Data Engineer";
 export const size = {
   width: 1200,
   height: 630,
@@ -43,7 +43,7 @@ export default async function Image() {
             <span style={{ color: "#eeece6" }}>№ 001</span>
             <span>FIG 0.1 · CORE SPECIMEN</span>
           </div>
-          <span>BEEBOMBSHELL.COM</span>
+          <span>RSHEKAR.ME</span>
         </div>
 
         {/* Center Headline */}
@@ -57,7 +57,7 @@ export default async function Image() {
               textTransform: "uppercase",
             }}
           >
-            product engineer, developer experience
+            cloud data engineer
           </div>
           <div
             style={{
@@ -68,7 +68,7 @@ export default async function Image() {
               color: "#eeece6",
             }}
           >
-            Bhavya Verma
+            Raja Shekar
           </div>
           <div
             style={{
@@ -78,7 +78,7 @@ export default async function Image() {
               lineHeight: 1.25,
             }}
           >
-            Shipping features and memes in equal measure.
+            Fascinated by all things data.
           </div>
         </div>
 
@@ -100,7 +100,7 @@ export default async function Image() {
             <span>SPRING DYNAMICS</span>
             <span>LLMS.TXT ENABLED</span>
           </div>
-          <span>LAT: 28.6139° N</span>
+          <span>SHEFFIELD, UK</span>
         </div>
       </div>
     ),
