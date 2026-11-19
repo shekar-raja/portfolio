@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect, useSyncExternalStore } from "react";
 import Link from "next/link";
-import { usePathname, useRouter } from "next/navigation";
+import { usePathname } from "next/navigation";
 import { motion, LayoutGroup } from "motion/react";
 import { Calendar, FileText, Menu, X } from "lucide-react";
 import { NotchLeftShoulder, NotchRightShoulder } from "./notch-shoulders";
@@ -25,6 +25,10 @@ export const SECTION_TO_NAV = {
   work: "work",
   views: "about",
   writing: "writing",
+  experience: "about",
+  skills: "about",
+  education: "about",
+  testimonials: "about",
   footer: "none",
 } as const;
 
@@ -38,12 +42,11 @@ const NAV_ITEMS: NavItem[] = [
   { label: "work", href: "/work" },
   { label: "writing", href: "/writing" },
   { label: "about", href: "/about" },
-  { label: "ping", href: "/ping" },
   { label: "resume", href: "/resume" },
 ];
 
 export function NotchNav({
-  bookingUrl = "https://cal.com/beebombshell/coffee",
+  bookingUrl = "mailto:rshekar.contact@gmail.com",
   statusText = "open for chats",
   enableSpotify = true,
 }: {
@@ -52,35 +55,11 @@ export function NotchNav({
   enableSpotify?: boolean;
 }) {
   const pathname = usePathname();
-  const router = useRouter();
   const { isOpen: isBookingOpen, toggle: toggleBooking, close: closeBooking } = useBookingStore();
   const { open: openLlms } = useLlmsStore();
   const [isMobileExpanded, setIsMobileExpanded] = useState(false);
   const [isPill, setIsPill] = useState(false);
   const [activeSectionNav, setActiveSectionNav] = useState<string>("index");
-
-  // Global 'P' shortcut: navigate to /ping when not typing in form controls
-  useEffect(() => {
-    const handleGlobalKeyDown = (e: KeyboardEvent) => {
-      if (e.defaultPrevented || e.metaKey || e.ctrlKey || e.altKey) return;
-      if (e.key === "p" || e.key === "P") {
-        const target = e.target as HTMLElement | null;
-        if (
-          target &&
-          (target.tagName === "INPUT" ||
-            target.tagName === "TEXTAREA" ||
-            target.isContentEditable)
-        ) {
-          return;
-        }
-        if (pathname !== "/ping") {
-          router.push("/ping");
-        }
-      }
-    };
-    window.addEventListener("keydown", handleGlobalKeyDown);
-    return () => window.removeEventListener("keydown", handleGlobalKeyDown);
-  }, [pathname, router]);
 
   const reducedMotion = useSyncExternalStore(
     subscribeReducedMotion,
@@ -294,7 +273,7 @@ export function NotchNav({
               className={`flex items-center pl-1 pr-1.5 sm:pr-2 transition-opacity focus-visible:rounded ${
                 isPill ? "hover:opacity-100" : "opacity-85 hover:opacity-100"
               }`}
-              aria-label="Home · Bhavya Verma"
+              aria-label="Home · Raja Shekar"
             >
               <PixelGlyph title={`Status: ${statusText}`} />
             </Link>

@@ -637,6 +637,40 @@
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
 }
 
+.badge-spotify-card {
+  display: flex;
+  flex-direction: column;
+  gap: calc(2px * var(--card-scale, 1));
+  padding: calc(10px * var(--card-scale, 1)) calc(12px * var(--card-scale, 1));
+  font-family: var(--font-geist-mono), ui-monospace, monospace;
+  color: rgba(255, 255, 255, 0.92);
+  min-width: 0;
+}
+
+.badge-spotify-status {
+  font-size: calc(9px * var(--card-scale, 1));
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #1ed760;
+}
+
+.badge-spotify-track,
+.badge-spotify-artist {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.badge-spotify-track {
+  font-size: calc(12px * var(--card-scale, 1));
+  font-weight: 600;
+}
+
+.badge-spotify-artist {
+  font-size: calc(10px * var(--card-scale, 1));
+  color: rgba(255, 255, 255, 0.6);
+}
+
 .badge-spotify-img {
   width: 100%;
   height: auto;

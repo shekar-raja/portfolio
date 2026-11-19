@@ -1,7 +1,7 @@
 import { ImageResponse } from "next/og";
 import { COPY } from "@/lib/copy";
 
-export const alt = "Anonymous Ping · Bhavya Verma";
+export const alt = "Anonymous Ping · Raja Shekar";
 export const size = {
   width: 1200,
   height: 630,
@@ -39,8 +39,8 @@ export default async function Image() {
             fontFamily: "monospace",
           }}
         >
-          <span style={{ color: "#eeece6", fontWeight: 600 }}>BEEBOMBSHELL</span>
-          <span>BEEBOMBSHELL.COM/PING</span>
+          <span style={{ color: "#eeece6", fontWeight: 600 }}>RAJA SHEKAR</span>
+          <span>RSHEKAR.ME/PING</span>
         </div>
 
         {/* Center Headline */}
@@ -93,7 +93,7 @@ export default async function Image() {
             <span>NO FINGERPRINT</span>
             <span>ANONYMOUS RECEIPT</span>
           </div>
-          <span>BHAVYA VERMA</span>
+          <span>RAJA SHEKAR</span>
         </div>
       </div>
     ),

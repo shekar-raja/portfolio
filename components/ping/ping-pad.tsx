@@ -42,6 +42,7 @@ export function PingPad({
   const [isBumping, setIsBumping] = useState(false);
   const [levelBars, setLevelBars] = useState([20, 45, 75, 50, 30]);
   const [toastMessage, setToastMessage] = useState<string | null>(null);
+  const [offline, setOffline] = useState(false);
   const [dailyCount, setDailyCount] = useState(0);
 
   // Mouse tilt & spotlight tracking
@@ -71,13 +72,13 @@ export function PingPad({
     let timeoutId: NodeJS.Timeout;
     try {
       const today = new Date().toISOString().slice(0, 10);
-      const raw = localStorage.getItem("beebombshell_ping_daily");
+      const raw = localStorage.getItem("ping_daily");
       if (raw) {
         const parsed = JSON.parse(raw);
         const count = parsed.date === today ? parsed.count || 0 : 0;
         if (parsed.date !== today) {
           localStorage.setItem(
-            "beebombshell_ping_daily",
+            "ping_daily",
             JSON.stringify({ date: today, count: 0 })
           );
         }
@@ -250,11 +251,17 @@ export function PingPad({
         }),
       });
 
+      const data = await res.json().catch(() => ({}));
+
+      if (data?.disabled === true) {
+        setOffline(true);
+        showToast("Pings are offline for now. Please check back later.", 5000);
+        return;
+      }
+
       if (!res.ok) {
         throw new Error("Bad status: " + res.status);
       }
-
-      const data = await res.json().catch(() => ({}));
 
       // Update daily count
       const newCount = dailyCount + 1;
@@ -262,7 +269,7 @@ export function PingPad({
       try {
         const today = new Date().toISOString().slice(0, 10);
         localStorage.setItem(
-          "beebombshell_ping_daily",
+          "ping_daily",
           JSON.stringify({ date: today, count: newCount })
         );
       } catch {
@@ -272,7 +279,7 @@ export function PingPad({
       // Success sequence
       pingAudio.playSendChime();
       setMessage("");
-      showToast("Delivered. Bee's phone just buzzed.");
+      showToast("Delivered.");
 
       // Generate receipt
       const receiptId = (data.receiptId || Math.random().toString(36).substring(2, 9)).toUpperCase();
@@ -686,6 +693,15 @@ export function PingPad({
           </div>
         </div>
       </div>
+
+      {offline && (
+        <div
+          role="status"
+          className="relative z-10 mt-4 rounded-xl border border-white/15 bg-white/5 px-4 py-3 text-center font-mono text-[11px] sm:text-[12px] text-white/70"
+        >
+          Pings are offline for now. Nothing was sent or stored.
+        </div>
+      )}
 
       {/* Interactive Toast Banner */}
       {toastMessage && (

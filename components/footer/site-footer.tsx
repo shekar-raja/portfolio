@@ -1,7 +1,6 @@
 "use client";
 
 import { useRef } from "react";
-import Link from "next/link";
 import { type Profile } from "@/lib/schemas";
 import { COPY } from "@/lib/copy";
 import { useBookingStore } from "@/lib/booking-store";
@@ -37,8 +36,8 @@ export function SiteFooter({ profile }: SiteFooterProps) {
 
   const links = [
     { label: COPY.footer.links.github, url: socialUrl("github") },
-    { label: COPY.footer.links.x, url: socialUrl("x") },
     { label: COPY.footer.links.linkedin, url: socialUrl("linkedin") },
+    { label: "Email", url: "mailto:rshekar.contact@gmail.com" },
   ].flatMap((link) => (link.url ? [{ label: link.label, url: link.url }] : []));
 
   const scrollToTop = () => {
@@ -62,7 +61,7 @@ export function SiteFooter({ profile }: SiteFooterProps) {
     window.scrollTo({ top: 0, behavior: reducedMotion ? "auto" : "smooth" });
   };
 
-  const copyright = COPY.footer.copyright.replace("{year}", "2026");
+  const copyright = COPY.footer.copyright;
 
   return (
     <footer
@@ -132,19 +131,18 @@ export function SiteFooter({ profile }: SiteFooterProps) {
             <span>{COPY.footer.links.llms}</span>
             <ExternalArrow />
           </button>
-          <Link
-            href="/ping"
-            className="group inline-flex items-center gap-1.5 transition-colors hover:text-[var(--fg)] focus-visible:rounded-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-[3px] focus-visible:outline-[var(--fg)]"
-          >
-            <span>ping</span>
-            <span className="rounded bg-black/10 dark:bg-white/10 px-1.5 py-0.5 text-[10px] text-[var(--fg)] font-mono leading-none border border-black/10 dark:border-white/15">
-              P
-            </span>
-          </Link>
         </nav>
 
         <div className="flex flex-wrap items-center gap-x-5 gap-y-3 sm:justify-end">
           <span>{copyright}</span>
+          <a
+            href="https://github.com/BeeBombshell/beebombshell-com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="transition-colors hover:text-[var(--fg)] focus-visible:rounded-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-[3px] focus-visible:outline-[var(--fg)]"
+          >
+            design adapted from beebombshell-com
+          </a>
           <button
             type="button"
             onClick={scrollToTop}

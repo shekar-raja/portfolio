@@ -64,7 +64,7 @@ export function PrivacyReceipt({ receipt, onReset }: PrivacyReceiptProps) {
 
           {/* Hero */}
           <div className="receipt-hero">
-            <h2 className="receipt-hero-headline">Bee&apos;s phone just buzzed.</h2>
+            <h2 className="receipt-hero-headline">Ping delivered.</h2>
             <p className="receipt-hero-sub">
               No IP. No fingerprint. Nothing left behind on our servers.
             </p>

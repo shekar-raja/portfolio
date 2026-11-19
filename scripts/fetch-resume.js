@@ -1,11 +1,12 @@
 #!/usr/bin/env node
+/* eslint-disable @typescript-eslint/no-require-imports */
 /**
  * fetch-resume.js
  *
  * Downloads the resume PDF from Google Drive and saves it to public/resume.pdf
  * before Next.js dev / build starts.
  *
- * - Reads resumeSource from src/data/portfolio.config.ts via regex (no ts-node needed)
+ * - Reads the Drive URL from env RESUME_SOURCE_URL (falls back to a built-in default)
  * - Follows redirects (Drive does multiple hops before delivering the file)
  * - Falls back gracefully if the download fails:
  *     • Existing public/resume.pdf is kept as-is
@@ -23,7 +24,8 @@ const http = require("http");
 const fs = require("fs");
 const path = require("path");
 
-const CONFIG_PATH = path.join(__dirname, "../src/data/portfolio.config.ts");
+const DEFAULT_RESUME_SOURCE =
+  "https://drive.google.com/file/d/1e3yACeZd0tu_MoEZa-VYf_7NrO9p2ZTX/view?usp=share_link";
 const OUTPUT_PATH = path.join(__dirname, "../public/resume.pdf");
 const MAX_REDIRECTS = 10;
 
@@ -33,17 +35,9 @@ function log(emoji, msg) {
   process.stdout.write(`${emoji}  ${msg}\n`);
 }
 
-/** Extract resumeSource URL from the TypeScript config file via regex. */
+/** Resume Drive URL: env override, else the default constant. */
 function readResumeSource() {
-  const src = fs.readFileSync(CONFIG_PATH, "utf8");
-  const match = src.match(/resumeSource\s*:\s*["']([^"']+)["']/);
-  if (!match) {
-    throw new Error(
-      'Could not find `resumeSource` in src/data/portfolio.config.ts.\n' +
-      'Make sure the field exists in the `personal` section.'
-    );
-  }
-  return match[1];
+  return process.env.RESUME_SOURCE_URL || DEFAULT_RESUME_SOURCE;
 }
 
 /** Convert a Google Drive share URL to a direct download URL. */
@@ -185,4 +179,7 @@ async function main() {
   }
 }
 
-main();
+main().catch((err) => {
+  log("⚠️ ", `Unexpected error: ${err && err.message}`);
+  // Never fail the build
+});

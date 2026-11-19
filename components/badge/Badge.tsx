@@ -19,6 +19,14 @@ import { BLOB_POINTS } from "./blob";
 import { RotateCw } from "lucide-react";
 import "./badge.css";
 
+type NowPlaying = {
+  isPlaying: boolean;
+  track: string;
+  artist: string;
+  url: string;
+  status: "playing" | "last_played" | "offline";
+};
+
 type ContributionData = {
   totalContributions: number;
   weeks: Array<Array<{ date: string; count: number; level: number }>>;
@@ -55,6 +63,7 @@ export function Badge({
 }: BadgeProps) {
   const [showBackContent, setShowBackContent] = useState(false);
   const [contribData, setContribData] = useState<ContributionData | null>(null);
+  const [nowPlaying, setNowPlaying] = useState<NowPlaying | null>(null);
 
   useEffect(() => {
     if (!showBackContent) return;
@@ -76,6 +85,15 @@ export function Badge({
       .then((data) => {
         if (!cancelled && data && data.weeks) {
           setContribData(data as ContributionData);
+        }
+      })
+      .catch(() => {});
+
+    fetch("/api/spotify")
+      .then((res) => res.json())
+      .then((data: NowPlaying) => {
+        if (!cancelled && data && data.status !== "offline" && data.track) {
+          setNowPlaying(data);
         }
       })
       .catch(() => {});
@@ -527,7 +545,7 @@ export function Badge({
           back: theme.back,
           stitching: theme.stitching,
           print: {
-            text: "BHAVYA VERMA · PRODUCT ENGINEER · ",
+            text: "RAJA SHEKAR · CLOUD DATA ENGINEER · ",
             phase: 40,
             color: theme.print,
             font: "500 11px var(--font-geist-mono), monospace",
@@ -545,7 +563,7 @@ export function Badge({
           back: theme.back,
           stitching: theme.stitching,
           print: {
-            text: "BHAVYA VERMA · PRODUCT ENGINEER · ",
+            text: "RAJA SHEKAR · CLOUD DATA ENGINEER · ",
             phase: 92,
             color: theme.print,
             font: "500 11px var(--font-geist-mono), monospace",
@@ -871,7 +889,7 @@ export function Badge({
           back: theme.back,
           stitching: theme.stitching,
           print: {
-            text: "BHAVYA VERMA · PRODUCT ENGINEER · ",
+            text: "RAJA SHEKAR · CLOUD DATA ENGINEER · ",
             phase: 40,
             color: theme.print,
             font: "500 11px var(--font-geist-mono), monospace",
@@ -891,7 +909,7 @@ export function Badge({
           back: theme.back,
           stitching: theme.stitching,
           print: {
-            text: "BHAVYA VERMA · PRODUCT ENGINEER · ",
+            text: "RAJA SHEKAR · CLOUD DATA ENGINEER · ",
             phase: 92,
             color: theme.print,
             font: "500 11px var(--font-geist-mono), monospace",
@@ -1238,22 +1256,7 @@ export function Badge({
               <div className="badge-back-controls">
                 <div className="badge-back-socials">
                   <a
-                    href="https://x.com/Bee_Bombshell"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="badge-social-pill"
-                    onClick={(e) => e.stopPropagation()}
-                    onPointerDown={(e) => e.stopPropagation()}
-                  >
-                    <svg className="h-3 w-3 fill-current" viewBox="0 0 24 24">
-                      <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
-                    </svg>
-                    <span>X</span>
-                    <span className="badge-social-arrow">↗</span>
-                  </a>
-
-                  <a
-                    href="https://www.linkedin.com/in/beebombshell"
+                    href="https://www.linkedin.com/in/raja-shekar/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="badge-social-pill"
@@ -1268,7 +1271,7 @@ export function Badge({
                   </a>
 
                   <a
-                    href="https://github.com/BeeBombshell"
+                    href="https://github.com/shekar-raja"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="badge-social-pill"
@@ -1283,7 +1286,7 @@ export function Badge({
                   </a>
                 </div>
 
-                {/* Bottom Row: Actions (left) + Spotify Embed Widget (right) */}
+                {/* Bottom Row: Actions */}
                 <div className="badge-back-bottom">
                   {/* Actions Column */}
                   <div className="badge-back-actions">
@@ -1303,33 +1306,34 @@ export function Badge({
                     ))}
                   </div>
 
-                  {/* Spotify Now Playing Embed Widget */}
-                  <div className="badge-back-spotify">
-                    <a
-                      href="https://spotify.beebombshell.com/now-playing?uid=a55e8495c5"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="badge-spotify-link"
-                      onClick={(e) => e.stopPropagation()}
-                      onPointerDown={(e) => e.stopPropagation()}
-                    >
-                      {showBackContent && (
-                        <img
-                          src="https://spotify.beebombshell.com/now-playing?uid=a55e8495c5"
-                          alt="Spotify Now Playing"
-                          className="badge-spotify-img"
-                          loading="lazy"
-                          decoding="async"
-                        />
-                      )}
-                    </a>
-                  </div>
+                  {/* Spotify now playing (served by /api/spotify) */}
+                  {nowPlaying && (
+                    <div className="badge-back-spotify">
+                      <a
+                        href={nowPlaying.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="badge-spotify-link"
+                        aria-label={`${nowPlaying.isPlaying ? "Now playing" : "Last played"} on Spotify: ${nowPlaying.track} by ${nowPlaying.artist}`}
+                        onClick={(e) => e.stopPropagation()}
+                        onPointerDown={(e) => e.stopPropagation()}
+                      >
+                        <span className="badge-spotify-card">
+                          <span className="badge-spotify-status">
+                            {nowPlaying.isPlaying ? "● now playing" : "last played"}
+                          </span>
+                          <span className="badge-spotify-track">{nowPlaying.track}</span>
+                          <span className="badge-spotify-artist">{nowPlaying.artist}</span>
+                        </span>
+                      </a>
+                    </div>
+                  )}
                 </div>
               </div>
 
               {/* Back Face Footer Meta */}
               <div className="badge-back-footer">
-                <span>Bhavya Verma</span>
+                <span>Raja Shekar</span>
               </div>
             </div>
           </div>

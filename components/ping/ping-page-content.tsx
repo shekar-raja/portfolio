@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useRef, useState, useCallback } from "react";
-import { ArrowUpRight } from "lucide-react";
 import { PingCable } from "./ping-cable";
 import { PingPad } from "./ping-pad";
 import { PingBurst, type PingBurstHandle } from "./ping-burst";
@@ -13,7 +12,6 @@ import "./ping.css";
 export function PingPageContent() {
   const containerRef = useRef<HTMLDivElement>(null);
   const cardRef = useRef<HTMLDivElement>(null);
-  const footerRef = useRef<HTMLElement>(null);
   const burstRef = useRef<PingBurstHandle | null>(null);
 
   const [isSending, setIsSending] = useState(false);
@@ -22,7 +20,6 @@ export function PingPageContent() {
   // Register bounding boxes with the background particle engine for text-aware dimming
   useRegisterTextBlock("ping-container", containerRef);
   useRegisterTextBlock("ping-card", cardRef);
-  useRegisterTextBlock("ping-footer", footerRef);
 
   const handleSendStart = useCallback(() => {
     setIsSending(true);
@@ -85,7 +82,7 @@ export function PingPageContent() {
           {/* Explainer */}
           <p className="text-[13px] sm:text-[15px] text-white/70 leading-relaxed font-normal max-w-md mx-auto">
             {receipt
-              ? "Your note was delivered into Bee's notification stream. Zero identifiers remain on our servers."
+              ? "Your note was delivered. Zero identifiers remain on our servers."
               : COPY.ping.explainer}
           </p>
         </div>
@@ -125,23 +122,6 @@ export function PingPageContent() {
           </div>
         )}
       </div>
-
-      {/* Credit note at bottom */}
-      <footer
-        ref={footerRef}
-        className="relative z-10 mt-6 sm:mt-8 mb-4 text-center font-mono text-[11px] sm:text-[12px] text-white/40 flex items-center justify-center gap-1.5 tracking-wide select-none"
-      >
-        <span>{COPY.ping.credit}</span>
-        <a
-          href={COPY.ping.creditUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-white/65 hover:text-white transition-colors underline decoration-white/20 hover:decoration-white/60 underline-offset-4 inline-flex items-center gap-0.5 group"
-        >
-          <span>{COPY.ping.creditProject}</span>
-          <ArrowUpRight className="w-3 h-3 text-white/40 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-        </a>
-      </footer>
     </div>
   );
 }
