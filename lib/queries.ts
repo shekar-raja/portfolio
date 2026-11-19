@@ -10,11 +10,19 @@ import {
   PostSchema,
   SiteConfigSchema,
   TakeSchema,
+  ExperienceSchema,
+  EducationSchema,
+  SkillGroupSchema,
+  TestimonialSchema,
   type Profile,
   type Project,
   type Post,
   type SiteConfig,
   type Take,
+  type Experience,
+  type Education,
+  type SkillGroup,
+  type Testimonial,
 } from "./schemas";
 
 function readSeedFile<T>(filename: string): T {
@@ -46,7 +54,7 @@ const cachedGitHubRepoMeta = unstable_cache(
     try {
       const res = await fetch(`https://api.github.com/repos/${owner}/${repo}`, {
         headers: {
-          "User-Agent": "BeeBombshell-Portfolio",
+          "User-Agent": "rshekar-portfolio",
           Accept: "application/vnd.github.v3+json",
         },
       });
@@ -281,4 +289,130 @@ export async function getTakes(): Promise<Take[]> {
   return cachedGetTakes();
 }
 
+async function fetchExperience(): Promise<Experience[]> {
+  if (firestore) {
+    try {
+      const snap = await firestore.collection("experience").orderBy("order", "asc").get();
+      if (!snap.empty) {
+        return snap.docs.map((d: QueryDocumentSnapshot) => ExperienceSchema.parse(d.data()));
+      }
+    } catch (err) {
+      console.warn("Firestore getExperience failed, using seed fallback:", err);
+    }
+  }
 
+  const raw = readSeedFile<unknown[]>("experience.json");
+  return raw.map((item) => ExperienceSchema.parse(item)).sort((a, b) => a.order - b.order);
+}
+
+const cachedGetExperience = unstable_cache(
+  fetchExperience,
+  ["experience-data"],
+  {
+    tags: [REVALIDATE_TAGS.experience],
+    revalidate: 3600,
+  }
+);
+
+export async function getExperience(): Promise<Experience[]> {
+  if (process.env.NODE_ENV === "development") {
+    return fetchExperience();
+  }
+  return cachedGetExperience();
+}
+
+async function fetchEducation(): Promise<Education[]> {
+  if (firestore) {
+    try {
+      const snap = await firestore.collection("education").orderBy("order", "asc").get();
+      if (!snap.empty) {
+        return snap.docs.map((d: QueryDocumentSnapshot) => EducationSchema.parse(d.data()));
+      }
+    } catch (err) {
+      console.warn("Firestore getEducation failed, using seed fallback:", err);
+    }
+  }
+
+  const raw = readSeedFile<unknown[]>("education.json");
+  return raw.map((item) => EducationSchema.parse(item)).sort((a, b) => a.order - b.order);
+}
+
+const cachedGetEducation = unstable_cache(
+  fetchEducation,
+  ["education-data"],
+  {
+    tags: [REVALIDATE_TAGS.education],
+    revalidate: 3600,
+  }
+);
+
+export async function getEducation(): Promise<Education[]> {
+  if (process.env.NODE_ENV === "development") {
+    return fetchEducation();
+  }
+  return cachedGetEducation();
+}
+
+async function fetchSkills(): Promise<SkillGroup[]> {
+  if (firestore) {
+    try {
+      const snap = await firestore.collection("skills").orderBy("order", "asc").get();
+      if (!snap.empty) {
+        return snap.docs.map((d: QueryDocumentSnapshot) => SkillGroupSchema.parse(d.data()));
+      }
+    } catch (err) {
+      console.warn("Firestore getSkills failed, using seed fallback:", err);
+    }
+  }
+
+  const raw = readSeedFile<unknown[]>("skills.json");
+  return raw.map((item) => SkillGroupSchema.parse(item)).sort((a, b) => a.order - b.order);
+}
+
+const cachedGetSkills = unstable_cache(
+  fetchSkills,
+  ["skills-data"],
+  {
+    tags: [REVALIDATE_TAGS.skills],
+    revalidate: 3600,
+  }
+);
+
+export async function getSkills(): Promise<SkillGroup[]> {
+  if (process.env.NODE_ENV === "development") {
+    return fetchSkills();
+  }
+  return cachedGetSkills();
+}
+
+async function fetchTestimonials(): Promise<Testimonial[]> {
+  if (firestore) {
+    try {
+      const snap = await firestore.collection("testimonials").orderBy("order", "asc").get();
+      if (!snap.empty) {
+        return snap.docs.map((d: QueryDocumentSnapshot) => TestimonialSchema.parse(d.data()));
+      }
+    } catch (err) {
+      console.warn("Firestore getTestimonials failed, using seed fallback:", err);
+    }
+  }
+
+  const raw = readSeedFile<unknown[]>("testimonials.json");
+  return raw.map((item) => TestimonialSchema.parse(item)).sort((a, b) => a.order - b.order);
+}
+
+const cachedGetTestimonials = unstable_cache(
+  fetchTestimonials,
+  ["testimonials-data"],
+  {
+    tags: [REVALIDATE_TAGS.testimonials],
+    revalidate: 3600,
+  }
+);
+
+export async function getTestimonials(): Promise<Testimonial[]> {
+  if (process.env.NODE_ENV === "development") {
+    return fetchTestimonials();
+  }
+  return cachedGetTestimonials();
+}

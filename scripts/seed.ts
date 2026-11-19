@@ -85,6 +85,14 @@ async function runSeed() {
   const config = JSON.parse(fs.readFileSync(path.join(seedDir, "config.json"), "utf-8"));
   await db.collection("site").doc("config").set(config);
 
+  for (const name of ["experience", "education", "skills", "testimonials"]) {
+    console.log(`Seeding ${name} into Firestore...`);
+    const items = JSON.parse(fs.readFileSync(path.join(seedDir, `${name}.json`), "utf-8"));
+    for (let i = 0; i < items.length; i++) {
+      await db.collection(name).doc(String(i + 1).padStart(3, "0")).set(items[i]);
+    }
+  }
+
   console.log("✓ Firestore seeding complete! All documents synchronized.");
 }
 

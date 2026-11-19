@@ -7,6 +7,10 @@ import {
   type Project,
   type Post,
   type Take,
+  type Experience,
+  type Education,
+  type SkillGroup,
+  type Testimonial,
 } from "@/lib/schemas";
 import { HeroBadge } from "@/components/badge/hero-badge";
 import { scrollStore } from "@/lib/scroll-store";
@@ -15,6 +19,10 @@ import { ViewsSection } from "@/components/character/views-section";
 import { ExpandingProjectCards } from "@/components/cards/expanding-project-cards";
 import { WritingRow } from "@/components/writing/writing-row";
 import { SectionHeader } from "@/components/type/section-header";
+import { ExperienceSection } from "@/components/sections/experience-section";
+import { SkillsSection } from "@/components/sections/skills-section";
+import { EducationSection } from "@/components/sections/education-section";
+import { TestimonialsSection } from "@/components/sections/testimonials-section";
 import { SiteFooter } from "@/components/footer/site-footer";
 import { COPY } from "@/lib/copy";
 
@@ -23,6 +31,10 @@ interface HeroSectionProps {
   selectedProjects: Project[];
   recentPosts?: Post[];
   takes?: Take[];
+  experience?: Experience[];
+  education?: Education[];
+  skills?: SkillGroup[];
+  testimonials?: Testimonial[];
 }
 
 export function HeroSection({
@@ -30,6 +42,10 @@ export function HeroSection({
   selectedProjects,
   recentPosts = [],
   takes = [],
+  experience = [],
+  education = [],
+  skills = [],
+  testimonials = [],
 }: HeroSectionProps) {
   const heroRef = useRef<HTMLDivElement>(null);
   const scrollHintRef = useRef<HTMLDivElement>(null);
@@ -125,6 +141,10 @@ export function HeroSection({
         <ExpandingProjectCards projects={selectedProjects.slice(0, 4)} />
       </section>
 
+      <ExperienceSection items={experience} />
+      <SkillsSection groups={skills} />
+      <EducationSection items={education} />
+
       {/* Recent writing */}
       {recentPosts.length > 0 && (
         <section
@@ -163,6 +183,8 @@ export function HeroSection({
 
       {/* Views nobody asked for */}
       <ViewsSection takes={takes} />
+
+      <TestimonialsSection items={testimonials} />
 
       <SiteFooter profile={profile} />
     </div>

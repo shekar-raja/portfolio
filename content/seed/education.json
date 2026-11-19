@@ -1,0 +1,20 @@
+[
+  {
+    "degree": "MSc Data Science and Analytics",
+    "institution": "University of Hertfordshire",
+    "location": "Hatfield, UK",
+    "start": "Sep 2022",
+    "end": "Nov 2024",
+    "detail": "Focused on Machine Learning, Cloud Computing and Data Analytics. Dissertation on exoplanet detection using machine learning with NASA Kepler dataset.",
+    "order": 1
+  },
+  {
+    "degree": "BSc Computer Science",
+    "institution": "Hyderabad Institute of Technology and Management",
+    "location": "Hyderabad, India",
+    "start": "Jun 2015",
+    "end": "Aug 2019",
+    "detail": "Core curriculum covering algorithms, data structures, database systems and software engineering.",
+    "order": 2
+  }
+]

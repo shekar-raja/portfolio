@@ -1,0 +1,75 @@
+[
+  {
+    "company": "Koolmill Systems",
+    "role": "Cloud Data Engineer",
+    "location": "Sheffield, UK",
+    "start": "Jun 2025",
+    "current": true,
+    "bullets": [
+      "Contributed to the Innovate UK funded Digital Rice Mill Demonstrator project, developing a scalable cloud data platform for real-time monitoring of industrial rice milling machines.",
+      "Architected end-to-end data architecture to ingest and process second-level industrial time-series telemetry from PLC-controlled milling systems via edge devices.",
+      "Designed multi-tenant time-series data model, reducing large-range query latency from 25–35s to sub-second responses.",
+      "Led zero-downtime production data migration (14-hour rollout) with validation checks, reducing database RCU/WCU consumption and operational costs.",
+      "Built real-time telemetry ingestion pipelines using AWS IoT platform alongside batch ETL workflows for daily and monthly operational analytics.",
+      "Implemented CI/CD and infrastructure automation using GitHub Actions, Docker, ECR, ECS and Terraform across multi-environment deployments.",
+      "Designed secure API layer using IAM, ABAC policies and Cognito enabling tenant-level access control to industrial machine telemetry."
+    ],
+    "tags": [
+      "AWS",
+      "Python",
+      "GitHub Actions",
+      "CI/CD",
+      "Docker",
+      "Data Modelling",
+      "Terraform",
+      "Excel",
+      "IOT",
+      "Time-Series Data"
+    ],
+    "order": 1
+  },
+  {
+    "company": "TruNums",
+    "role": "Software Engineer",
+    "location": "Remote, US",
+    "start": "Oct 2022",
+    "end": "Jan 2024",
+    "bullets": [
+      "Developed and deployed a MEAN-stack social media platform serving 5,000+ global users, delivering scalable user interactions and real-time content features.",
+      "Designed scalable MongoDB and Redis data models improving application performance and session handling.",
+      "Deployed production releases via AWS, reducing downtime and ensuring stable global updates."
+    ],
+    "tags": [
+      "Node.js",
+      "Angular",
+      "MongoDB",
+      "Redis",
+      "AWS",
+      "Rest API",
+      "CI/CD"
+    ],
+    "order": 2
+  },
+  {
+    "company": "Groundhog Apps",
+    "role": "Software Engineer",
+    "location": "Hyderabad, India",
+    "start": "Dec 2019",
+    "end": "Aug 2022",
+    "bullets": [
+      "Developed and maintained MEAN-stack applications for mining operations, contributing to a 40% increase in production throughput per shift.",
+      "Automated shift-end reporting workflows, reducing manual reporting effort by 50%.",
+      "Optimised database indexing strategies, reducing query latency by 20%.",
+      "Designed and maintained REST APIs supporting operational analytics and reporting dashboards."
+    ],
+    "tags": [
+      "Node.js",
+      "Angular",
+      "MongoDB",
+      "Python",
+      "REST API",
+      "Redis"
+    ],
+    "order": 3
+  }
+]

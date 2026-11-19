@@ -1,0 +1,78 @@
+[
+  {
+    "group": "Languages & Backend",
+    "items": [
+      "Python",
+      "SQL",
+      "JavaScript",
+      "Scala",
+      "FastAPI",
+      "Node.js",
+      "React",
+      "Angular"
+    ],
+    "order": 1
+  },
+  {
+    "group": "Cloud & AWS",
+    "items": [
+      "S3",
+      "AWS Lambda",
+      "ECS",
+      "IoT Core",
+      "API Gateway",
+      "Cognito",
+      "CloudWatch",
+      "SNS",
+      "DynamoDB",
+      "IAM",
+      "SageMaker",
+      "ECR"
+    ],
+    "order": 2
+  },
+  {
+    "group": "DevOps & IaC",
+    "items": [
+      "Terraform",
+      "Docker",
+      "GitHub Actions",
+      "IAM",
+      "ABAC"
+    ],
+    "order": 3
+  },
+  {
+    "group": "Databases",
+    "items": [
+      "DynamoDB",
+      "PostgreSQL",
+      "MongoDB",
+      "Redis",
+      "CouchDB"
+    ],
+    "order": 4
+  },
+  {
+    "group": "Data Engineering",
+    "items": [
+      "ETL/ELT Pipelines",
+      "Real-Time Streaming",
+      "Time-Series Modelling",
+      "Data Modelling",
+      "Query Optimisation"
+    ],
+    "order": 5
+  },
+  {
+    "group": "ML & Data Science",
+    "items": [
+      "PyTorch",
+      "Scikit-Learn",
+      "Pandas",
+      "NumPy",
+      "Matplotlib"
+    ],
+    "order": 6
+  }
+]

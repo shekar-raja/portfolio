@@ -57,11 +57,16 @@ export function ParticleCanvas() {
       const SECTIONS: Array<{ id: string; mode: ParticleMode }> = [
         { id: "hero", mode: "burst" },
         { id: "work", mode: "lattice" },
+        { id: "experience", mode: "lattice" },
+        { id: "skills", mode: "contours" },
+        { id: "education", mode: "lattice" },
         { id: "writing", mode: "writing" },
         { id: "views", mode: "takes" },
+        { id: "testimonials", mode: "contours" },
         { id: "footer", mode: "wordmark" },
       ];
 
+      let activeSectionId = "hero";
       let activeSectionMode: ParticleMode = "burst";
 
       const onScroll = () => {
@@ -73,40 +78,44 @@ export function ParticleCanvas() {
           const el =
             document.getElementById(sec.id) ||
             document.querySelector(`[data-section="${sec.id}"]`);
-          if (!el) return { mode: sec.mode, ratio: 0 };
+          if (!el) return { id: sec.id, mode: sec.mode, ratio: 0 };
           const rect = el.getBoundingClientRect();
           const visibleTop = Math.max(0, rect.top);
           const visibleBottom = Math.min(windowH, rect.bottom);
           const visibleH = Math.max(0, visibleBottom - visibleTop);
           const ratio = visibleH / windowH;
-          return { mode: sec.mode, ratio };
+          return { id: sec.id, mode: sec.mode, ratio };
         });
 
         const currentActive = visibilities.find(
-          (v) => v.mode === activeSectionMode
+          (v) => v.id === activeSectionId
         );
         const currentRatio = currentActive?.ratio ?? 0;
 
         // If another section has crossed 45% visibility and exceeds current active, switch to it
         const candidate = visibilities.find(
           (v) =>
-            v.mode !== activeSectionMode &&
+            v.id !== activeSectionId &&
             v.ratio >= 0.45 &&
             v.ratio > currentRatio
         );
 
         if (candidate) {
+          const changed = candidate.mode !== activeSectionMode;
+          activeSectionId = candidate.id;
           activeSectionMode = candidate.mode;
-          engine.morphTo(activeSectionMode);
+          if (changed) engine.morphTo(activeSectionMode);
         } else if (currentRatio < 0.4) {
           // Current section fell below 40% exit threshold: pick dominant visible section
           const best = visibilities.reduce(
             (max, curr) => (curr.ratio > max.ratio ? curr : max),
             visibilities[0]
           );
-          if (best.ratio >= 0.25 && best.mode !== activeSectionMode) {
+          if (best.ratio >= 0.25 && best.id !== activeSectionId) {
+            const changed = best.mode !== activeSectionMode;
+            activeSectionId = best.id;
             activeSectionMode = best.mode;
-            engine.morphTo(activeSectionMode);
+            if (changed) engine.morphTo(activeSectionMode);
           }
         }
 
