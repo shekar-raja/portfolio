@@ -1,6 +1,6 @@
 /**
  * particle-engine.ts
- * Core Canvas 2D particle engine for BeeBombshell.com.
+ * Core Canvas 2D particle engine for rshekar.me.
  *
  * Design spec: design.md §Particle system
  * Plan spec:   plan.md §Phase 2
@@ -389,7 +389,7 @@ export class ParticleEngine {
     const height = Math.max(1, Math.round(rect.height));
     if (width < 40 || height < 40) return;
 
-    const text = element.dataset.wordmark || "BEEBOMBSHELL";
+    const text = element.dataset.wordmark || "RAJA SHEKAR";
     const styles = window.getComputedStyle(element);
     const family = styles.fontFamily || "monospace";
     const canvas = document.createElement("canvas");

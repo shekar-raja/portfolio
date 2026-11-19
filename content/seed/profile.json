@@ -1,24 +1,24 @@
 {
-  "name": "Bhavya Verma",
-  "role": "product engineer, developer experience",
+  "name": "Raja Shekar",
+  "role": "cloud data engineer",
   "location": "",
-  "bio": "Product engineer on the developer-experience side. Early-stage low-code startups raised me. I live where technical meets creative, and I explain things well. Free time goes to open source and to X, where I post views nobody asked for.",
+  "bio": "Cloud data engineer. I'm fascinated by all things data: pipelines, AI solutions, and the applications around them. Over five years in software, now building data platforms on AWS.",
   "statusText": "open for chats",
   "socials": [
     {
       "label": "GitHub",
-      "url": "https://github.com/BeeBombshell",
-      "handle": "@BeeBombshell"
-    },
-    {
-      "label": "X",
-      "url": "https://x.com/Bee_Bombshell",
-      "handle": "@Bee_Bombshell"
+      "url": "https://github.com/shekar-raja",
+      "handle": "@shekar-raja"
     },
     {
       "label": "LinkedIn",
-      "url": "https://www.linkedin.com/in/beebombshell",
-      "handle": "beebombshell"
+      "url": "https://www.linkedin.com/in/raja-shekar/",
+      "handle": "raja-shekar"
+    },
+    {
+      "label": "Email",
+      "url": "mailto:rshekar.contact@gmail.com",
+      "handle": "rshekar.contact@gmail.com"
     }
   ]
 }

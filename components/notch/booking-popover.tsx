@@ -14,7 +14,7 @@ interface BookingPopoverProps {
 export function BookingPopover({
   isOpen,
   onClose,
-  bookingUrl = "https://cal.com/beebombshell/coffee",
+  bookingUrl = "mailto:rshekar.contact@gmail.com",
   statusText = "Open for chats",
 }: BookingPopoverProps) {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -23,7 +23,7 @@ export function BookingPopover({
   const targetUrl =
     bookingUrl && !bookingUrl.includes("20min")
       ? bookingUrl
-      : "https://cal.com/beebombshell/coffee";
+      : "mailto:rshekar.contact@gmail.com";
 
   // Close on Escape key press
   useEffect(() => {
@@ -82,7 +82,7 @@ export function BookingPopover({
                   id="booking-modal-title"
                   className="font-mono text-xs uppercase tracking-wider font-semibold text-[var(--fg)]"
                 >
-                  Coffee Chat · Cal.com
+                  Say hello · Email
                 </h2>
               </div>
               <button
@@ -103,16 +103,16 @@ export function BookingPopover({
                 </div>
                 <div>
                   <h3 className="text-base font-medium text-[var(--fg)] leading-snug">
-                    Grab a virtual coffee
+                    Drop me a message
                   </h3>
                   <p className="text-xs text-[var(--mut)]">
-                    {statusText} · 20 min conversation
+                    {statusText} · email me anytime
                   </p>
                 </div>
               </div>
 
               <p className="text-xs text-[var(--mut)] leading-relaxed pt-1">
-                Redirecting to Cal.com to pick a convenient slot...
+                Opening your email app to start a conversation...
               </p>
             </div>
 
@@ -125,7 +125,7 @@ export function BookingPopover({
                 onClick={onClose}
                 className="w-full flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-[var(--fg)] text-[var(--bg)] font-medium hover:opacity-90 transition-opacity focus-visible:outline-2"
               >
-                <span>Continue to Cal.com</span>
+                <span>Continue to email</span>
                 <ArrowUpRight className="w-4 h-4" />
               </a>
 

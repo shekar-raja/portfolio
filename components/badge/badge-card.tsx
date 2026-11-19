@@ -399,9 +399,9 @@ export function BadgeCard({
                 <span className="text-[11px] opacity-60">↗</span>
               </button>
 
-              {/* Unsolicited views on X */}
+              {/* LinkedIn */}
               <a
-                href="https://x.com/Bee_Bombshell"
+                href="https://www.linkedin.com/in/raja-shekar/"
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={(e) => e.stopPropagation()}
@@ -414,7 +414,7 @@ export function BadgeCard({
 
           {/* Footer note */}
           <div className="flex items-center justify-between border-t border-white/10 pt-3 text-[10px] font-mono text-white/40">
-            <span>Bhavya Verma</span>
+            <span>Raja Shekar</span>
           </div>
         </div>
       </div>

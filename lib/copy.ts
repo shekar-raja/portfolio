@@ -1,58 +1,58 @@
 /**
  * lib/copy.ts
- * Single source of truth for all copy across BeeBombshell.
+ * Single source of truth for all copy across rshekar.me.
  * Conforms to copy.md and design.md.
  */
 
 export const COPY = {
   // Voice & Facts
   site: {
-    title: "Bhavya Verma",
-    titleTemplate: "%s · Bhavya Verma",
-    tagline: "Shipping features and memes in equal measure.",
+    title: "Raja Shekar",
+    titleTemplate: "%s · Raja Shekar",
+    tagline: "Curious engineer. Data-driven builder.",
   },
   seo: {
     description:
-      "Bhavya Verma is a product engineer focused on developer experience. Dev tools, open source, writing, and views nobody asked for.",
-    ogTitle: "Bhavya Verma · I make dev tools feel like someone cared",
+      "Raja Shekar is a cloud data engineer. Data pipelines, AI solutions, projects, writing, and views nobody asked for.",
+    ogTitle: "Raja Shekar · I'm fascinated by all things data",
     ogDescription:
-      "Product engineer, developer experience. Open source, writing, and a lanyard that swings.",
+      "Cloud data engineer. Pipelines, AI, projects, writing, and a lanyard that swings.",
     jsonLdDescription:
-      "Product engineer focused on developer experience, open source contributor and mentor.",
+      "Cloud data engineer with 5+ years of software engineering experience, building data pipelines, AI solutions, and applications.",
     badgeAlt:
       "A holographic ID badge with a glossy blob character, hanging from a black lanyard.",
   },
   bio: {
     oneLiner:
-      "Product engineer, developer experience. I make dev tools feel like someone cared.",
+      "Cloud data engineer. I'm fascinated by all things data.",
     short:
-      "Product engineer on the developer-experience side. Early-stage low-code startups raised me. I live where technical meets creative, and I explain things well. Free time goes to open source and to X, where I post views nobody asked for.",
+      "Cloud data engineer. Fascinated by all things data: pipelines, AI solutions, and applications. Five-plus years in software, curious about how things work.",
     medium:
-      "I'm Bhavya, a product engineer working on developer experience, which is a fancy way of saying I care a lot about the first ten minutes with a tool. I started at early-stage low-code startups, where the team is small and the surface area is everything. I like the spot where technical meets creative, and I'm good at explaining either one to the other. Outside work: open source, mentoring (20+ women and non-binary folks into their first contributions so far), and X, where I post views nobody asked for.",
+      "I'm Raja, a cloud data engineer who has always been curious about how things work. That curiosity took me from full stack web applications into data, cloud engineering, and applied AI. I have over five years of experience as a software engineer, and today I'm at Koolmill Systems, contributing to an Innovate UK funded project on smart systems for rice milling. What drives me is the chance to keep learning, keep building, and make solutions that matter.",
     long: [
-      "I'm a product engineer working on developer experience, which is a fancy way of saying I care a lot about the first ten minutes with a tool.",
-      'I started out at early-stage low-code startups, where nobody has a job title for what you\'re doing and the only rule is "make it work, then make it nice."',
-      "I'm happiest where the technical meets the creative, and I'm unreasonably fond of explaining either one to the other.",
-      "Open source is where I learned most of what I know, so I give it back. I've helped mentor 20+ women and non-binary folks into their first contributions, and I'd do it again tomorrow.",
-      "I'm bad at sitting still. When I'm \"off\", I'm usually on X, sharing views nobody asked for.",
+      "I'm a cloud data engineer, fascinated by all things data: building data pipelines, AI solutions, and applications.",
+      "I've always been curious about how things work. That curiosity first led me into full stack web applications and, over time, into data, cloud engineering, and applied AI.",
+      "With over five years as a software engineer, I now focus on designing and delivering data driven systems that turn ideas into real world solutions.",
+      "I'm currently a Cloud Data Engineer at Koolmill Systems Limited, contributing to an Innovate UK funded project developing next generation smart systems for rice milling.",
+      "What drives me is the opportunity to keep learning, keep building, and create solutions that matter.",
     ],
   },
   card: {
-    label: "Bhavya Verma",
-    meta: "Product engineer · Developer experience.",
-    headline: "Hi, I'm Bhavya. I make dev tools feel like someone cared.",
-    headlineLead: "Hi, I'm Bhavya. I make dev tools feel like ",
-    headlineAccent: "someone cared.",
-    bio: "Product engineer on the developer-experience side. Early-stage low-code startups raised me. I live where technical meets creative, and I explain things well. Free time goes to open source and to X, where I post views nobody asked for.",
-    chips: ["20+ mentored into OSS", "ex low-code", "DX"],
+    label: "Raja Shekar",
+    meta: "Cloud data engineer · Data & AI.",
+    headline: "Hi, I'm Raja. I'm fascinated by all things data.",
+    headlineLead: "Hi, I'm Raja. I'm fascinated by ",
+    headlineAccent: "all things data.",
+    bio: "Cloud data engineer. Fascinated by all things data: pipelines, AI solutions, and applications. Five-plus years in software, curious about how things work.",
+    chips: ["5+ yrs", "cloud data", "AWS"],
     hint: "psst, flip me",
     hintBack: "flip me back",
     back: {
       label: "Find me",
-      book: "book a call",
+      book: "email me",
       writing: "writing",
       llms: "llms.txt",
-      x: "unsolicited views ↗",
+      x: "linkedin ↗",
     },
   },
   nav: {
@@ -61,14 +61,14 @@ export const COPY = {
     writing: "writing",
     about: "about",
     ping: "ping",
-    calendarTooltip: "Book a call",
+    calendarTooltip: "Email me",
     llmsLabel: "llms.txt",
     llmsTooltip: "For the robots (and the curious)",
     themeToDark: "Lights off",
     themeToLight: "Lights on",
     statusOpen: "open for chats",
     statusBusy: "heads down, back soon",
-    statusTooltip: "currently: not sitting still",
+    statusTooltip: "currently: building data things",
   },
   ping: {
     eyebrow: "ANONYMOUS PING",
@@ -77,18 +77,15 @@ export const COPY = {
     explainer:
       "Anonymous notes, confessions, roasts, or honest feedback delivered straight to my phone.",
     disclosure:
-      "No name, IP or browser details are stored. I may share pings on X, without anything that could identify you.",
+      "No name, IP or browser details are stored. I may share pings publicly, without anything that could identify you.",
     sharingRules:
       "My rules when sharing: post only the message text, no tag or metadata; strip names and handles of third parties; skip anything abusive or that could identify the sender.",
     footerHint: "arrows change tag and prompt · Ctrl+Enter sends",
-    deliveredToast: "Delivered. Bee's phone just buzzed.",
+    deliveredToast: "Delivered. Raja's phone just buzzed.",
     errorToast: "Couldn't send. Press Enter to retry.",
     micDisabledNotice:
       "Speech recognition is disabled on purpose: browser speech APIs can send audio to third-party cloud servers. To guarantee zero tracking, only keyboard input is accepted.",
     dailyLimitReached: "Daily limit reached (3/3). Come back tomorrow!",
-    credit: "powered by",
-    creditProject: "whodunit-ping",
-    creditUrl: "https://github.com/BeeBombshell/whodunit-ping",
   },
   index: {
     scrollHint: "scroll. the badge will survive.",
@@ -98,70 +95,67 @@ export const COPY = {
     title: "About",
     howTitle: "How I work",
     howItems: [
-      "Docs are a feature. Ship them like one.",
-      "The best error message is the one you never see. The second best tells you what to do next.",
-      "If it needs a tutorial, try to make it need less of one.",
-      "Explain it to someone new, then fix whatever confused them.",
+      "Curious first. Understand how it works, then build it.",
+      "Data driven systems should turn ideas into real world solutions.",
+      "Keep learning, keep building.",
+      "Functions describe the world. Let's write ours together.",
     ],
-    ossTitle: "Open source and mentoring",
+    ossTitle: "Data, cloud and AI",
     ossBody:
-      "Open source taught me most of what I know, so I try to give some back. I've helped mentor 20+ women and non-binary folks into their first open source contributions. Watching someone merge their first PR never gets old.",
+      "I moved from full stack web applications into data, cloud engineering, and applied AI. I like building things that make a tangible difference, from operational efficiency to sustainability goals.",
     ossProjects:
-      "Contributions across projects including UNICEF, Apache APISIX, and Fedora.",
+      "Projects across machine learning, data pipelines, and the cloud.",
     offclockTitle: "Off the clock",
     offclockBody:
-      "There is no off the clock. There is X, where I share views nobody asked for. Come argue with me.",
+      "Mostly still near a computer, if I'm honest. Say hi anyway.",
     funTitle: "Fun facts",
     funItems: [
-      "Has never knowingly sat still.",
-      "Four-time GitHub Galaxy Brain.",
-      "Believes a good README is a feature.",
-      "Opinions per day: unreasonable.",
+      "Has a published Adobe XD plugin (500+ installs).",
+      "MSc thesis was about finding exoplanets.",
+      "Believes functions describe the world.",
+      "Opinions per day: curiously few.",
     ],
     nowTitle: "Currently",
-    nowBody: "Shipping features and memes in equal measure.",
+    nowBody: "Cloud Data Engineer at Koolmill Systems.",
   },
   work: {
     title: "Work",
-    intro: "Selected work. Some of it even has a README.",
+    intro: "Selected work. Data, AI, and a plugin or two.",
     cardHint: "click to open",
     cardOpenLabel: "open case study",
     stars: "{n} stars",
   },
   writing: {
     title: "Writing",
-    intro: "Mostly things I wish I'd read sooner.",
-    empty: "First post loading. Opinions are being formed.",
+    intro: "Notes on data, as I learn it.",
+    empty: "First post loading. Notes are being taken.",
     readTime: "{n} min read · skimmable",
     tagsLabel: "filed under",
     rss: "RSS, which still exists and is great",
-    postFooter: "Disagree? That's what X is for. ↗",
+    postFooter: "Disagree? Drop me a line. ↗",
     draftBanner: "Draft. You weren't supposed to see this. (Hi.)",
   },
   views: {
     title: "Views nobody asked for",
-    sub: "Unsolicited, unreviewed, occasionally correct.",
-    cta: "Disagree with me on X ↗",
+    sub: "Short, sincere, and still unreviewed.",
+    cta: "Disagree with me by email ↗",
     empty: "No takes today. Suspicious.",
     takes: [
-      "The worst thing you could do for your X presence is to involve \"AI\" in any way, shape, or form. (Except opinions, obviously.)",
-      "RIP public static void main, you will be missed. Not that I Java anymore, lol.",
-      "My Claude agent went rogue and ordered two more pairs of wide-leg jeans and pullovers. On my card.",
-      "We all start somewhere. Be the mentor you once wished you had.\nA mindset I've mostly seen in open source communities though. Wish more people thought this way.",
-      "Graph Engineering is apparently the next big hype.\nWe had:\nContext Eng. > Harness Eng. > Loop Eng. > Added nodes & vertices = Graph Engineering 😵💫\nPeople be making tiny tweaks and calling it a breakthrough. It's just modifying the architecture to fit what you build 🤷♀️",
-      "What I initially intended as a personal project turned into a SaaS.\nGoing in big, it seems! ※\\(^o^)/※\n★ Dropping the beta soon. Drop a comment if you want early access! ★",
+      "Functions describe the world—let's write ours together.",
+      "Curious about how things work, and always happy to keep learning and building.",
+      "Fascinated by all things data.",
     ],
   },
   booking: {
     title: "Let's talk",
-    sub: "Pick a time. I'll bring opinions.",
+    sub: "Send an email. I'll reply.",
     topics:
-      "Dev tools, open source, breaking into OSS, or just arguing about a README.",
-    cta: "Book a call",
-    success: "Booked. I'll bring opinions.",
-    error: "The calendar is being shy. Email me instead: {email}",
+      "Data pipelines, cloud, AI, an opportunity, or just saying hi.",
+    cta: "Send an email",
+    success: "Sent. I'll get back to you.",
+    error: "Something went wrong. Email me directly: {email}",
     close: "close",
-    busy: "Calendar's full for now. Email me and I'll find a gap.",
+    busy: "Busy for now. Email me and I'll get back to you.",
   },
   llms: {
     toggle: "llms.txt",
@@ -186,21 +180,21 @@ export const COPY = {
   },
   egg: {
     console:
-      "Hi, you opened devtools. Respect. The physics on that badge is a custom rope sim, ask me about it. If you're hiring, building, or just curious: hello@beebombshell.com",
+      "Hi, you opened devtools. Respect. The physics on that badge is a rope sim. If you're hiring, building, or just curious: rshekar.contact@gmail.com",
     htmlComment:
-      "You found the source. The lanyard is a verlet rope. Ask me about it.",
+      "You found the source. The lanyard is a verlet rope. Say hi: rshekar.contact@gmail.com",
     logoClick: "ouch.",
   },
   footer: {
     status: "Open for chats",
     heading: "Let's talk",
-    sub: "Pick a time. Bring a problem, I'll bring opinions.",
-    cta: "Book a call",
-    copyright: "© {year} beebombshell.com",
+    sub: "Bring a problem or a hello. I'll reply.",
+    cta: "Send an email",
+    copyright: "© 2026 rshekar.me",
     top: "up we go",
     links: {
       github: "GitHub",
-      x: "X",
+      x: "Email",
       linkedin: "LinkedIn",
       llms: "llms.txt",
     },
@@ -216,23 +210,23 @@ export const COPY = {
   },
   state: {
     notFoundTitle: "Nothing here.",
-    notFoundBody: "I checked twice. (I don't sit still, remember?)",
+    notFoundBody: "I checked twice. The data says nothing's here.",
     notFoundCta: "take me home",
     errorTitle: "Something broke.",
     errorBody: "Not you, me. I've been told.",
     errorCta: "try again",
     loading: "warming up the particles…",
     offline: "You're offline. The badge is on its own for now.",
-    emptyProjects: "Nothing shipped yet. Impossible, but here we are.",
+    emptyProjects: "Nothing here yet. Impossible, but here we are.",
     formError: "That didn't go through. Try once more?",
     copied: "copied",
   },
   links: {
     github: "GitHub ↗",
-    x: "X ↗",
+    x: "Email ↗",
     linkedin: "LinkedIn ↗",
     email: "Email",
-    site: "beebombshell.com",
+    site: "rshekar.me",
   },
 } as const;
 

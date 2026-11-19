@@ -61,7 +61,7 @@ export function HeroBadge({ className = "" }: { className?: string }) {
           icon: <ArrowUpRight className="w-3.5 h-3.5" />,
           text: COPY.card.back.x,
           onClick: () => {
-            window.open("https://x.com/Bee_Bombshell", "_blank", "noopener,noreferrer");
+            window.open("https://www.linkedin.com/in/raja-shekar/", "_blank", "noopener,noreferrer");
           },
         },
       ],
