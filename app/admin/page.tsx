@@ -5,7 +5,7 @@ import { AdminRoot } from "@/components/admin/admin-root";
 
 export const metadata: Metadata = {
   title: "Admin · Specimen Controller",
-  description: "Internal publication and site controller for BeeBombshell.",
+  description: "Internal publication and site controller for rshekar.me.",
   robots: {
     index: false,
     follow: false,

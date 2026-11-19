@@ -4,7 +4,7 @@ import fallbackData from "@/content/seed/github-contributions.json";
 export async function GET() {
   try {
     const res = await fetch(
-      "https://github-contributions-api.jogruber.de/v4/BeeBombshell",
+      "https://github-contributions-api.jogruber.de/v4/shekar-raja",
       { next: { revalidate: 3600 } }
     );
     if (!res.ok) {
@@ -38,7 +38,7 @@ export async function GET() {
     const total = recent.reduce((sum: number, x: { count: number }) => sum + x.count, 0);
 
     return NextResponse.json({
-      username: "BeeBombshell",
+      username: "shekar-raja",
       totalContributions: total,
       startDate: recent[0].date,
       endDate: recent[recent.length - 1].date,

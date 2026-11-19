@@ -192,7 +192,7 @@ export function AdminDashboard({ onLogout }: AdminDashboardProps) {
           <div className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse" />
           <div>
             <div className="text-[10px] font-mono uppercase tracking-widest text-[var(--mut)]">
-              BEEBOMBSHELL // SYSTEM
+              RSHEKAR.ME // SYSTEM
             </div>
             <h1 className="text-sm sm:text-base font-medium tracking-tight">
               Specimen Controller
@@ -611,7 +611,7 @@ export function AdminDashboard({ onLogout }: AdminDashboardProps) {
                       bookingUrl: e.target.value || undefined,
                     })
                   }
-                  placeholder="https://cal.com/bhavya/coffee"
+                  placeholder="mailto:rshekar.contact@gmail.com"
                   className="w-full text-xs font-mono px-3 py-2 rounded-lg border border-[var(--line)] bg-[var(--bg)] text-[var(--fg)] focus:outline-none focus:border-[var(--fg)]"
                 />
               </div>

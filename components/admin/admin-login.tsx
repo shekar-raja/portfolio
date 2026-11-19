@@ -96,7 +96,7 @@ export function AdminLogin({ onSuccess }: AdminLoginProps) {
               </button>
             </div>
             <p className="mt-2 text-[10px] font-mono text-[var(--mut)]/80">
-              Default local dev key: <code className="bg-[var(--line)] px-1 rounded">beebombshell-admin</code>
+              Set <code className="bg-[var(--line)] px-1 rounded">ADMIN_SECRET</code> in your environment to enable login.
             </p>
           </div>
 

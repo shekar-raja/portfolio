@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
+import crypto from "crypto";
 import { revalidateTag, revalidatePath } from "next/cache";
 import { REVALIDATE_TAGS, type RevalidateTag } from "@/lib/revalidate";
 
@@ -21,13 +22,15 @@ export async function POST(request: NextRequest) {
       }
     }
 
-    const expectedSecret =
-      process.env.REVALIDATION_SECRET ||
-      process.env.REVALIDATE_SECRET ||
-      process.env.ADMIN_SECRET;
+    const expectedSecret = process.env.REVALIDATION_SECRET;
 
-    // Validate secret
-    if (!expectedSecret || secret !== expectedSecret) {
+    // Validate secret (timing-safe, over SHA-256 digests of equal length)
+    const digest = (v: string) => crypto.createHash("sha256").update(v).digest();
+    if (
+      !expectedSecret ||
+      typeof secret !== "string" ||
+      !crypto.timingSafeEqual(digest(secret), digest(expectedSecret))
+    ) {
       return NextResponse.json(
         { error: "Unauthorized: Invalid or missing revalidation secret" },
         { status: 401 }

@@ -97,13 +97,14 @@ export async function GET() {
     }
   }
 
-  // Showcase fallback track so notch has working marquee and equalizer
+  // Not configured or unavailable: report offline so the UI hides the widget
+  // instead of showing a made-up track.
   const fallbackData: SpotifyNowPlayingResponse = {
-    isPlaying: true,
-    track: "Midnight City",
-    artist: "M83",
-    url: "https://open.spotify.com/track/1eyzqe2QqGZUmfcPZtrIyt",
-    status: "playing",
+    isPlaying: false,
+    track: "",
+    artist: "",
+    url: "",
+    status: "offline",
   };
 
   return NextResponse.json(fallbackData, {

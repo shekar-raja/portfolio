@@ -2,6 +2,13 @@ import { NextRequest, NextResponse } from "next/server";
 import crypto from "crypto";
 
 export async function POST(req: NextRequest) {
+  let upstreamUrl = process.env.PING_WEBHOOK_URL?.trim();
+
+  // Feature is deferred: without a webhook, pings are disabled and nothing is read or logged.
+  if (!upstreamUrl) {
+    return NextResponse.json({ ok: false, disabled: true }, { status: 503 });
+  }
+
   try {
     const body = await req.json().catch(() => null);
 
@@ -46,11 +53,8 @@ export async function POST(req: NextRequest) {
       );
     }
 
-    // 3. Optional upstream proxy: if WHODUNIT_PING_URL or PING_WORKER_URL is configured
-    let upstreamUrl =
-      process.env.WHODUNIT_PING_URL || process.env.PING_WORKER_URL;
-
-    if (upstreamUrl && upstreamUrl.trim().length > 0) {
+    // 3. Forward to the configured webhook
+    {
       if (!upstreamUrl.startsWith("http://") && !upstreamUrl.startsWith("https://")) {
         upstreamUrl = `https://${upstreamUrl}`;
       }
@@ -59,25 +63,21 @@ export async function POST(req: NextRequest) {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
-            "X-Forwarded-From": "beebombshell-web",
+            "X-Forwarded-From": "rshekar-me",
           },
           body: JSON.stringify({ message: trimmed }),
         });
 
         if (!upstreamRes.ok) {
           console.warn(
-            "Upstream ping worker responded with status:",
+            "Ping webhook responded with status:",
             upstreamRes.status
           );
         }
       } catch (err) {
-        console.warn("Could not reach upstream ping worker:", err);
+        console.warn("Could not reach ping webhook:", err);
       }
-    } else {
-      // In local dev or standalone deployments without worker configured
-      console.log(`[ANONYMOUS PING RECEIVED] ${trimmed}`);
     }
-
 
     // 4. Return zero-knowledge cryptographic receipt data
     const receiptId = crypto.randomBytes(4).toString("hex").toUpperCase();

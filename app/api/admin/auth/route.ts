@@ -4,6 +4,7 @@ import {
   setAdminSession,
   clearAdminSession,
   validatePassword,
+  isAdminEnabled,
 } from "@/lib/admin-auth";
 
 export async function GET() {
@@ -12,6 +13,9 @@ export async function GET() {
 }
 
 export async function POST(request: NextRequest) {
+  if (!isAdminEnabled()) {
+    return NextResponse.json({ error: "admin disabled" }, { status: 503 });
+  }
   try {
     const body = await request.json();
     const { password } = body;
