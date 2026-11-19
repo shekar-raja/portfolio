@@ -1,0 +1,931 @@
+/* components/badge/badge.css */
+/* Styles for the physical badge, matching badge-agent-prompt.md */
+
+.badge-stage {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 100svh;
+  overflow: hidden;
+  user-select: none;
+  -webkit-user-select: none;
+  pointer-events: none;
+}
+
+.badge-rope {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.badge-card {
+  position: absolute;
+  left: 0;
+  top: 0;
+  /*
+   * Match the dimensions and resting position calculated by Badge.tsx before
+   * hydration. Without this first-paint geometry the server-rendered card
+   * starts at 0,0 at 560x380, then jumps into place when the physics loop
+   * starts. The headline is normally the page's LCP candidate, so that jump
+   * can push LCP out until after JavaScript has loaded and run.
+   */
+  --initial-card-w: max(
+    280px,
+    min(
+      max(500px, calc(50vw + 20px)),
+      820px,
+      calc((100svh - max(56px, 8svh) + 40px) / 0.98)
+    )
+  );
+  --card-w: var(--initial-card-w);
+  --card-h: calc(var(--card-w) * 0.68);
+  width: var(--card-w);
+  height: var(--card-h);
+  --card-scale: calc(var(--card-w, 560px) / 560);
+  z-index: 3;
+  transform: translate(
+    calc((100vw - var(--card-w)) / 2),
+    calc(-40px + var(--card-w) * 0.3)
+  );
+  transform-origin: center center;
+  /* NOTE: will-change: transform is intentionally omitted here.
+   * On mobile Chromium and some WebKit builds, will-change on the outer card
+   * promotes it to a GPU compositing layer, and any preserve-3d context in a
+   * child element gets flattened at the layer boundary — making
+   * backface-visibility: hidden silently stop working. The JS RAF loop already
+   * sets transform every frame, so will-change buys nothing here. */
+  touch-action: none;
+  cursor: grab;
+  outline: none;
+  pointer-events: auto;
+}
+
+@media (max-width: 639px) {
+  .badge-card {
+    --mobile-scale: max(
+      0.8095,
+      min(calc((100vw - 28px) / 320), calc((100svh - 220px) / 420))
+    );
+    --card-scale: min(1, var(--mobile-scale));
+    --card-w: calc(320px * var(--card-scale));
+    --card-h: calc(420px * var(--card-scale));
+    transform: translate(
+      calc((100vw - var(--card-w)) / 2),
+      calc(-40px + 168px * var(--card-scale))
+    );
+  }
+}
+
+.badge-card.is-dragging {
+  cursor: grabbing;
+}
+
+.badge-card:focus-visible {
+  outline: 2px solid rgba(255, 255, 255, 0.7);
+  outline-offset: 4px;
+}
+
+/* Hardware slot & ring */
+.badge-slot {
+  position: absolute;
+  width: calc(44px * var(--card-scale, 1));
+  height: calc(7px * var(--card-scale, 1));
+  border-radius: calc(4px * var(--card-scale, 1));
+  left: 50%;
+  transform: translateX(-50%);
+  top: calc(-6px * var(--card-scale, 1));
+  background: #0b0b0c;
+  z-index: 4;
+}
+
+.badge-ring {
+  position: absolute;
+  width: calc(13px * var(--card-scale, 1));
+  height: calc(21px * var(--card-scale, 1));
+  border: calc(2.5px * var(--card-scale, 1)) solid #c4c4cb;
+  border-radius: calc(8px * var(--card-scale, 1));
+  left: 50%;
+  transform: translateX(-50%);
+  top: calc(-17px * var(--card-scale, 1));
+  box-sizing: border-box;
+  pointer-events: none;
+  z-index: 4;
+}
+
+/* 3D Flip Perspective Container */
+.badge-perspective {
+  width: 100%;
+  height: 100%;
+  perspective: 1200px;
+  -webkit-perspective: 1200px;
+}
+
+.badge-flip {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d; /* Required for Safari & iOS Chrome */
+  border-radius: 20px;
+  /* box-shadow is on a ::before pseudo-element instead of here.
+   * Some browser/GPU paths treat box-shadow directly on a preserve-3d element
+   * as a compositing group, which flattens the 3D context and breaks
+   * backface-visibility. A pseudo-element avoids that path. */
+}
+
+.badge-flip::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 20px;
+  box-shadow: 0 30px 50px rgba(0, 0, 0, 0.24);
+  pointer-events: none;
+  z-index: -1;
+}
+
+.dark .badge-flip::before {
+  box-shadow:
+    0 30px 60px rgba(0, 0, 0, 0.65),
+    0 0 24px rgba(255, 255, 255, 0.04);
+}
+
+/* Card faces: overflow:hidden on faces ONLY */
+.badge-face {
+  position: absolute;
+  inset: 0;
+  border-radius: 20px;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  overflow: hidden;
+  background: #0b0b0c;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+.badge-face.front {
+  transform: translateZ(1px);
+}
+
+.dark .badge-face {
+  border-color: rgba(255, 255, 255, 0.24);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.12),
+    0 12px 32px rgba(0, 0, 0, 0.45);
+}
+
+/* 1px inner top highlight so it reads clearly as an object in dark mode */
+.badge-face::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.14) 15%,
+    rgba(255, 255, 255, 0.14) 85%,
+    transparent 100%
+  );
+  pointer-events: none;
+  z-index: 20;
+}
+
+.badge-face.back {
+  transform: rotateY(180deg) translateZ(1px);
+  /* Start hidden — JS RAF loop manages visibility dynamically.
+   * This prevents the back face from bleeding through on first paint
+   * before the animation loop has run even once. */
+  visibility: hidden;
+}
+
+/*
+ * Dot overlay & glare band — direct children of .badge-card.
+ * Use standard opacity instead of mix-blend-mode: screen, which breaks
+ * GPU compositing and collapses 3D contexts on mobile WebKit and Chrome.
+ */
+.badge-dots {
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(
+    rgba(255, 255, 255, 0.12) 1px,
+    transparent 1.3px
+  );
+  background-size: 7px 7px;
+  opacity: 0.45;
+  pointer-events: none;
+  border-radius: 20px;
+  z-index: 6;
+}
+
+/* Specular glare band */
+.badge-glare {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-size: 260% 100%;
+  background-image: linear-gradient(
+    105deg,
+    transparent 42%,
+    rgba(255, 255, 255, 0.12) 50%,
+    transparent 58%
+  );
+  opacity: 0.6;
+  border-radius: 20px;
+  z-index: 7;
+}
+
+/* Front Face Typography & Elements */
+.badge-meta-group {
+  position: absolute;
+  left: calc(24px * var(--card-scale, 1));
+  top: calc(20px * var(--card-scale, 1));
+  z-index: 5;
+}
+
+.badge-label {
+  font-family: var(--font-geist-mono), monospace;
+  font-size: calc(11px * var(--card-scale, 1));
+  color: #ffffff;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.badge-meta {
+  font-family: var(--font-geist-mono), monospace;
+  font-size: calc(11px * var(--card-scale, 1));
+  color: #a3a3aa;
+  margin-top: calc(4px * var(--card-scale, 1));
+}
+
+.badge-headline {
+  position: absolute;
+  left: calc(24px * var(--card-scale, 1));
+  top: calc(82px * var(--card-scale, 1));
+  width: calc(350px * var(--card-scale, 1));
+  max-width: calc(100% - 195px * var(--card-scale, 1));
+  font-size: calc(27px * var(--card-scale, 1));
+  line-height: 1.08;
+  letter-spacing: -0.035em;
+  color: #ffffff;
+  font-weight: 400;
+  margin: 0;
+  overflow-wrap: anywhere;
+  z-index: 5;
+}
+
+.badge-accent {
+  display: inline;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  background-image: linear-gradient(100deg, #c9b8ff, #ff9ed6, #8fe3f5, #c9b8ff);
+  background-size: 250% 100%;
+  font-weight: 500;
+}
+
+.badge-bio {
+  position: absolute;
+  left: calc(24px * var(--card-scale, 1));
+  top: calc(190px * var(--card-scale, 1));
+  width: calc(360px * var(--card-scale, 1));
+  max-width: calc(100% - 170px * var(--card-scale, 1));
+  font-size: calc(13px * var(--card-scale, 1));
+  line-height: 1.6;
+  color: #c4c4cb;
+  margin: 0;
+  overflow-wrap: anywhere;
+  z-index: 5;
+}
+
+.badge-chips {
+  position: absolute;
+  left: calc(24px * var(--card-scale, 1));
+  bottom: calc(20px * var(--card-scale, 1));
+  display: flex;
+  gap: calc(8px * var(--card-scale, 1));
+  z-index: 5;
+}
+
+.badge-chip {
+  font-family: var(--font-geist-mono), monospace;
+  font-size: calc(11px * var(--card-scale, 1));
+  color: #d9d9de;
+  border: 0.5px solid rgba(255, 255, 255, 0.28);
+  border-radius: 999px;
+  padding: calc(4px * var(--card-scale, 1)) calc(10px * var(--card-scale, 1));
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.badge-footer-meta {
+  position: absolute;
+  right: calc(24px * var(--card-scale, 1));
+  bottom: calc(24px * var(--card-scale, 1));
+  font-family: var(--font-geist-mono), monospace;
+  font-size: calc(11px * var(--card-scale, 1));
+  color: #8a8a92;
+  display: flex;
+  gap: calc(12px * var(--card-scale, 1));
+  z-index: 5;
+}
+
+/* Mascot SVG Container */
+.badge-mascot-container {
+  position: absolute;
+  right: calc(24px * var(--card-scale, 1));
+  top: calc(24px * var(--card-scale, 1));
+  width: calc(134px * var(--card-scale, 1));
+  height: calc(134px * var(--card-scale, 1));
+  z-index: 5;
+  pointer-events: none;
+}
+
+.badge-mascot-svg {
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  transform-origin: center center;
+}
+
+/* Eyes */
+.badge-eyes-wrap {
+  position: absolute;
+  left: 50%;
+  top: 38%;
+  width: 0;
+  height: 0;
+  pointer-events: none;
+  transform-origin: center center;
+}
+
+.badge-eye-bar {
+  position: absolute;
+  width: calc(9px * var(--card-scale, 1));
+  height: calc(34px * var(--card-scale, 1));
+  border-radius: calc(5px * var(--card-scale, 1));
+  background: #ffffff;
+  opacity: 0.96;
+  top: calc(-17px * var(--card-scale, 1));
+  transform-origin: center center;
+}
+
+.badge-eye-bar.left {
+  left: calc(-15px * var(--card-scale, 1));
+}
+
+.badge-eye-bar.right {
+  left: calc(6px * var(--card-scale, 1));
+}
+
+.badge-face.back {
+  transform: rotateY(180deg) translateZ(1px);
+  display: flex;
+  flex-direction: column;
+  padding: calc(18px * var(--card-scale, 1)) calc(24px * var(--card-scale, 1))
+    calc(14px * var(--card-scale, 1));
+  box-sizing: border-box;
+}
+
+/* Back Face Header */
+.badge-back-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: calc(10px * var(--card-scale, 1));
+  z-index: 5;
+  flex-shrink: 0;
+  min-width: 0;
+}
+
+.badge-back-label {
+  font-family: var(--font-geist-mono), monospace;
+  font-size: calc(11px * var(--card-scale, 1));
+  color: #a3a3aa;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.badge-back-sub {
+  font-family: var(--font-geist-mono), monospace;
+  font-size: calc(10px * var(--card-scale, 1));
+  color: #8a8a92;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  min-width: 0;
+  overflow: hidden;
+  text-align: right;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* GitHub Contributions Chart */
+.badge-contrib-wrap {
+  z-index: 5;
+  padding: calc(8px * var(--card-scale, 1)) calc(10px * var(--card-scale, 1));
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: calc(12px * var(--card-scale, 1));
+  box-sizing: border-box;
+  margin-bottom: calc(12px * var(--card-scale, 1));
+  flex-shrink: 0;
+  overflow-x: auto;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+  min-width: 0;
+}
+
+.badge-contrib-wrap::-webkit-scrollbar {
+  display: none;
+}
+
+.badge-contrib-grid {
+  display: flex;
+  gap: calc(3px * var(--card-scale, 1));
+  justify-content: space-between;
+}
+
+.badge-contrib-col {
+  display: flex;
+  flex-direction: column;
+  gap: calc(3px * var(--card-scale, 1));
+}
+
+.badge-contrib-cell {
+  width: calc(8px * var(--card-scale, 1));
+  height: calc(8px * var(--card-scale, 1));
+  border-radius: calc(2px * var(--card-scale, 1));
+  transition:
+    transform 0.15s ease,
+    filter 0.15s ease;
+}
+
+.badge-contrib-cell:hover {
+  transform: scale(1.3);
+  filter: brightness(1.2);
+  z-index: 2;
+}
+
+/* Palette matching design.md */
+.badge-contrib-cell[data-level="0"] {
+  background: rgba(255, 255, 255, 0.06);
+}
+.badge-contrib-cell[data-level="1"] {
+  background: #7fd2e6;
+}
+.badge-contrib-cell[data-level="2"] {
+  background: #9d8df5;
+}
+.badge-contrib-cell[data-level="3"] {
+  background: #c58cec;
+}
+.badge-contrib-cell[data-level="4"] {
+  background: #f08fc6;
+}
+.badge-contrib-cell[data-level="5"] {
+  background: #f7a6d1;
+}
+
+.dark .badge-contrib-cell[data-level="1"] {
+  background: #a6e6f2;
+}
+.dark .badge-contrib-cell[data-level="2"] {
+  background: #b3a6ff;
+}
+.dark .badge-contrib-cell[data-level="3"] {
+  background: #d5b0f5;
+}
+.dark .badge-contrib-cell[data-level="4"] {
+  background: #ffb3dc;
+}
+.dark .badge-contrib-cell[data-level="5"] {
+  background: #fcc4e3;
+}
+
+/* Socials Row: below chart & above links */
+.badge-back-socials {
+  display: flex;
+  align-items: center;
+  gap: calc(8px * var(--card-scale, 1));
+  margin-bottom: calc(14px * var(--card-scale, 1));
+  z-index: 5;
+  flex-shrink: 0;
+  flex-wrap: wrap;
+}
+
+.badge-social-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: calc(6px * var(--card-scale, 1));
+  padding: calc(3px * var(--card-scale, 1)) calc(10px * var(--card-scale, 1));
+  border-radius: 999px;
+  font-family: var(--font-geist-mono), monospace;
+  font-size: calc(11px * var(--card-scale, 1));
+  color: rgba(255, 255, 255, 0.85);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  text-decoration: none;
+  transition:
+    background-color 0.15s ease,
+    color 0.15s ease,
+    border-color 0.15s ease,
+    transform 0.15s ease;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.badge-social-pill:hover {
+  background: rgba(255, 255, 255, 0.12);
+  color: #ffffff;
+  border-color: rgba(255, 255, 255, 0.28);
+  transform: translateY(-1px);
+}
+
+.badge-social-arrow {
+  font-size: calc(9px * var(--card-scale, 1));
+  opacity: 0.6;
+}
+
+.badge-social-pill > svg {
+  width: calc(12px * var(--card-scale, 1));
+  height: calc(12px * var(--card-scale, 1));
+}
+
+/* Bottom Row: Links (left) + Spotify Widget (right) */
+.badge-back-controls {
+  position: absolute;
+  left: calc(24px * var(--card-scale, 1));
+  right: calc(24px * var(--card-scale, 1));
+  bottom: calc(38px * var(--card-scale, 1));
+  z-index: 6;
+  cursor: pointer;
+}
+
+.badge-back-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: calc(16px * var(--card-scale, 1));
+  margin-bottom: calc(10px * var(--card-scale, 1));
+  z-index: 5;
+  min-height: 0;
+}
+
+.badge-back-actions {
+  display: flex;
+  flex-direction: column;
+  font-size: calc(12.5px * var(--card-scale, 1));
+  line-height: 1.95;
+  color: #ffffff;
+  min-width: calc(155px * var(--card-scale, 1));
+}
+
+.badge-back-action {
+  display: inline-flex;
+  align-items: center;
+  gap: calc(8px * var(--card-scale, 1));
+  color: #ffffff;
+  opacity: 0.88;
+  transition:
+    opacity 0.15s ease,
+    transform 0.15s ease;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
+  text-align: left;
+  font: inherit;
+}
+
+.badge-back-action > svg {
+  width: calc(14px * var(--card-scale, 1));
+  height: calc(14px * var(--card-scale, 1));
+}
+
+.badge-back-action:hover {
+  opacity: 1;
+  transform: translateX(2px);
+}
+
+.badge-back-spotify {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.badge-spotify-link {
+  display: block;
+  max-width: calc(310px * var(--card-scale, 1));
+  width: 100%;
+  border-radius: calc(12px * var(--card-scale, 1));
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(18, 18, 20, 0.8);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+  cursor: pointer;
+}
+
+.badge-spotify-link:hover {
+  transform: translateY(-2px) scale(1.02);
+  border-color: rgba(255, 255, 255, 0.28);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
+}
+
+.badge-spotify-img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.badge-back-footer {
+  position: absolute;
+  left: calc(24px * var(--card-scale, 1));
+  right: calc(24px * var(--card-scale, 1));
+  bottom: calc(14px * var(--card-scale, 1));
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: var(--font-geist-mono), monospace;
+  gap: calc(12px * var(--card-scale, 1));
+  font-size: calc(10px * var(--card-scale, 1));
+  color: rgba(255, 255, 255, 0.35);
+  letter-spacing: 0.08em;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding-top: calc(6px * var(--card-scale, 1));
+  z-index: 5;
+  flex-shrink: 0;
+}
+
+/* Mobile responsive adaptations (< 640px) */
+@media (max-width: 639px) {
+  /* Front Face Mobile: Hierarchical vertical rhythm with zero collisions */
+  .badge-meta-group {
+    left: calc(20px * var(--card-scale, 1));
+    top: calc(22px * var(--card-scale, 1));
+    max-width: calc(180px * var(--card-scale, 1));
+  }
+  .badge-label {
+    font-size: calc(10px * var(--card-scale, 1));
+    letter-spacing: 0.12em;
+  }
+  .badge-meta {
+    font-size: calc(10px * var(--card-scale, 1));
+    margin-top: calc(3px * var(--card-scale, 1));
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  /* Mascot stamp positioned in top-right without intruding on headline */
+  .badge-mascot-container {
+    right: calc(16px * var(--card-scale, 1));
+    top: calc(18px * var(--card-scale, 1));
+    width: calc(76px * var(--card-scale, 1));
+    height: calc(76px * var(--card-scale, 1));
+  }
+  .badge-mascot-svg {
+    width: 100%;
+    height: 100%;
+  }
+  .badge-eye-bar {
+    width: calc(5px * var(--card-scale, 1));
+    height: calc(19px * var(--card-scale, 1));
+    border-radius: calc(3px * var(--card-scale, 1));
+    top: calc(-9.5px * var(--card-scale, 1));
+  }
+  .badge-eye-bar.left {
+    left: calc(-8.5px * var(--card-scale, 1));
+  }
+  .badge-eye-bar.right {
+    left: calc(3.5px * var(--card-scale, 1));
+  }
+
+  /* Headline starts safely below the mascot (y=106px vs mascot bottom y=94px) */
+  .badge-headline {
+    left: calc(20px * var(--card-scale, 1));
+    right: calc(20px * var(--card-scale, 1));
+    top: calc(106px * var(--card-scale, 1));
+    width: auto;
+    max-width: none;
+    font-size: calc(20px * var(--card-scale, 1));
+    line-height: 1.15;
+    letter-spacing: -0.03em;
+    margin: 0;
+  }
+
+  /* Bio text with spacious line-height */
+  .badge-bio {
+    left: calc(20px * var(--card-scale, 1));
+    right: calc(20px * var(--card-scale, 1));
+    top: calc(208px * var(--card-scale, 1));
+    width: auto;
+    max-width: none;
+    font-size: calc(11.5px * var(--card-scale, 1));
+    line-height: 1.55;
+    max-height: unset;
+    overflow-y: visible;
+    margin: 0;
+  }
+
+  /* Chips on their own row above footer meta */
+  .badge-chips {
+    left: calc(20px * var(--card-scale, 1));
+    right: calc(20px * var(--card-scale, 1));
+    bottom: calc(50px * var(--card-scale, 1));
+    display: flex;
+    flex-wrap: wrap;
+    gap: calc(5px * var(--card-scale, 1));
+  }
+  .badge-chip {
+    font-size: calc(9.5px * var(--card-scale, 1));
+    padding: calc(3px * var(--card-scale, 1)) calc(8px * var(--card-scale, 1));
+  }
+
+  /* Footer meta on its own row at the bottom */
+  .badge-footer-meta {
+    left: calc(20px * var(--card-scale, 1));
+    right: calc(20px * var(--card-scale, 1));
+    bottom: calc(16px * var(--card-scale, 1));
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    padding-top: calc(8px * var(--card-scale, 1));
+    font-size: calc(9.5px * var(--card-scale, 1));
+  }
+
+  /* Back Face Mobile Adaptations */
+  .badge-face.back {
+    padding: calc(18px * var(--card-scale, 1)) calc(18px * var(--card-scale, 1))
+      calc(42px * var(--card-scale, 1));
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 100%;
+    box-sizing: border-box;
+    background:
+      radial-gradient(
+        circle at 100% 0%,
+        rgba(177, 145, 255, 0.13),
+        transparent 48%
+      ),
+      linear-gradient(145deg, #111117 0%, #0b0b0c 65%);
+  }
+  .badge-back-header {
+    margin-bottom: calc(8px * var(--card-scale, 1));
+  }
+  .badge-back-label {
+    font-size: calc(10px * var(--card-scale, 1));
+  }
+  .badge-back-sub {
+    font-size: calc(9px * var(--card-scale, 1));
+  }
+  .badge-contrib-wrap {
+    padding: calc(7px * var(--card-scale, 1));
+    margin-bottom: calc(12px * var(--card-scale, 1));
+    background: rgba(255, 255, 255, 0.045);
+    border-color: rgba(255, 255, 255, 0.13);
+  }
+  .badge-contrib-cell {
+    width: calc(4px * var(--card-scale, 1));
+    height: calc(4px * var(--card-scale, 1));
+    border-radius: calc(1px * var(--card-scale, 1));
+  }
+  .badge-contrib-grid,
+  .badge-contrib-col {
+    gap: calc(1px * var(--card-scale, 1));
+  }
+  .badge-back-socials {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: calc(6px * var(--card-scale, 1));
+    margin-bottom: calc(14px * var(--card-scale, 1));
+  }
+  .badge-back-controls {
+    position: static;
+    left: calc(20px * var(--card-scale, 1));
+    right: calc(20px * var(--card-scale, 1));
+    bottom: auto;
+    width: 100%;
+    margin-top: calc(4px * var(--card-scale, 1));
+    margin-bottom: calc(32px * var(--card-scale, 1));
+    flex-shrink: 0;
+  }
+  .badge-social-pill {
+    justify-content: center;
+    min-width: 0;
+    font-size: calc(10.5px * var(--card-scale, 1));
+    padding: calc(5px * var(--card-scale, 1)) calc(4px * var(--card-scale, 1));
+    gap: calc(5px * var(--card-scale, 1));
+  }
+  .badge-back-bottom {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: calc(14px * var(--card-scale, 1));
+    min-height: 0;
+  }
+  /* Remove Spotify embed on mobile for clean breathing room */
+  .badge-back-spotify {
+    display: none !important;
+  }
+  .badge-back-actions {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: calc(8px * var(--card-scale, 1)) calc(10px * var(--card-scale, 1));
+    width: 100%;
+  }
+  .badge-back-action {
+    display: flex;
+    align-items: center;
+    gap: calc(8px * var(--card-scale, 1));
+    font-size: calc(11px * var(--card-scale, 1));
+    min-width: 0;
+    padding: calc(8px * var(--card-scale, 1)) calc(8px * var(--card-scale, 1));
+    border-radius: calc(8px * var(--card-scale, 1));
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    transition:
+      background 0.15s ease,
+      border-color 0.15s ease;
+  }
+  .badge-back-action:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.2);
+  }
+  .badge-back-footer {
+    left: calc(20px * var(--card-scale, 1));
+    right: calc(20px * var(--card-scale, 1));
+    bottom: calc(16px * var(--card-scale, 1));
+    font-size: calc(9.5px * var(--card-scale, 1));
+    padding-top: calc(8px * var(--card-scale, 1));
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    flex-shrink: 0;
+  }
+}
+
+/* Desktop enlargement (>= 1024px) */
+@media (min-width: 1024px) {
+  .badge-headline {
+    width: calc(350px * var(--card-scale, 1));
+    max-width: calc(100% - 200px * var(--card-scale, 1));
+    font-size: calc(26.5px * var(--card-scale, 1));
+    top: calc(86px * var(--card-scale, 1));
+  }
+  .badge-bio {
+    width: calc(370px * var(--card-scale, 1));
+    max-width: calc(100% - 180px * var(--card-scale, 1));
+    font-size: calc(13px * var(--card-scale, 1));
+    top: calc(195px * var(--card-scale, 1));
+  }
+  .badge-chips {
+    bottom: calc(24px * var(--card-scale, 1));
+    left: calc(28px * var(--card-scale, 1));
+  }
+  .badge-footer-meta {
+    right: calc(28px * var(--card-scale, 1));
+    bottom: calc(24px * var(--card-scale, 1));
+  }
+  .badge-mascot-container {
+    width: calc(140px * var(--card-scale, 1));
+    height: calc(140px * var(--card-scale, 1));
+    right: calc(28px * var(--card-scale, 1));
+    top: calc(26px * var(--card-scale, 1));
+  }
+  .badge-mascot-svg {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+/* Extra Large Screens (>= 1440px) */
+@media (min-width: 1440px) {
+  .badge-headline {
+    width: calc(370px * var(--card-scale, 1));
+    max-width: calc(100% - 205px * var(--card-scale, 1));
+    font-size: calc(28px * var(--card-scale, 1));
+    top: calc(88px * var(--card-scale, 1));
+  }
+  .badge-bio {
+    width: calc(390px * var(--card-scale, 1));
+    max-width: calc(100% - 180px * var(--card-scale, 1));
+    font-size: calc(13px * var(--card-scale, 1));
+    top: calc(195px * var(--card-scale, 1));
+  }
+  .badge-mascot-container {
+    width: calc(145px * var(--card-scale, 1));
+    height: calc(145px * var(--card-scale, 1));
+    right: calc(30px * var(--card-scale, 1));
+    top: calc(28px * var(--card-scale, 1));
+  }
+  .badge-mascot-svg {
+    width: 100%;
+    height: 100%;
+  }
+}

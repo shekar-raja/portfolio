@@ -1,0 +1,12 @@
+{
+  "availability": "open",
+  "bookingUrl": "https://cal.com/beebombshell/coffee",
+  "bookingProvider": "cal",
+  "featureFlags": {
+    "showBooking": true,
+    "enableLlmsTxt": true,
+    "enableSoundEffects": false,
+    "spotifyNowPlaying": true,
+    "character": true
+  }
+}

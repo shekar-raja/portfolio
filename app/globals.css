@@ -1,0 +1,322 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  --bg: #f6f5f1;
+  --fg: #121212;
+  --mut: #6f6e69;
+  --line: rgba(0, 0, 0, 0.16);
+  --p0: #9d8df5;
+  --p1: #c58cec;
+  --p2: #f08fc6;
+  --p3: #7fd2e6;
+  --p4: #b5a6ff;
+  --p5: #f7a6d1;
+}
+
+.dark {
+  --bg: #0d0d0c;
+  --fg: #eeece6;
+  --mut: #a2a19b;
+  --line: rgba(255, 255, 255, 0.18);
+  --p0: #b3a6ff;
+  --p1: #d5b0f5;
+  --p2: #ffb3dc;
+  --p3: #a6e6f2;
+  --p4: #c9c0ff;
+  --p5: #fcc4e3;
+}
+
+@theme {
+  --color-bg: var(--bg);
+  --color-fg: var(--fg);
+  --color-mut: var(--mut);
+  --color-line: var(--line);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+  background-color: var(--bg);
+  color: var(--fg);
+  font-family:
+    var(--font-geist-sans),
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    sans-serif;
+  transition:
+    background-color 500ms ease,
+    color 500ms ease;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Lenis smooth scrolling rules */
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: clip;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
+
+/* Accessible focus ring per design.md */
+:focus-visible {
+  outline: 2px solid var(--fg);
+  outline-offset: 2px;
+}
+
+/* View Transition: theme glide (lightbulb effect)
+   Suppress the default cross-fade; JS drives the clip-path animation. */
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation: none;
+  mix-blend-mode: normal;
+}
+
+/* Ensure the incoming layer is always on top during theme transition */
+::view-transition-new(root) {
+  z-index: 1;
+}
+::view-transition-old(root) {
+  z-index: 0;
+}
+
+/* Soft halo protection around text for particles */
+.text-halo {
+  text-shadow:
+    0 0 12px var(--bg),
+    0 0 24px var(--bg);
+}
+
+/* Shiki syntax highlighting dual themes */
+.shiki,
+.shiki span {
+  color: var(--shiki-light);
+  background-color: transparent !important;
+}
+
+.dark .shiki,
+.dark .shiki span {
+  color: var(--shiki-dark);
+  background-color: transparent !important;
+}
+
+/* Prose typography for articles */
+.prose-article {
+  line-height: 1.8;
+  color: var(--fg);
+}
+
+.prose-article p {
+  margin-top: 1.25em;
+  margin-bottom: 1.25em;
+  color: var(--fg);
+  opacity: 0.92;
+}
+
+.prose-article h2 {
+  font-size: 1.625rem;
+  font-weight: 500;
+  letter-spacing: -0.025em;
+  margin-top: 2.5em;
+  margin-bottom: 0.75em;
+  color: var(--fg);
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 0.35em;
+}
+
+.prose-article h3 {
+  font-size: 1.25rem;
+  font-weight: 500;
+  letter-spacing: -0.015em;
+  margin-top: 2em;
+  margin-bottom: 0.5em;
+  color: var(--fg);
+}
+
+.prose-article ul {
+  list-style: disc outside !important;
+  margin-top: 1.25em;
+  margin-bottom: 1.25em;
+  padding-left: 1.6em;
+}
+
+.prose-article ol {
+  list-style: decimal outside !important;
+  margin-top: 1.25em;
+  margin-bottom: 1.25em;
+  padding-left: 1.6em;
+}
+
+.prose-article li {
+  display: list-item !important;
+  list-style: inherit !important;
+  margin-top: 0.45em;
+  margin-bottom: 0.45em;
+  line-height: 1.7;
+  color: var(--fg);
+  opacity: 0.92;
+}
+
+.prose-article li::marker {
+  color: var(--mut);
+  font-weight: 500;
+}
+
+.prose-article li strong {
+  color: var(--fg);
+  font-weight: 600;
+}
+
+.prose-article a {
+  color: var(--fg);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-color: var(--line);
+  transition: text-decoration-color 0.2s;
+}
+
+.prose-article a:hover {
+  text-decoration-color: var(--fg);
+}
+
+.prose-article code:not(pre code) {
+  font-family: var(--font-geist-mono), monospace;
+  font-size: 0.875em;
+  padding: 0.15em 0.4em;
+  border-radius: 4px;
+  background-color: var(--line);
+  color: var(--fg);
+}
+
+.prose-article pre {
+  margin: 0;
+  font-family: var(--font-geist-mono), monospace;
+  font-size: 0.85rem;
+  line-height: 1.6;
+}
+
+.prose-article figure {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.prose-article img,
+.prose-article video {
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.75rem;
+}
+
+.prose-article figcaption {
+  margin-top: 0.65rem;
+  text-align: center;
+  font-family: var(--font-geist-mono), monospace;
+  font-size: 0.75rem;
+  color: var(--mut);
+}
+
+.prose-article hr {
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
+  border: 0;
+  border-top: 1px solid var(--line);
+}
+
+/* Spotify Equalizer Bars (4 bars, height 3px to 12px, 0.9s ease-in-out) */
+@keyframes eq-pulse-1 {
+  0%,
+  100% {
+    height: 3px;
+  }
+  50% {
+    height: 12px;
+  }
+}
+@keyframes eq-pulse-2 {
+  0%,
+  100% {
+    height: 11px;
+  }
+  50% {
+    height: 4px;
+  }
+}
+@keyframes eq-pulse-3 {
+  0%,
+  100% {
+    height: 5px;
+  }
+  50% {
+    height: 12px;
+  }
+}
+@keyframes eq-pulse-4 {
+  0%,
+  100% {
+    height: 10px;
+  }
+  50% {
+    height: 3px;
+  }
+}
+
+.animate-eq-1 {
+  animation: eq-pulse-1 0.9s ease-in-out infinite 0s;
+}
+.animate-eq-2 {
+  animation: eq-pulse-2 0.9s ease-in-out infinite 0.2s;
+}
+.animate-eq-3 {
+  animation: eq-pulse-3 0.9s ease-in-out infinite 0.4s;
+}
+.animate-eq-4 {
+  animation: eq-pulse-4 0.9s ease-in-out infinite 0.1s;
+}
+
+/* Marquee: translates by -50% over 9s, linear, infinite */
+@keyframes marquee-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee-scroll 9s linear infinite;
+}
+
+/* Holographic gradient text utility for card headline */
+.foil-text {
+  background: linear-gradient(135deg, #c9b8ff 0%, #ff9ed6 50%, #8fe3f5 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline;
+}
