@@ -1,10 +1,51 @@
 [
   {
+    "company": "Lifebridge Inc.",
+    "role": "Senior Software Engineer",
+    "location": "Boston, US · Remote",
+    "start": "Mar 2025",
+    "current": true,
+    "bullets": [
+      "Built a multi-agent AI orchestration layer using LangGraph and MCP as the sole engineer across multiple applications on the Lifebridge platform, replacing fragmented legacy insurance workflows with automated agent-driven processing.",
+      "Engineered a hybrid RAG pipeline combining FAISS vector indexing with ColBERT reranking, improving retrieval accuracy on domain-specific insurance terminology for an IBM WatsonX-powered chatbot.",
+      "Delivered 15+ Python microservices across multiple NX monorepos backed by 12+ PostgreSQL entities and a Next.js frontend, powering a cloud-native platform that replaced legacy insurance systems.",
+      "Operated Kubernetes deployments across development and production, with Azure DevOps for continuous delivery and GitHub Actions for CI across 15+ services.",
+      "Implemented WebSocket-based real-time updates for a ReactFlow drag-and-drop canvas used to configure insurance processes.",
+      "Centralised IAM with Keycloak, replacing fragmented authentication and authorisation across 7 services with a single access control point."
+    ],
+    "tags": [
+      "Python",
+      "LangGraph",
+      "MCP",
+      "RAG",
+      "PostgreSQL",
+      "Next.js",
+      "Kubernetes",
+      "Azure DevOps",
+      "Keycloak"
+    ],
+    "order": 1,
+    "geo": {
+      "lat": 42.3601,
+      "lng": -71.0589,
+      "label": "Boston, US"
+    },
+    "remoteFrom": {
+      "lat": 51.7634,
+      "lng": -0.2238,
+      "label": "Hatfield, UK"
+    }
+  },
+  {
     "company": "Koolmill Systems",
     "role": "Cloud Data Engineer",
     "location": "Sheffield, UK",
-    "start": "Jun 2025",
-    "current": true,
+    "geo": {
+      "lat": 53.3811,
+      "lng": -1.4701,
+      "label": "Sheffield, UK"
+    },
+    "start": "Apr 2025",
     "bullets": [
       "Contributed to the Innovate UK funded Digital Rice Mill Demonstrator project, developing a scalable cloud data platform for real-time monitoring of industrial rice milling machines.",
       "Architected end-to-end data architecture to ingest and process second-level industrial time-series telemetry from PLC-controlled milling systems via edge devices.",
@@ -26,12 +67,23 @@
       "IOT",
       "Time-Series Data"
     ],
-    "order": 1
+    "order": 2,
+    "end": "Mar 2026"
   },
   {
     "company": "TruNums",
     "role": "Software Engineer",
-    "location": "Remote, US",
+    "location": "New York, US · Remote",
+    "geo": {
+      "lat": 40.7128,
+      "lng": -74.006,
+      "label": "New York, US"
+    },
+    "remoteFrom": {
+      "lat": 51.7634,
+      "lng": -0.2238,
+      "label": "Hatfield, UK"
+    },
     "start": "Oct 2022",
     "end": "Jan 2024",
     "bullets": [
@@ -48,12 +100,17 @@
       "Rest API",
       "CI/CD"
     ],
-    "order": 2
+    "order": 3
   },
   {
     "company": "Groundhog Apps",
     "role": "Software Engineer",
     "location": "Hyderabad, India",
+    "geo": {
+      "lat": 17.385,
+      "lng": 78.4867,
+      "label": "Hyderabad, India"
+    },
     "start": "Dec 2019",
     "end": "Aug 2022",
     "bullets": [
@@ -70,6 +127,6 @@
       "REST API",
       "Redis"
     ],
-    "order": 3
+    "order": 4
   }
 ]

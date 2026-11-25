@@ -1,16 +1,19 @@
 "use client";
 
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import { motion, useReducedMotion } from "motion/react";
 import { SectionHeader } from "@/components/type/section-header";
 import { useRegisterTextBlock } from "@/components/particles/use-particles";
-import type { Experience } from "@/lib/schemas";
+import { WorkGlobe, jobKey } from "@/components/sections/work-globe";
+import type { Education, Experience } from "@/lib/schemas";
 
 interface ExperienceSectionProps {
   items: Experience[];
+  education?: Education[];
 }
 
-export function ExperienceSection({ items }: ExperienceSectionProps) {
+export function ExperienceSection({ items, education = [] }: ExperienceSectionProps) {
+  const [activeKey, setActiveKey] = useState<string | null>(null);
   const ref = useRef<HTMLElement>(null);
   const reduced = useReducedMotion() ?? false;
   useRegisterTextBlock("experience", ref);
@@ -29,7 +32,11 @@ export function ExperienceSection({ items }: ExperienceSectionProps) {
         title="Experience"
         intro="Cloud data platforms, industrial telemetry and full-stack systems, most recent first."
       />
-      <ol className="divide-y divide-[var(--line)] border-b border-[var(--line)]">
+      <div className="grid gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(0,380px)] lg:gap-12">
+      <div className="order-first self-start lg:sticky lg:top-24 lg:order-last">
+        <WorkGlobe jobs={items} education={education} activeKey={activeKey} />
+      </div>
+      <ol className="min-w-0 divide-y divide-[var(--line)] border-b border-[var(--line)]">
         {items.map((job, i) => (
           <motion.li
             key={`${job.company}-${job.start}`}
@@ -37,7 +44,14 @@ export function ExperienceSection({ items }: ExperienceSectionProps) {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-60px" }}
             transition={{ duration: 0.45, delay: Math.min(i, 3) * 0.05, ease: [0.22, 1, 0.36, 1] }}
-            className="grid gap-4 px-1 py-8 sm:px-2 md:grid-cols-[minmax(0,220px)_minmax(0,1fr)] md:gap-10"
+            tabIndex={job.geo ? 0 : undefined}
+            onPointerEnter={() => setActiveKey(jobKey(job))}
+            onPointerLeave={(e) => {
+              if (e.pointerType === "mouse") setActiveKey(null);
+            }}
+            onFocus={() => setActiveKey(jobKey(job))}
+            onBlur={() => setActiveKey(null)}
+            className="grid gap-4 px-1 py-8 outline-none focus-visible:ring-1 focus-visible:ring-[var(--mut)] sm:px-2 md:grid-cols-[minmax(0,160px)_minmax(0,1fr)] md:gap-8"
           >
             <div className="flex flex-col gap-1.5 font-mono text-[11px] text-[var(--mut)]">
               <time>
@@ -84,6 +98,7 @@ export function ExperienceSection({ items }: ExperienceSectionProps) {
           </motion.li>
         ))}
       </ol>
+      </div>
     </section>
   );
 }

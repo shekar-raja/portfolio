@@ -73,10 +73,21 @@ export const SiteConfigSchema = z.object({
   featureFlags: z.record(z.string(), z.boolean()).default({}),
 });
 
+/** A named place on the globe. */
+export const GeoSchema = z.object({
+  lat: z.number(),
+  lng: z.number(),
+  label: z.string(),
+});
+
 export const ExperienceSchema = z.object({
   company: z.string(),
   role: z.string(),
   location: z.string().optional(),
+  /** Where the work shipped to (globe marker). */
+  geo: GeoSchema.optional(),
+  /** Where the work was physically done from, if different from `geo` (globe arc origin). */
+  remoteFrom: GeoSchema.optional(),
   start: z.string(),
   end: z.string().optional(),
   current: z.boolean().optional(),
@@ -89,6 +100,7 @@ export const EducationSchema = z.object({
   degree: z.string(),
   institution: z.string(),
   location: z.string().optional(),
+  geo: GeoSchema.optional(),
   start: z.string(),
   end: z.string().optional(),
   detail: z.string().optional(),
@@ -118,6 +130,7 @@ export type Take = z.infer<typeof TakeSchema>;
 export type Project = z.infer<typeof ProjectSchema>;
 export type Post = z.infer<typeof PostSchema>;
 export type SiteConfig = z.infer<typeof SiteConfigSchema>;
+export type Geo = z.infer<typeof GeoSchema>;
 export type Experience = z.infer<typeof ExperienceSchema>;
 export type Education = z.infer<typeof EducationSchema>;
 export type SkillGroup = z.infer<typeof SkillGroupSchema>;

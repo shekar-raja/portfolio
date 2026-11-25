@@ -141,7 +141,7 @@ export function HeroSection({
         <ExpandingProjectCards projects={selectedProjects.slice(0, 4)} />
       </section>
 
-      <ExperienceSection items={experience} />
+      <ExperienceSection items={experience} education={education} />
       <SkillsSection groups={skills} />
       <EducationSection items={education} />
 
